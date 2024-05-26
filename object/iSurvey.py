@@ -33,10 +33,11 @@ class iQuestions(dict):
         parent_nodes = list()
         
         for question in body.findall('*'):
+            
             if question.tag in ["sectionEnd", "loopEnd"]:
                 parent_nodes = list()
             else:
-                if question.attrib["surveyBuilderV3CMSObjGUID"] != "101622D0-8B7C-4DE5-B97B-67D33C2E51D7":
+                if question.attrib["surveyBuilderV3CMSObjGUID"] not in ["101622D0-8B7C-4DE5-B97B-67D33C2E51D7","0AB35540-8549-42F2-A4C4-EA793334170F"]:
                     object_name = question.attrib["objectName"]
                     
                     if len(parent_nodes) > 0:
@@ -53,7 +54,7 @@ class iQuestion(dict):
         self.generate(question, answersref, parent_nodes=parent_nodes)
     
     def generate(self, question, answersref, parent_nodes=None):
-        if question.attrib['pos'] == "5":
+        if question.attrib['pos'] == "56":
             a = ""
         self["text"] = self.get_text(question)
         self["attributes"] = question.attrib
@@ -164,26 +165,26 @@ class iQuestion(dict):
     def syntax_comment(self):
         datatype = "text"
 
-        match self["comment"]["datatype"]:
+        match int(self["comment"]["datatype"]):
             case 2:
                 datatype = "long" if self["comment"]["scale"] == 0 else "double"
             case 3:
                 datatype = "text"
             case 4:
-                datatype = "double"
+                datatype = "date"
                 
         return f'{self["attributes"]["objectName"]} "{self["text"]}" {datatype};'
 
     def syntax_general(self):
         datatype = "text"
 
-        match self["comment"]["datatype"]:
+        match int(self["comment"]["datatype"]):
             case 2:
                 datatype = "long" if self["comment"]["scale"] == 0 else "double"
             case 3:
                 datatype = "text"
             case 4:
-                datatype = "double"
+                datatype = "date"
                 
         return f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]} "{self["text"]}" {datatype};'
 
@@ -222,6 +223,12 @@ class iQuestion(dict):
                     case dataTypeConstants.mtText.value:
                         columns.append(self["attributes"]["objectName"])
                         csv_columns.append(self["attributes"]["objectName"])
+                    case dataTypeConstants.mtDate.value:
+                        columns.append(self["attributes"]["objectName"])
+                        csv_columns.append(self["attributes"]["objectName"])
+                    case dataTypeConstants.mtDouble.value:
+                        columns.append(self["attributes"]["objectName"])
+                        csv_columns.append(self["attributes"]["objectName"])
                     case dataTypeConstants.mtCategorical.value:
                         columns.append(self["attributes"]["objectName"])
 
@@ -243,18 +250,18 @@ class iQuestion(dict):
                         csv_columns.append(f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]}')
                 return
             
-            columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0)])
-            csv_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0)])
+            columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="mdd")])
+            csv_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="csv")])
 
         backtrack()
         
         return {"mdd" : columns, "csv" : csv_columns}
     
-    def get_parents(self, index):
+    def get_parents(self, index, format="mdd"):
         if index == len(self["parents"]):
             return 
         else:
-            p1s = self.get_parent_columns(self["parents"][index])
+            p1s = self.get_parent_columns(self["parents"][index], format=format)
             p2s = self.get_parents(index + 1)
 
             if p2s is None:
@@ -262,7 +269,7 @@ class iQuestion(dict):
             else:
                 return ["%s.%s" % (p1, p2) for p1 in p1s for p2 in p2s]
 
-    def get_parent_columns(self, parent):
+    def get_parent_columns(self, parent, format="mdd"):
         parent_columns = list()
 
         if parent["objecttype"] == "BlockFields":
@@ -270,7 +277,10 @@ class iQuestion(dict):
         if parent["objecttype"] == "Loop":
             for key, option in parent["answers"]["options"].items():
                 if not bool(int(option["attributes"]["isDisplayAsHeader"])):
-                    parent_columns.append('%s[{%s}]' % (parent["attributes"]["objectName"], option['objectname']))
+                    if format == "mdd":
+                        parent_columns.append('%s[{%s}]' % (parent["attributes"]["objectName"], option['objectname']))
+                    elif format == "csv":
+                        parent_columns.append('%s[%s]' % (parent["attributes"]["objectName"], option['objectname']))
 
         return parent_columns
 

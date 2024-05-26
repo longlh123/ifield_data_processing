@@ -12,6 +12,7 @@ from object.enumerations import dataTypeConstants
 from object.iSurvey import iSurvey
 
 import collections.abc
+
 #hyper needs the four following aliases to be done manually.
 collections.Iterable = collections.abc.Iterable
 collections.Mapping = collections.abc.Mapping
@@ -99,12 +100,24 @@ for i, row in df_main[list(df_main.columns)].iterrows():
         v = list()
 
         for key, question in isurvey["questions"].items():
-            if question["datatype"] != dataTypeConstants.mtNone:
-                match question["datatype"].value:
-                    case dataTypeConstants.mtText.value:
-                        if not pd.isnull(row[question["columns"][0]]):
-                            c.extend(question["columns"])
-                            v.append("'{}'".format(row[question["columns"][0]]))
+            if question["datatype"] not in [dataTypeConstants.mtNone, dataTypeConstants.mtLevel]:
+                for i in range(len(row[question["columns"]["mdd"]])):
+                    col_mdd = question["columns"]["mdd"][i]
+                    col_csv = question["columns"]["csv"][i] 
+
+                    if not pd.isnull(row[col_csv]):
+                        match question["datatype"].value:
+                            case dataTypeConstants.mtText.value:
+                                c.append(col_mdd)
+                                v.append("'{}'".format(row[col_csv]))
+                            case dataTypeConstants.mtDate.value:
+                                c.append(col_mdd)
+                                v.append("'{}'".format(row[col_csv]))
+                            case dataTypeConstants.mtDouble.value:
+                                c.append(col_mdd)
+                                v.append("{}".format(row[col_csv]))
+                                    
+                        
         
         sql_update = "UPDATE VDATA SET " + ','.join([cx + str(r" = %s") for cx in c]) % tuple(v) + " WHERE record = {}".format(row.name)
         adoConn.Execute(sql_update)    
