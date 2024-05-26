@@ -1,0 +1,54 @@
+'==================================================================================
+'THÔNG TIN FILE MDD-DDF FORMAT
+'==================================================================================
+#define SQLQueryString "SELECT * FROM VDATA"
+
+InputDatasource(Input, "The input data source")
+	ConnectionString = " _
+		Provider = mrOleDB.Provider.2; _
+		Persist Security Info = False; _
+		Data Source = CDSC; _
+		Initial Catalog = " + InputDataFile + "; _
+		Mode = 3; _
+		MR Init MDSC Access = 2; _
+		MR Init MDM Language = vi-VN; _
+		MR Init MDM Access = 0; _
+		MR Init MDM DataSource Use = 0; _
+		MR Init MDM Version Variable = False; _
+		MR Init Category Names = 0; _
+		MR Init Category Values = 0; _
+		MR Init Allow Dirty = True; _
+		MR Init Validation = True; _
+		MR Init Input Locale = 0; _
+		MR Init Output Locale = 0; _
+		MR Init Overwrite = 0; _
+		MR Init Native Schema = False; _
+		MR Init Merge Data Elements = False"
+	SelectQuery = SQLQueryString
+End InputDatasource
+
+OutputDatasource(Output, "The output data source")
+	ConnectionString = " _
+		Provider = mrOleDB.Provider.2; _
+		Persist Security Info = False; _
+		Data Source = mrDataFileDsc; _
+		Location = " + OutputDataDDF + "; _
+		Mode = 3; _
+		MR Init MDSC Access = 2; _
+		MR Init MDM Language = vi-VN; _
+		MR Init MDM Access = 0; _
+		MR Init MDM DataSource Use = 0; _
+		MR Init MDM Version Variable = False; _
+		MR Init Category Names = 0; _
+		MR Init Category Values = 0; _
+		MR Init Allow Dirty = True; _
+		MR Init Validation = True; _
+		MR Init Input Locale = 0; _
+		MR Init Output Locale = 0; _
+		MR Init Overwrite = 2; _
+		MR Init Native Schema = False; _
+		MR Init Merge Data Elements = False"
+	MetaDataOutputName = OutputDataMDD
+	VariableOrder = "METADATAORDER"
+End OutputDatasource
+

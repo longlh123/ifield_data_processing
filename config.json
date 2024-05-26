@@ -1,0 +1,34 @@
+{
+    "project_name" : "<!--Enter a project name-->",
+    "run_mdd_source" : true, 
+    "main" : {
+        "xmls" : {
+            "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+        },
+        "protoid_final" : "8402",
+        "csv" : "<!--Enter a csv file-->"
+    },
+    "stages" : {
+        "stage-1" : {
+            "xmls" : {
+                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+            },
+            "protoid_final" : "8402",
+            "csv" : "<!--Enter a csv file-->"
+        },
+        "stage-2" : {
+            "xmls" : {
+                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+            },
+            "protoid_final" : "8402",
+            "csv" : "<!--Enter a csv file-->"
+        },
+        "stage-3" : {
+            "xmls" : {
+                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+            },
+            "protoid_final" : "8402",
+            "csv" : "<!--Enter a csv file-->"
+        }
+    }
+}
