@@ -213,69 +213,87 @@ class iQuestion(dict):
 
         return text
 
-    def get_columns(self):
-        mdd_columns = []
-        mdd_other_columns = []
-        csv_columns = []
-        csv_other_columns = []
+    def generate_columns(self, parent_name=None):
+        columns = {}
         
-        def backtrack():
-            #if "parents" not in self.keys():
-            if self["datatype"].value in [dataTypeConstants.mtText.value,dataTypeConstants.mtDate.value,dataTypeConstants.mtDouble.value,dataTypeConstants.mtCategorical.value,dataTypeConstants.mtObject.value]:
-                match self["datatype"].value:
-                    case dataTypeConstants.mtText.value:
-                        mdd_columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(self["attributes"]["objectName"])
-                    case dataTypeConstants.mtDate.value:
-                        mdd_columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(self["attributes"]["objectName"])
-                    case dataTypeConstants.mtDouble.value:
-                        mdd_columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(self["attributes"]["objectName"])
-                    case dataTypeConstants.mtCategorical.value:
-                        mdd_columns.append(self["attributes"]["objectName"])
+        mdd_col = self["attributes"]["objectName"] if parent_name is None else "%s.%s" % (parent_name, self["attributes"]["objectName"])
+        
+        if(self["datatype"].value == dataTypeConstants.mtCategorical.value):
+            columns[mdd_col] = dict({
+                "csv" : list(),
+                "others" : dict()
+            })
 
-                        if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
-                            for key, option in self["answers"]["options"].items():
-                                if not bool(int(option["attributes"]["isDisplayAsHeader"])):
-                                    csv_columns.append("%s.%s" % (self["attributes"]["objectName"], option["objectname"]))
-                                if bool(int(option["attributes"]["isOtherSpecify"])):
-                                    mdd_other_columns.append("%s.%s" % (self["attributes"]["objectName"], option["objectname"]))
-                                    csv_other_columns.append("%s.%s.%s" % (self["attributes"]["objectName"], option["objectname"], option["otherfield"]["objectName"])) 
-                        else:
-                            csv_columns.append(self["attributes"]["objectName"])
+            if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
+                for key, option in self["answers"]["options"].items():
+                    csv_col = "%s.%s" % (re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), option["objectname"])
+                    
+                    if not bool(int(option["attributes"]["isDisplayAsHeader"])):
+                        columns[mdd_col]["csv"].append(csv_col)
+                    if bool(int(option["attributes"]["isOtherSpecify"])):
+                        mdd_other_col = "%s.%s" % (mdd_col, option["objectname"])
+                        csv_other_col = "%s.%s.%s" % (
+                                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), 
+                                            option["objectname"], 
+                                            option["otherfield"]["objectName"])
+
+                        columns[mdd_col]["others"][mdd_other_col] = dict({
+                            "csv" : csv_other_col,
+                            "datatype" : option["otherfield"]["datatype"]
+                        })
+            else:
+                csv_col = re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))
+
+                columns[mdd_col] = dict({
+                    "csv" : [csv_col],
+                    "others" : dict()
+                })
+            
+                for key, option in self["answers"]["options"].items():
+                    if bool(int(option["attributes"]["isOtherSpecify"])):
+                        mdd_other_col = "%s.%s" % (mdd_col, option["objectname"])
+                        csv_other_col = "%s.%s" % (
+                                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), 
+                                            option["otherfield"]["objectName"])
                         
-                            for key, option in self["answers"]["options"].items():
-                                if bool(int(option["attributes"]["isOtherSpecify"])):
-                                    mdd_other_columns.append("%s.%s" % (self["attributes"]["objectName"], option["otherfield"]["objectName"]))
-                                    csv_other_columns.append("%s.%s" % (self["attributes"]["objectName"], option["otherfield"]["objectName"])) 
-                    case dataTypeConstants.mtObject.value:
-                        mdd_columns.append(self["attributes"]["objectName"])
-                        mdd_columns.append(f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]}')
+                        columns[mdd_col]["others"][mdd_other_col] = dict({
+                            "csv" : [csv_other_col],
+                            "datatype" : option["otherfield"]["datatype"]
+                        })
+        elif(self["datatype"].value == dataTypeConstants.mtObject.value):
+            columns[mdd_col] = dict({
+                "csv" : [mdd_col]
+            })
 
-                        csv_columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(f'{self["attributes"]["objectName"]}.{self["comment"]["objectName"]}')
-                return
-            
-            mdd_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="mdd")])
-            
-            if len(mdd_other_columns) > 0:
-                mdd_other_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="mdd")])
-            
-            csv_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="csv")])
-            
-            if len(csv_other_columns):
-                csv_other_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0, format="csv")])
-
-        backtrack()
+            columns[f'{mdd_col}{self["comment"]["objectName"]}'] = dict({
+                "csv" : "%s.%s" % (
+                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)),
+                            self["comment"]["objectName"])
+            })
+        else:
+            columns[mdd_col] = dict({
+                "csv" : [re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))]
+            })
         
-        return {"mdd" : mdd_columns, "mdd_other" : mdd_other_columns, "csv" : csv_columns, "csv_other" : csv_other_columns}
-    
-    def get_parents(self, index, format="mdd"):
+        return columns
+
+    def get_columns(self):
+        if "parents" not in self.keys():
+            return self.generate_columns()
+        else:
+            columns = list()
+            parents = self.get_parents(0)
+            
+            for parent_name in parents:
+                columns.append(self.generate_columns(parent_name=parent_name)) 
+
+            return columns
+            
+    def get_parents(self, index):
         if index == len(self["parents"]):
             return 
         else:
-            p1s = self.get_parent_columns(self["parents"][index], format=format)
+            p1s = self.get_parent_columns(self["parents"][index])
             p2s = self.get_parents(index + 1)
 
             if p2s is None:
@@ -283,7 +301,7 @@ class iQuestion(dict):
             else:
                 return ["%s.%s" % (p1, p2) for p1 in p1s for p2 in p2s]
 
-    def get_parent_columns(self, parent, format="mdd"):
+    def get_parent_columns(self, parent):
         parent_columns = list()
 
         if parent["objecttype"] == "BlockFields":
@@ -291,10 +309,7 @@ class iQuestion(dict):
         if parent["objecttype"] == "Loop":
             for key, option in parent["answers"]["options"].items():
                 if not bool(int(option["attributes"]["isDisplayAsHeader"])):
-                    if format == "mdd":
-                        parent_columns.append('%s[{%s}]' % (parent["attributes"]["objectName"], option['objectname']))
-                    elif format == "csv":
-                        parent_columns.append('%s[%s]' % (parent["attributes"]["objectName"], option['objectname']))
+                    parent_columns.append('%s[{%s}]' % (parent["attributes"]["objectName"], option['objectname']))
 
         return parent_columns
 
