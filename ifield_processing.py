@@ -101,23 +101,46 @@ for i, row in df_main[list(df_main.columns)].iterrows():
 
         for key, question in isurvey["questions"].items():
             if question["datatype"] not in [dataTypeConstants.mtNone, dataTypeConstants.mtLevel]:
-                for i in range(len(row[question["columns"]["mdd"]])):
+                for i in range(len(question["columns"]["mdd"])):
                     col_mdd = question["columns"]["mdd"][i]
-                    col_csv = question["columns"]["csv"][i] 
+                    
+                    if col_mdd in ["QI[{_1}]._scale"]:
+                        a = ""
+                    
+                    if question["datatype"].value == dataTypeConstants.mtCategorical.value:
+                        if bool(int(question["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
+                            if row[question["columns"]["csv"]].sum() > 0:
+                                c.append(col_mdd)
+                                v.append("{%s}" % (",".join([re.sub(pattern="{}.".format(col_mdd), repl="", string=k) for k, v in dict(row[question["columns"]["csv"]]).items() if v == 1])))
+                        else:
+                            col_csv = question["columns"]["csv"][i]
 
-                    if not pd.isnull(row[col_csv]):
-                        match question["datatype"].value:
-                            case dataTypeConstants.mtText.value:
+                            if not pd.isnull(row[col_csv]): 
                                 c.append(col_mdd)
-                                v.append("'{}'".format(row[col_csv]))
-                            case dataTypeConstants.mtDate.value:
-                                c.append(col_mdd)
-                                v.append("'{}'".format(row[col_csv]))
-                            case dataTypeConstants.mtDouble.value:
-                                c.append(col_mdd)
-                                v.append("{}".format(row[col_csv]))
-                                    
+                                v.append("{%s}" % (question["answers"]["options"][str(int(row[col_csv]))]["objectname"]))
+
+                        if len(question["columns"]["mdd_other"]) > 0:
+                            for i in range(len(question["columns"]["mdd_other"])):
+                                col_other_mdd = question["columns"]["mdd_other"][i]
+                                col_other_csv = question["columns"]["csv_other"][i]
+                                
+                                if not pd.isnull(row[col_other_csv]):
+                                    c.append(col_other_mdd)
+                                    v.append("'{}'".format(row[col_other_csv]))
+                    else:
+                        col_csv = question["columns"]["csv"][i] 
                         
+                        if not pd.isnull(row[col_csv]):
+                            match question["datatype"].value:
+                                case dataTypeConstants.mtText.value:
+                                    c.append(col_mdd)
+                                    v.append("'{}'".format(row[col_csv]))
+                                case dataTypeConstants.mtDate.value:
+                                    c.append(col_mdd)
+                                    v.append("'{}'".format(row[col_csv]))
+                                case dataTypeConstants.mtDouble.value:
+                                    c.append(col_mdd)
+                                    v.append("{}".format(row[col_csv]))
         
         sql_update = "UPDATE VDATA SET " + ','.join([cx + str(r" = %s") for cx in c]) % tuple(v) + " WHERE record = {}".format(row.name)
         adoConn.Execute(sql_update)    
