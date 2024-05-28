@@ -33,9 +33,11 @@ class iQuestions(dict):
         parent_nodes = list()
         
         for question in body.findall('*'):
-            
+            if question.attrib['pos'] == "55":
+                a = ""
+
             if question.tag in ["sectionEnd", "loopEnd"]:
-                parent_nodes = list()
+                if len(parent_nodes) > 0: parent_nodes.pop()
             else:
                 if question.attrib["surveyBuilderV3CMSObjGUID"] not in ["101622D0-8B7C-4DE5-B97B-67D33C2E51D7","0AB35540-8549-42F2-A4C4-EA793334170F"]:
                     object_name = question.attrib["objectName"]
@@ -54,7 +56,7 @@ class iQuestion(dict):
         self.generate(question, answersref, parent_nodes=parent_nodes)
     
     def generate(self, question, answersref, parent_nodes=None):
-        if question.attrib['pos'] == "162":
+        if question.attrib['pos'] == "302":
             a = ""
         self["text"] = self.get_text(question)
         self["attributes"] = question.attrib
@@ -157,7 +159,7 @@ class iQuestion(dict):
         s = '%s "%s" categorical%s{%s};' % (
             self["attributes"]["objectName"], 
             self["text"], 
-            "[1..1]" if self["answers"]["answerref"]["attributes"]["isMultipleSelection"] else "[1..]",
+            "[1..]" if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])) else "[1..1]",
             self["answers"]["syntax"]
         )
         return s
@@ -218,10 +220,11 @@ class iQuestion(dict):
         
         mdd_col = self["attributes"]["objectName"] if parent_name is None else "%s.%s" % (parent_name, self["attributes"]["objectName"])
         
-        if(self["datatype"].value == dataTypeConstants.mtCategorical.value):
+        if(self["datatype"].value == dataTypeConstants.mtCategorical.value or self["datatype"].value == dataTypeConstants.mtObject.value):
             columns[mdd_col] = dict({
                 "csv" : list(),
-                "others" : dict()
+                "others" : dict(),
+                "datatype" : dataTypeConstants.mtCategorical
             })
 
             if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
@@ -238,16 +241,13 @@ class iQuestion(dict):
                                             option["otherfield"]["objectName"])
 
                         columns[mdd_col]["others"][mdd_other_col] = dict({
-                            "csv" : csv_other_col,
+                            "csv" : [csv_other_col],
                             "datatype" : option["otherfield"]["datatype"]
                         })
             else:
                 csv_col = re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))
 
-                columns[mdd_col] = dict({
-                    "csv" : [csv_col],
-                    "others" : dict()
-                })
+                columns[mdd_col]["csv"].append(csv_col)
             
                 for key, option in self["answers"]["options"].items():
                     if bool(int(option["attributes"]["isOtherSpecify"])):
@@ -260,16 +260,14 @@ class iQuestion(dict):
                             "csv" : [csv_other_col],
                             "datatype" : option["otherfield"]["datatype"]
                         })
-        elif(self["datatype"].value == dataTypeConstants.mtObject.value):
-            columns[mdd_col] = dict({
-                "csv" : [mdd_col]
-            })
-
-            columns[f'{mdd_col}{self["comment"]["objectName"]}'] = dict({
-                "csv" : "%s.%s" % (
-                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)),
-                            self["comment"]["objectName"])
-            })
+            
+            if (self["datatype"].value == dataTypeConstants.mtObject.value):
+                columns[f'{mdd_col}{self["comment"]["objectName"]}'] = dict({
+                    "csv" : ["%s.%s" % (
+                                re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)),
+                                self["comment"]["objectName"])],
+                    "datatype" : dataTypeConstants.mtText if int(self["comment"]["datatype"]) == 3 else dataTypeConstants.mtDouble
+                })
         else:
             columns[mdd_col] = dict({
                 "csv" : [re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))]
@@ -278,16 +276,17 @@ class iQuestion(dict):
         return columns
 
     def get_columns(self):
+        columns = list()
+
         if "parents" not in self.keys():
-            return self.generate_columns()
+            columns.append(self.generate_columns()) 
         else:
-            columns = list()
             parents = self.get_parents(0)
             
             for parent_name in parents:
                 columns.append(self.generate_columns(parent_name=parent_name)) 
 
-            return columns
+        return columns
             
     def get_parents(self, index):
         if index == len(self["parents"]):
