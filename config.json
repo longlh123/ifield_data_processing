@@ -2,10 +2,10 @@
     "project_name" : "HACOCHI_TEST",
     "run_mdd_source" : true,
     "source_initialization" : {
-        "delete_all" : false,
+        "delete_all" : true,
         "remove_all_ids" : true,
         "dummy_data_required": false
-    }, 
+    },
     "main" : {
         "xmls" : {
             "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
@@ -15,21 +15,21 @@
     "stages" : {
         "stage-1" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "8589" : "ProtoSurvey_8589_{DB0004C7-4A9B-4FC7-BA70-4046DCD096AD}.xml"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "8589"
         },
         "stage-2" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "8591" : "ProtoSurvey_8591_{1AF93323-8806-4F0A-8296-2BE1DDEE1B96}.xml"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "8591"
         },
         "stage-3" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "8594" : "ProtoSurvey_8594_{EA8AB6D2-8440-4F0D-A096-85EB27EE1A2A}.xml"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "8594"
         }
     }
 }

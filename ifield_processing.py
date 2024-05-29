@@ -26,14 +26,31 @@ f = open('config.json', mode = 'r', encoding="utf-8")
 config = json.loads(f.read())
 f.close()
 
-main_protoid_final = config["main"]["protoid_final"]
+main_protoid_final = int(config["main"]["protoid_final"])
 
 isurveys = {}
 
-#Đọc file xml của phần main
-for proto_id, xml_file in config["main"]["xmls"].items(): 
-    isurveys[proto_id] = iSurvey(f'source\\xml\\{xml_file}') 
+csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
+csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=False)
 
+for csv_file in csv_files:
+    df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
+    
+    for proto_id in list(np.unique(list(df["ProtoSurveyID"]))):
+        if proto_id not in isurveys.keys():
+            isurveys[proto_id] = {
+                "csv" : csv_file,
+                "survey" : None
+            }
+
+#Read the xml file for the main section
+for proto_id, xml_file in config["main"]["xmls"].items():
+    isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+
+#Read the xml file for the placement + recall section
+for stage_id, stage_obj in config["stages"].items():
+    for proto_id, xml_file in stage_obj["xmls"] .items():
+        isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
 
 if config["run_mdd_source"]:
     #Create mdd/ddf file based on xmls file
@@ -56,7 +73,7 @@ if config["run_mdd_source"]:
 
     mdd_source.addScript("InstanceID", "InstanceID \"InstanceID\" text;")
 
-    for question_name, question in isurveys[main_protoid_final]["questions"].items():
+    for question_name, question in isurveys[main_protoid_final]["survey"]["questions"].items():
         if "syntax" in question.keys():
             
             if question["attributes"]["objectName"] in ["SHELL_BLOCK"]:
@@ -92,12 +109,14 @@ try:
     if config["source_initialization"]["delete_all"]:
         sql_delete = "DELETE FROM VDATA"
         adoConn.Execute(sql_delete)
-    
-    csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
-    csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=True)
+        adoConn.Close()
 
-    for csv_file in csv_files:
-        df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
+    #csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
+    #csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=True)
+
+    for proto_id, xml_file in config["main"]["xmls"].items():
+
+        df = pd.read_csv(isurveys[int(proto_id)]["csv"], encoding="utf-8", low_memory=False)
         df.set_index(['InstanceID'], inplace=True)
 
         #Allow inserting dummy data
@@ -124,9 +143,11 @@ try:
                 df_data = df_data.loc[df_data["System_LocationID"] != "_DefaultSP"]
 
             if not df_data.empty:
+                adoConn.Open(conn)
+
                 for i, row in df_data[list(df_data.columns)].iterrows():
                     try:
-                        isurvey = isurveys[str(row["ProtoSurveyID"])]
+                        isurvey = isurveys[int(row["ProtoSurveyID"])]["survey"]
                     except Exception as ex:
                         raise Exception("Config Error", "ProtoID {} should be declare in the config file.".format(str(row["ProtoSurveyID"])))
                         
@@ -203,11 +224,16 @@ try:
                             adoConn.Execute(sql_update)
                     except:
                         continue
+
+                adoConn.Close()
     
     #Delete all data before inserting new data (default is FALSE)
     if config["source_initialization"]["remove_all_ids"]:
+        adoConn.Open(conn)
+
         sql_delete = "DELETE FROM VDATA WHERE Not _LoaiPhieu.ContainsAny({_1,_5})"
         adoConn.Execute(sql_delete)
+        adoConn.Close()
 
 except Exception as error:
     print(repr(error))
