@@ -8,15 +8,29 @@
     <li><b>run_mdd_source</b>: Select TRUE to create an original mdd/ddf file or FALSE to skip this step.</li>
 </ol>
 
-<p>Step 2: Setup for the F2F/CLT/CATI</p>
+<p>Step 3: Setup for the F2F/CLT/CATI (optional)</p>
+
+<ol>
+    <li><b>delete_all</b>: Delete all data before inserting new data (default is FALSE)</li>
+    <li><b>dummy_data_required</b>: Allow inserting dummy data (default is FALSE)
+    <li><b>remove_all_ids</b>: Remove all IDs with types of cancel and extra (default is TRUE)
+</ol>
+
+<p>Step 3: Setup for the F2F/CLT/CATI</p>
 
 <ol>
     <li>
         <b>main</b>:
         <ul>
-            <li><b>xmls</b>: Điền thông tin các file xmls của dự án (từ version cũ -> version mới) theo cấu trúc <b>protodid: file_name.xml</b></li>
-            <li><b>protoid_final</b>: Protoid được dùng để tạo file original mdd/ddf</li>
-            <li><b>csv</b>: Điền thông tin file finalize csv</li>
+            <li>
+                <b>xmls</b>: Fill in the information for the project's XML files (from the old version to the new version) according to the syntax:
+                <pre>
+                    <code>
+                        "protodid": "file_name.xml"
+                    </code>
+                </pre>
+            </li>
+            <li><b>protoid_final</b>: Protoid is used fo create the file original mdd/ddf file</li>
         <ul>
     </li>
 </ol>
@@ -25,37 +39,36 @@
 <pre>
     <code>
         {
-            "project_name" : "###--Enter a project name--###",
+            "project_name" : "--Enter a project name--",
             "run_mdd_source" : true, 
             "main" : {
                 "xmls" : {
-                    "###--Enter a protodid--###" : "###--Enter a xml file--###",
-                    "###--Enter a protodid--###" : "###--Enter a xml file--###"
+                    "--Enter a protodid--" : "--Enter a xml file--",
+                    "--Enter a protodid--" : "--Enter a xml file--"
                 },
-                "protoid_final" : "8402",
-                "csv" : "###--Enter a csv file--###"
+                "protoid_final" : "--Enter a protoid final--"
             },
             "stages" : {
                 "stage-1" : {
                     "xmls" : {
-                        "###--Enter a protodid--###" : "###--Enter a xml file--###"
+                        "--Enter a protodid--" : "--Enter a xml file--",
+                        "--Enter a protodid--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "8402",
-                    "csv" : "###--Enter a csv file--###"
+                    "protoid_final" : "--Enter a protoid final--"
                 },
                 "stage-2" : {
                     "xmls" : {
-                        "###--Enter a protodid--###" : "###--Enter a xml file--###"
+                        "--Enter a protodid--" : "--Enter a xml file--",
+                        "--Enter a protodid--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "8402",
-                    "csv" : "###--Enter a csv file--###"
+                    "protoid_final" : "--Enter a protoid final--"
                 },
                 "stage-3" : {
                     "xmls" : {
-                        "###--Enter a protodid--###" : "###--Enter a xml file--###"
+                        "--Enter a protodid--" : "--Enter a xml file--",
+                        "--Enter a protodid--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "8402",
-                    "csv" : "###--Enter a csv file--###"
+                    "protoid_final" : "--Enter a protoid final--"
                 }
             }
         }

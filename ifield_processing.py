@@ -1,8 +1,10 @@
+import sys
 import os
 import shutil
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
+import re
 import json
 import glob
 import win32com.client as w32
@@ -72,75 +74,141 @@ if config["run_mdd_source"]:
 current_mdd_file = "data\\{}_EXPORT.mdd".format(config["project_name"])
 current_ddf_file = "data\\{}_EXPORT.ddf".format(config["project_name"])
 
-df_main = pd.read_csv(f'source\\csv\\{config["main"]["csv"]}', encoding="utf-8")
-df_main.set_index(['InstanceID'], inplace=True)
+try:
+    if not os.path.isfile(current_mdd_file) or not os.path.isfile(current_ddf_file):
+        raise Exception("File Error", "File mdd/ddf is not exist.")
 
-adoConn = w32.Dispatch('ADODB.Connection')
-conn = "Provider=mrOleDB.Provider.2; Data Source = mrDataFileDsc; Location={}; Initial Catalog={}; Mode=ReadWrite; MR Init Category Names=1".format(current_ddf_file, current_mdd_file)
-adoConn.Open(conn)
+    #Open the update data file
+    df_update_data = pd.read_csv("source\\update_data.csv", encoding="utf-8")
 
-sql_delete = "DELETE FROM VDATA"
-adoConn.Execute(sql_delete)
+    if not df_update_data.empty:
+        df_update_data.set_index(["InstanceID"], inplace=True)
 
-for i, row in df_main[list(df_main.columns)].iterrows():
-    try:
-        sql_insert = "INSERT INTO VDATA(InstanceID) VALUES(%s)" % (row.name)
-        adoConn.Execute(sql_insert)
+    adoConn = w32.Dispatch('ADODB.Connection')
+    conn = "Provider=mrOleDB.Provider.2; Data Source = mrDataFileDsc; Location={}; Initial Catalog={}; Mode=ReadWrite; MR Init Category Names=1".format(current_ddf_file, current_mdd_file)
+    adoConn.Open(conn)
 
-        isurvey = isurveys[str(row["ProtoSurveyID"])]
+    #Delete all data before inserting new data (default is FALSE)
+    if config["source_initialization"]["delete_all"]:
+        sql_delete = "DELETE FROM VDATA"
+        adoConn.Execute(sql_delete)
+    
+    csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
+    csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=True)
 
-        c = list()
-        v = list()
+    for csv_file in csv_files:
+        df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
+        df.set_index(['InstanceID'], inplace=True)
 
-        for key, question in isurvey["questions"].items():
-            if question["attributes"]["objectName"] in ["Q6a_Text"]:
-                if row.name == 1609219:
-                    a = ""
-
-            if question["datatype"] not in [dataTypeConstants.mtNone, dataTypeConstants.mtLevel]:
-                for i in range(len(question["columns"])):
-                    for mdd_col, csv_obj in question["columns"][i].items():
+        #Allow inserting dummy data
+        if config["source_initialization"]["dummy_data_required"]:
+            df = df.loc[df["System_LocationID"] == "_DefaultSP"]
+        else:
+            df = df.loc[df["System_LocationID"] != "_DefaultSP"]
+            
+        m = Metadata(mdd_file=current_mdd_file, ddf_file=current_ddf_file, sql_query="SELECT InstanceID FROM VDATA")
+        df_instancedis = m.convertToDataFrame(questions=["InstanceID"])
         
-                        if (question["datatype"].value == dataTypeConstants.mtCategorical.value) or (question["datatype"].value == dataTypeConstants.mtObject.value and csv_obj["datatype"].value == dataTypeConstants.mtCategorical.value):
-                            if bool(int(question["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
-                                if row[csv_obj["csv"]].sum() > 0:
-                                    c.append(mdd_col)
-                                    v.append("{%s}" % (",".join([k.split(".")[-1] for k, v in dict(row[csv_obj["csv"]]).items() if v == 1])))
-                            else:
-                                if not pd.isnull(row[csv_obj["csv"][0]]): 
-                                    c.append(mdd_col)
-                                    v.append("{%s}" % (question["answers"]["options"][str(int(row[csv_obj["csv"][0]]))]["objectname"]))
-                            
-                            for mdd_other_col, csv_other_obj in csv_obj["others"].items():
-
-                                if not pd.isnull(row[csv_other_obj["csv"][0]]):
-                                    c.append(mdd_other_col)
-
-                                    match int(csv_other_obj["datatype"]):
-                                        case 2:
-                                            v.append("{}".format(row[csv_other_obj["csv"][0]]))
-                                        case 3:
-                                            v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
-                                        case 4:
-                                            v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
-                        else:
-                            if not pd.isnull(row[csv_obj["csv"][0]]):
-                                match question["datatype"].value:
-                                    case dataTypeConstants.mtText.value:
-                                        c.append(mdd_col)
-                                        v.append("'{}'".format(". ".join(str(row[csv_obj["csv"][0]]).split('\n'))))
-                                    case dataTypeConstants.mtDate.value:
-                                        c.append(mdd_col)
-                                        v.append("'{}'".format(row[csv_obj["csv"][0]]))
-                                    case dataTypeConstants.mtDouble.value:
-                                        c.append(mdd_col)
-                                        v.append("{}".format(row[csv_obj["csv"][0]]))
-                                    case dataTypeConstants.mtObject.value:
-                                        c.append(mdd_col)
-                                        v.append("{}".format(row[csv_obj["csv"][0]]))
+        if not df_instancedis.empty:
+            df_instancedis.set_index(['InstanceID'], inplace=True)
         
-        sql_update = "UPDATE VDATA SET " + ','.join([cx + str(r" = %s") for cx in c]) % tuple(v) + " WHERE InstanceID = {}".format(row.name)
-        adoConn.Execute(sql_update)    
-    except Exception as ex:
-        #print(sql_insert, ex, sep="-")
-        sys.exit(1)
+        ids = [id for id in list(df.index) if str(id) not in list(df_instancedis.index)]
+
+        if len(ids) > 0:
+            df_data = df.loc[ids]
+
+            #Allow inserting dummy data
+            if config["source_initialization"]["dummy_data_required"]:
+                df_data = df_data.loc[df_data["System_LocationID"] == "_DefaultSP"]
+            else:
+                df_data = df_data.loc[df_data["System_LocationID"] != "_DefaultSP"]
+
+            if not df_data.empty:
+                for i, row in df_data[list(df_data.columns)].iterrows():
+                    try:
+                        isurvey = isurveys[str(row["ProtoSurveyID"])]
+                    except Exception as ex:
+                        raise Exception("Config Error", "ProtoID {} should be declare in the config file.".format(str(row["ProtoSurveyID"])))
+                        
+                    sql_insert = "INSERT INTO VDATA(InstanceID) VALUES(%s)" % (row.name)
+                    adoConn.Execute(sql_insert)
+                    
+                    c = list()
+                    v = list()
+
+                    for key, question in isurvey["questions"].items():
+                        if question["attributes"]["objectName"] in ["Q6a_Text"]:
+                            if row.name == 1609219:
+                                a = ""
+
+                        if question["datatype"] not in [dataTypeConstants.mtNone, dataTypeConstants.mtLevel]:
+                            for i in range(len(question["columns"])):
+                                for mdd_col, csv_obj in question["columns"][i].items():
+                    
+                                    if (question["datatype"].value == dataTypeConstants.mtCategorical.value) or (question["datatype"].value == dataTypeConstants.mtObject.value and csv_obj["datatype"].value == dataTypeConstants.mtCategorical.value):
+                                        if bool(int(question["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
+                                            if row[csv_obj["csv"]].sum() > 0:
+                                                c.append(mdd_col)
+                                                v.append("{%s}" % (",".join([k.split(".")[-1] for k, v in dict(row[csv_obj["csv"]]).items() if v == 1])))
+                                        else:
+                                            if not pd.isnull(row[csv_obj["csv"][0]]): 
+                                                c.append(mdd_col)
+                                                v.append("{%s}" % (question["answers"]["options"][str(int(row[csv_obj["csv"][0]]))]["objectname"]))
+                                        
+                                        for mdd_other_col, csv_other_obj in csv_obj["others"].items():
+
+                                            if not pd.isnull(row[csv_other_obj["csv"][0]]):
+                                                c.append(mdd_other_col)
+
+                                                match int(csv_other_obj["datatype"]):
+                                                    case 2:
+                                                        v.append("{}".format(row[csv_other_obj["csv"][0]]))
+                                                    case 3:
+                                                        v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
+                                                    case 4:
+                                                        v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
+                                    else:
+                                        if not pd.isnull(row[csv_obj["csv"][0]]):
+                                            match question["datatype"].value:
+                                                case dataTypeConstants.mtText.value:
+                                                    c.append(mdd_col)
+                                                    v.append("'{}'".format(". ".join(re.split('\n|\r', str(row[csv_obj["csv"][0]])))))
+                                                case dataTypeConstants.mtDate.value:
+                                                    c.append(mdd_col)
+                                                    v.append("'{}'".format(row[csv_obj["csv"][0]]))
+                                                case dataTypeConstants.mtDouble.value:
+                                                    c.append(mdd_col)
+                                                    v.append("{}".format(row[csv_obj["csv"][0]]))
+                                                case dataTypeConstants.mtObject.value:
+                                                    c.append(mdd_col)
+                                                    v.append("{}".format(row[csv_obj["csv"][0]]))
+                    
+                    sql_update = "UPDATE VDATA SET " + ','.join([cx + str(r" = %s") for cx in c]) % tuple(v) + " WHERE InstanceID = {}".format(row.name)
+                    adoConn.Execute(sql_update)
+
+                    try:
+                        df_update_data_by_id = df_update_data[["Question Name","Current Value"]].loc[row.name]
+
+                        if not df_update_data_by_id.empty:
+                            sql_update = "UPDATE VDATA SET %s WHERE InstanceID = %s" % (
+                                "%s = %s" % (
+                                    df_update_data_by_id[0], 
+                                    'NULL' if pd.isnull(df_update_data_by_id[1]) else (df_update_data_by_id[1] if str(df_update_data_by_id[1]).isnumeric() else "'%s'" % (df_update_data_by_id[1]))
+                                ) if isinstance(df_update_data_by_id,pd.Series) else ",".join(["%s = %s" % (
+                                    x[0],
+                                    'NULL' if pd.isnull(x[1]) else (x[1] if str(x[1]).isnumeric() else "'%s'" % (x[1]))
+                                ) for x in [tuple(x) for x in df_update_data[["Question Name","Current Value"]].loc[row.name].to_numpy()]]),
+                                row.name
+                            )
+                            adoConn.Execute(sql_update)
+                    except:
+                        continue
+    
+    #Delete all data before inserting new data (default is FALSE)
+    if config["source_initialization"]["remove_all_ids"]:
+        sql_delete = "DELETE FROM VDATA WHERE Not _LoaiPhieu.ContainsAny({_1,_5})"
+        adoConn.Execute(sql_delete)
+
+except Exception as error:
+    print(repr(error))
+    #sys.exit(repr(error))

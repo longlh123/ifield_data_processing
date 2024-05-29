@@ -1,33 +1,35 @@
 {
     "project_name" : "HACOCHI_TEST",
-    "run_mdd_source" : false, 
+    "run_mdd_source" : true,
+    "source_initialization" : {
+        "delete_all" : false,
+        "remove_all_ids" : true,
+        "dummy_data_required": false
+    }, 
     "main" : {
         "xmls" : {
             "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
         },
-        "protoid_final" : "8402",
-        "csv" : "ExportDataA3BB9DC81634499DAAB4EDF83F346680.csv"
+        "protoid_final" : "8402"
     },
     "stages" : {
         "stage-1" : {
             "xmls" : {
                 "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
             },
-            "protoid_final" : "8402",
-            "csv" : "ExportDataA3BB9DC81634499DAAB4EDF83F346680.csv"
+            "protoid_final" : "8402"
         },
         "stage-2" : {
             "xmls" : {
                 "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
             },
-            "csv" : "ExportDataA3BB9DC81634499DAAB4EDF83F346680.csv"
+            "protoid_final" : "8402"
         },
         "stage-3" : {
             "xmls" : {
                 "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
             },
-            "protoid_final" : "8402",
-            "csv" : "ExportDataA3BB9DC81634499DAAB4EDF83F346680.csv"
+            "protoid_final" : "8402"
         }
     }
 }
