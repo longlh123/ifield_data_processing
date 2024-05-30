@@ -4,7 +4,7 @@
 <p>Step 1: Setup config.json</p>
 
 <ol>
-    <li><b>project_name</b>: Enter a project name</li>
+    <li><b>project_name</b>: Enter a project name(Nhan ho testing markup file editing)</li>
     <li><b>run_mdd_source</b>: Select TRUE to create an original mdd/ddf file or FALSE to skip this step.</li>
 </ol>
 

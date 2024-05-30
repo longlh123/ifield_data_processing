@@ -2,10 +2,10 @@
     "project_name" : "PVN2024118_CMI_PICO_SAPA",
     "run_mdd_source" : true,
     "source_initialization" : {
-        "delete_all" : false,
+        "delete_all" : true,
         "remove_all_ids" : true,
         "dummy_data_required": false
-    }, 
+    },
     "main" : {
         "xmls" : {
             "8641" : "ProtoSurvey_8641_{7BE38B31-9311-4E04-AD93-CF1800FB4FA5}.xml",
@@ -16,21 +16,22 @@
     "stages" : {
         "stage-1" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "--Enter a protodid 1--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "--Enter a protodid 1--"
         },
         "stage-2" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "--Enter a protodid 1--" : "--Enter a xml file--",
+                "--Enter a protodid 2--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "--Enter a protodid 2--"
         },
         "stage-3" : {
             "xmls" : {
-                "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+                "--Enter a protodid 1--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402"
+            "protoid_final" : "--Enter a protodid 1--"
         }
     }
 }
