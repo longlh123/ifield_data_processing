@@ -33,7 +33,7 @@ isurveys = {}
 csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
 csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=False)
 
-for csv_file in csv_files:
+for csv_file in tqdm(csv_files, desc="Read the csv file"):
     df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
     
     for proto_id in list(np.unique(list(df["ProtoSurveyID"]))):
@@ -44,11 +44,11 @@ for csv_file in csv_files:
             }
 
 #Read the xml file for the main section
-for proto_id, xml_file in config["main"]["xmls"].items():
+for proto_id, xml_file in tqdm(config["main"]["xmls"].items(), desc="Convet the xml file for the main section"):
     isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
 
 #Read the xml file for the placement + recall section
-for stage_id, stage_obj in config["stages"].items():
+for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
     for proto_id, xml_file in stage_obj["xmls"] .items():
         isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
 
@@ -73,7 +73,7 @@ if config["run_mdd_source"]:
 
     mdd_source.addScript("InstanceID", "InstanceID \"InstanceID\" text;")
 
-    for question_name, question in isurveys[main_protoid_final]["survey"]["questions"].items():
+    for question_name, question in tqdm(isurveys[main_protoid_final]["survey"]["questions"].items(), desc="Convert the mdd/ddf file"):
         if "syntax" in question.keys():
             
             if question["attributes"]["objectName"] in ["SHELL_BLOCK"]:
@@ -111,10 +111,7 @@ try:
         adoConn.Execute(sql_delete)
         adoConn.Close()
 
-    #csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
-    #csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=True)
-
-    for proto_id, xml_file in config["main"]["xmls"].items():
+    for proto_id, xml_file in tqdm(config["main"]["xmls"].items(), desc="Insert data into the mdd/ddf file"):
 
         df = pd.read_csv(isurveys[int(proto_id)]["csv"], encoding="utf-8", low_memory=False)
         df.set_index(['InstanceID'], inplace=True)
@@ -145,7 +142,7 @@ try:
             if not df_data.empty:
                 adoConn.Open(conn)
 
-                for i, row in df_data[list(df_data.columns)].iterrows():
+                for i, row in tqdm(df_data[list(df_data.columns)].iterrows(), desc="During the data insertion process"):
                     try:
                         isurvey = isurveys[int(row["ProtoSurveyID"])]["survey"]
                     except Exception as ex:
