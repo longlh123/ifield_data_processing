@@ -26,72 +26,93 @@ f = open('config.json', mode = 'r', encoding="utf-8")
 config = json.loads(f.read())
 f.close()
 
-main_protoid_final = int(config["main"]["protoid_final"])
+try:
+    main_protoid_final = int(config["main"]["protoid_final"])
 
-isurveys = {}
+    isurveys = {}
 
-csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
-csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=False)
+    csv_files = glob.glob(os.path.join("source\\csv", "*.csv"))
+    csv_files = sorted(csv_files, key=lambda x: os.path.getctime(x), reverse=False)
 
-for csv_file in tqdm(csv_files, desc="Read the csv file"):
-    df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
+    for csv_file in tqdm(csv_files, desc="Read the csv file"):
+        df = pd.read_csv(csv_file, encoding="utf-8", low_memory=False)
+        
+        for proto_id in list(np.unique(list(df["ProtoSurveyID"]))):
+            if proto_id not in isurveys.keys():
+                isurveys[proto_id] = {
+                    "csv" : csv_file,
+                    "survey" : None
+                }
+
+    #Read the xml file for the main section
+    try:
+        for proto_id, xml_file in tqdm(config["main"]["xmls"].items(), desc="Convet the xml file for the main section"):
+            if os.path.exists(f'source\\xml\\{xml_file}'):
+                isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+            else:
+                print("Config Warning: ", "ProtoID {} should be declare in the config file.".format(proto_id))
+    except:
+        raise Exception("Config Error: ", "ProtoID {} has no data in the CSV file.".format(proto_id))
     
-    for proto_id in list(np.unique(list(df["ProtoSurveyID"]))):
-        if proto_id not in isurveys.keys():
-            isurveys[proto_id] = {
-                "csv" : csv_file,
-                "survey" : None
-            }
+    #Read the xml file for the placement + recall section
+    follow_up_questions = []
 
-#Read the xml file for the main section
-for proto_id, xml_file in tqdm(config["main"]["xmls"].items(), desc="Convet the xml file for the main section"):
-    isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+    for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
+        try:
+            for proto_id, xml_file in stage_obj["xmls"] .items():
+                if os.path.exists(f'source\\xml\\{xml_file}'):
+                    isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+                else:
+                    print("Config Warning: ", "ProtoID {} should be declare in the config file.".format(proto_id))
+        except:
+            raise Exception("Config Error: ", "ProtoID {} has no data in the CSV file.".format(proto_id))
+        
+        if len(follow_up_questions) > 0:
+            follow_up_questions.extend([{a : 0}  for a in list(isurveys[int(proto_id)]["survey"]["questions"].keys()) if a not in follow_up_questions]) 
 
-#Read the xml file for the placement + recall section
-for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
-    for proto_id, xml_file in stage_obj["xmls"] .items():
-        isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+    if config["run_mdd_source"]:
+        #Create mdd/ddf file based on xmls file
+        source_mdd_file = r"template\TemplateProject.mdd"
+        current_mdd_file = "data\\{}.mdd".format(config["project_name"])
+        source_dms_file = r"dms\OutputDDFFile.dms"
 
-if config["run_mdd_source"]:
-    #Create mdd/ddf file based on xmls file
-    source_mdd_file = r"template\TemplateProject.mdd"
-    current_mdd_file = "data\\{}.mdd".format(config["project_name"])
-    source_dms_file = r"dms\OutputDDFFile.dms"
+        mdd_files = glob.glob(os.path.join("data", "*.mdd"))
+        ddf_files = glob.glob(os.path.join("data", "*.ddf"))
 
-    mdd_files = glob.glob(os.path.join("data", "*.mdd"))
-    ddf_files = glob.glob(os.path.join("data", "*.ddf"))
+        for f in mdd_files:
+            os.remove(f)
+        for f in ddf_files:
+            os.remove(f)
 
-    for f in mdd_files:
-        os.remove(f)
-    for f in ddf_files:
-        os.remove(f)
+        if not os.path.exists(current_mdd_file):
+            shutil.copy(source_mdd_file, current_mdd_file)
 
-    if not os.path.exists(current_mdd_file):
-        shutil.copy(source_mdd_file, current_mdd_file)
+        mdd_source = Metadata(mdd_file=current_mdd_file, dms_file=source_dms_file)
 
-    mdd_source = Metadata(mdd_file=current_mdd_file, dms_file=source_dms_file)
+        mdd_source.addScript("InstanceID", "InstanceID \"InstanceID\" text;")
 
-    mdd_source.addScript("InstanceID", "InstanceID \"InstanceID\" text;")
+        for question_name, question in tqdm(isurveys[main_protoid_final]["survey"]["questions"].items(), desc="Convert the mdd/ddf file for the main question"):
+            if "syntax" in question.keys():
+                
+                if question["attributes"]["objectName"] in ["SHELL_BLOCK"]:
+                    a = ""
 
-    for question_name, question in tqdm(isurveys[main_protoid_final]["survey"]["questions"].items(), desc="Convert the mdd/ddf file"):
-        if "syntax" in question.keys():
-            
-            if question["attributes"]["objectName"] in ["SHELL_BLOCK"]:
+                mdd_source.addScript(question["attributes"]["objectName"], question["syntax"], is_defined_list=question["is_defined_list"], parent_nodes=list() if "parents" not in question.keys() else [q["attributes"]["objectName"] for q in question["parents"]])
+
+                if "comment_syntax" in question.keys():
+                    mdd_source.addScript(f'{question["attributes"]["objectName"]}{question["comment"]["objectName"]}', question["comment_syntax"], parent_nodes=list() if "parents" not in question.keys() else [q["attributes"]["objectName"] for q in question["parents"]])
+
+        if len(follow_up_questions):
+            for question_id in tqdm(follow_up_questions, desc="Convert the mdd/ddf file for the follow-up question"):
                 a = ""
 
-            mdd_source.addScript(question["attributes"]["objectName"], question["syntax"], is_defined_list=question["is_defined_list"], parent_nodes=list() if "parents" not in question.keys() else [q["attributes"]["objectName"] for q in question["parents"]])
+        mdd_source.runDMS()
 
-            if "comment_syntax" in question.keys():
-                mdd_source.addScript(f'{question["attributes"]["objectName"]}{question["comment"]["objectName"]}', question["comment_syntax"], parent_nodes=list() if "parents" not in question.keys() else [q["attributes"]["objectName"] for q in question["parents"]])
+    ###################################################################################
 
-    mdd_source.runDMS()
+    current_mdd_file = "data\\{}_EXPORT.mdd".format(config["project_name"])
+    current_ddf_file = "data\\{}_EXPORT.ddf".format(config["project_name"])
 
-###################################################################################
-
-current_mdd_file = "data\\{}_EXPORT.mdd".format(config["project_name"])
-current_ddf_file = "data\\{}_EXPORT.ddf".format(config["project_name"])
-
-try:
     if not os.path.isfile(current_mdd_file) or not os.path.isfile(current_ddf_file):
         raise Exception("File Error", "File mdd/ddf is not exist.")
 
@@ -223,15 +244,14 @@ try:
                         continue
 
                 adoConn.Close()
-    
+
     #Delete all data before inserting new data (default is FALSE)
     if config["source_initialization"]["remove_all_ids"]:
         adoConn.Open(conn)
 
         sql_delete = "DELETE FROM VDATA WHERE Not _LoaiPhieu.ContainsAny({_1,_5})"
         adoConn.Execute(sql_delete)
-        adoConn.Close()
-
+        adoConn.Close()       
 except Exception as error:
     print(repr(error))
     #sys.exit(repr(error))
