@@ -103,10 +103,10 @@ try:
 
     adoConn = w32.Dispatch('ADODB.Connection')
     conn = "Provider=mrOleDB.Provider.2; Data Source = mrDataFileDsc; Location={}; Initial Catalog={}; Mode=ReadWrite; MR Init Category Names=1".format(current_ddf_file, current_mdd_file)
-    adoConn.Open(conn)
-
+    
     #Delete all data before inserting new data (default is FALSE)
     if config["source_initialization"]["delete_all"]:
+        adoConn.Open(conn)
         sql_delete = "DELETE FROM VDATA"
         adoConn.Execute(sql_delete)
         adoConn.Close()
