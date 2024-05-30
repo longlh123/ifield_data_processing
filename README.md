@@ -43,32 +43,32 @@
             "run_mdd_source" : true, 
             "main" : {
                 "xmls" : {
-                    "--Enter a protodid--" : "--Enter a xml file--",
-                    "--Enter a protodid--" : "--Enter a xml file--"
+                    "--Enter a protodid 1--" : "--Enter a xml file--",
+                    "--Enter a protodid 2--" : "--Enter a xml file--"
                 },
-                "protoid_final" : "--Enter a protoid final--"
+                "protoid_final" : "--Enter a protoid final 2--"
             },
             "stages" : {
                 "stage-1" : {
                     "xmls" : {
-                        "--Enter a protodid--" : "--Enter a xml file--",
-                        "--Enter a protodid--" : "--Enter a xml file--"
+                        "--Enter a protodid 1--" : "--Enter a xml file--",
+                        "--Enter a protodid 2--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "--Enter a protoid final--"
+                    "protoid_final" : "--Enter a protoid final 2--"
                 },
                 "stage-2" : {
                     "xmls" : {
-                        "--Enter a protodid--" : "--Enter a xml file--",
-                        "--Enter a protodid--" : "--Enter a xml file--"
+                        "--Enter a protodid 1--" : "--Enter a xml file--",
+                        "--Enter a protodid 2--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "--Enter a protoid final--"
+                    "protoid_final" : "--Enter a protoid final 2--"
                 },
                 "stage-3" : {
                     "xmls" : {
-                        "--Enter a protodid--" : "--Enter a xml file--",
-                        "--Enter a protodid--" : "--Enter a xml file--"
+                        "--Enter a protodid 1--" : "--Enter a xml file--",
+                        "--Enter a protodid 2--" : "--Enter a xml file--"
                     },
-                    "protoid_final" : "--Enter a protoid final--"
+                    "protoid_final" : "--Enter a protoid final 2--"
                 }
             }
         }
