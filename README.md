@@ -29,6 +29,7 @@
 <p><b>Step 4</b>: Setup for the F2F/CLT/CATI (optional)</p>
 
 <ol>
+    <li><b>default_language: Default the language that is used as the default</b></li>
     <li><b>delete_all</b>: Delete all data before inserting new data (default is FALSE)</li>
     <li><b>dummy_data_required</b>: Allow inserting dummy data (default is FALSE)
     <li><b>remove_all_ids</b>: Remove all IDs with types of cancel and extra (default is TRUE)
