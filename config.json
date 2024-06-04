@@ -1,6 +1,6 @@
 {
-    "project_name" : "--Project Name--",
-    "run_mdd_source" : true,
+    "project_name" : "PVN2023306_SWEETIE_PHASE2",
+    "run_mdd_source" : false,
     "source_initialization" : {
         "delete_all" : true,
         "remove_all_ids" : true,
@@ -8,10 +8,9 @@
     },
     "main" : {
         "xmls" : {
-            "--Enter a protodid 1--" : "--Enter a xml file--",
-            "--Enter a protodid 2--" : "--Enter a xml file--"
+            "8685" : "ProtoSurvey_8685_{E2B6E89D-AC48-4143-BCF5-CEBE96ADFAB1}.xml"
         },
-        "protoid_final" : "--Enter a protodid 2--"
+        "protoid_final" : "8685"
     },
     "stages" : {
         "stage-1" : {

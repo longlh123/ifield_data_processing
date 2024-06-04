@@ -48,9 +48,9 @@ for proto_id, xml_file in tqdm(config["main"]["xmls"].items(), desc="Convet the 
     isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
 
 #Read the xml file for the placement + recall section
-for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
-    for proto_id, xml_file in stage_obj["xmls"] .items():
-        isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+# for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
+#     for proto_id, xml_file in stage_obj["xmls"] .items():
+#         isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
 
 if config["run_mdd_source"]:
     #Create mdd/ddf file based on xmls file
