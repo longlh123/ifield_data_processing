@@ -1,16 +1,35 @@
 <h3>iField data processing</h3>
 
 <blockquote>
-<p>Step 1: Setup config.json</p>
+<p><b>Step 1</b>: To see local branch</p>
+
+<pre>
+    <code>
+        git branch
+    </code>
+</pre>
+
+<p><b>Step 2</b>: To create and move to a new local branch</p>
+
+<pre>
+    <code>
+        git branch -b my-branch-name
+    </code>
+</pre>
+
+<u>Note</u>: replace <b>my-branch-name</b> with whatever name you want
+
+<p><b>Step 3</b>: Setup config.json</p>
 
 <ol>
     <li><b>project_name</b>: Enter a project name</li>
     <li><b>run_mdd_source</b>: Select TRUE to create an original mdd/ddf file or FALSE to skip this step.</li>
 </ol>
 
-<p>Step 3: Setup for the F2F/CLT/CATI (optional)</p>
+<p><b>Step 4</b>: Setup for the F2F/CLT/CATI (optional)</p>
 
 <ol>
+    <li><b>default_language: Default the language that is used as the default</b></li>
     <li><b>delete_all</b>: Delete all data before inserting new data (default is FALSE)</li>
     <li><b>dummy_data_required</b>: Allow inserting dummy data (default is FALSE)
     <li><b>remove_all_ids</b>: Remove all IDs with types of cancel and extra (default is TRUE)

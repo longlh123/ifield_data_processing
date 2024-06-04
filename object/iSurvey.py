@@ -86,7 +86,7 @@ class iQuestion(dict):
                 
                 self["columns"] = self.get_columns()
             case "FCE61FC3-99D3-455A-B635-517183475C26": #DataType.Media | DataType.Categorical
-                if self["answers"]["attributes"]["answerSetID"] != "8":
+                if self["answers"]["attributes"]["answerSetID"] != "8" and self["answers"]["attributes"]["answerSetID"] != "-1":
                     self["datatype"] = dataTypeConstants.mtCategorical
                     self["syntax"] = self.syntax_categorical()
 
@@ -338,7 +338,7 @@ class iAnswers(dict):
         self["attributes"] = answers.attrib
         self["answerref"] = answersref[self["attributes"]["answerSetID"]]
     
-        if self["attributes"]["answerSetID"] != '8':
+        if self["attributes"]["answerSetID"] != '8' and self["attributes"]["answerSetID"] != '-1':
             self["options"] = iOptions(answers.find('options').findall('option'), self["answerref"]) 
             self["syntax"] = self.syntax()
 
