@@ -33,10 +33,13 @@ class iQuestions(dict):
         parent_nodes = list()
         
         for question in body.findall('*'):
+            if question.attrib['pos'] == "55":
+                a = ""
+
             if question.tag in ["sectionEnd", "loopEnd"]:
-                parent_nodes = list()
+                if len(parent_nodes) > 0: parent_nodes.pop()
             else:
-                if question.attrib["surveyBuilderV3CMSObjGUID"] != "101622D0-8B7C-4DE5-B97B-67D33C2E51D7":
+                if question.attrib["surveyBuilderV3CMSObjGUID"] not in ["101622D0-8B7C-4DE5-B97B-67D33C2E51D7","0AB35540-8549-42F2-A4C4-EA793334170F"]:
                     object_name = question.attrib["objectName"]
                     
                     if len(parent_nodes) > 0:
@@ -53,7 +56,7 @@ class iQuestion(dict):
         self.generate(question, answersref, parent_nodes=parent_nodes)
     
     def generate(self, question, answersref, parent_nodes=None):
-        if question.attrib['pos'] == "5":
+        if question.attrib['pos'] == "302":
             a = ""
         self["text"] = self.get_text(question)
         self["attributes"] = question.attrib
@@ -83,7 +86,7 @@ class iQuestion(dict):
                 
                 self["columns"] = self.get_columns()
             case "FCE61FC3-99D3-455A-B635-517183475C26": #DataType.Media | DataType.Categorical
-                if self["answers"]["attributes"]["answerSetID"] != "8":
+                if self["answers"]["attributes"]["answerSetID"] != "8" and self["answers"]["attributes"]["answerSetID"] != "-1":
                     self["datatype"] = dataTypeConstants.mtCategorical
                     self["syntax"] = self.syntax_categorical()
 
@@ -156,7 +159,7 @@ class iQuestion(dict):
         s = '%s "%s" categorical%s{%s};' % (
             self["attributes"]["objectName"], 
             self["text"], 
-            "[1..1]" if self["answers"]["answerref"]["attributes"]["isMultipleSelection"] else "[1..]",
+            "[1..]" if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])) else "[1..1]",
             self["answers"]["syntax"]
         )
         return s
@@ -164,26 +167,26 @@ class iQuestion(dict):
     def syntax_comment(self):
         datatype = "text"
 
-        match self["comment"]["datatype"]:
+        match int(self["comment"]["datatype"]):
             case 2:
                 datatype = "long" if self["comment"]["scale"] == 0 else "double"
             case 3:
                 datatype = "text"
             case 4:
-                datatype = "double"
+                datatype = "date"
                 
         return f'{self["attributes"]["objectName"]} "{self["text"]}" {datatype};'
 
     def syntax_general(self):
         datatype = "text"
 
-        match self["comment"]["datatype"]:
+        match int(self["comment"]["datatype"]):
             case 2:
                 datatype = "long" if self["comment"]["scale"] == 0 else "double"
             case 3:
                 datatype = "text"
             case 4:
-                datatype = "double"
+                datatype = "date"
                 
         return f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]} "{self["text"]}" {datatype};'
 
@@ -212,44 +215,79 @@ class iQuestion(dict):
 
         return text
 
-    def get_columns(self):
-        columns = []
-        csv_columns = []
-
-        def backtrack():
-            if "parents" not in self.keys():
-                match self["datatype"].value:
-                    case dataTypeConstants.mtText.value:
-                        columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(self["attributes"]["objectName"])
-                    case dataTypeConstants.mtCategorical.value:
-                        columns.append(self["attributes"]["objectName"])
-
-                        if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
-                            for key, option in self["answers"]["options"].items():
-                                if not bool(int(option["attributes"]["isDisplayAsHeader"])):
-                                    csv_columns.append("%s.%s" % (self["attributes"]["objectName"], option["objectname"]))
-                        else:
-                            csv_columns.append(self["attributes"]["objectName"])
-                        
-                        for key, option in self["answers"]["options"].items():
-                            if bool(int(option["attributes"]["isOtherSpecify"])):
-                                csv_columns.append("%s.%s" % (self["attributes"]["objectName"], option["otherfield"].attrib["objectName"])) 
-                    case dataTypeConstants.mtObject.value:
-                        columns.append(self["attributes"]["objectName"])
-                        columns.append(f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]}')
-
-                        csv_columns.append(self["attributes"]["objectName"])
-                        csv_columns.append(f'{self["attributes"]["objectName"]}{self["comment"]["objectName"]}')
-                return
-            
-            columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0)])
-            csv_columns.extend([f'{p}.{self["attributes"]["objectName"]}' for p in self.get_parents(0)])
-
-        backtrack()
+    def generate_columns(self, parent_name=None):
+        columns = {}
         
-        return {"mdd" : columns, "csv" : csv_columns}
-    
+        mdd_col = self["attributes"]["objectName"] if parent_name is None else "%s.%s" % (parent_name, self["attributes"]["objectName"])
+        
+        if(self["datatype"].value == dataTypeConstants.mtCategorical.value or self["datatype"].value == dataTypeConstants.mtObject.value):
+            columns[mdd_col] = dict({
+                "csv" : list(),
+                "others" : dict(),
+                "datatype" : dataTypeConstants.mtCategorical
+            })
+
+            if bool(int(self["answers"]["answerref"]["attributes"]["isMultipleSelection"])):
+                for key, option in self["answers"]["options"].items():
+                    csv_col = "%s.%s" % (re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), option["objectname"])
+                    
+                    if not bool(int(option["attributes"]["isDisplayAsHeader"])):
+                        columns[mdd_col]["csv"].append(csv_col)
+                    if bool(int(option["attributes"]["isOtherSpecify"])):
+                        mdd_other_col = "%s.%s" % (mdd_col, option["objectname"])
+                        csv_other_col = "%s.%s.%s" % (
+                                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), 
+                                            option["objectname"], 
+                                            option["otherfield"]["objectName"])
+
+                        columns[mdd_col]["others"][mdd_other_col] = dict({
+                            "csv" : [csv_other_col],
+                            "datatype" : option["otherfield"]["datatype"]
+                        })
+            else:
+                csv_col = re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))
+
+                columns[mdd_col]["csv"].append(csv_col)
+            
+                for key, option in self["answers"]["options"].items():
+                    if bool(int(option["attributes"]["isOtherSpecify"])):
+                        mdd_other_col = "%s.%s" % (mdd_col, option["objectname"])
+                        csv_other_col = "%s.%s" % (
+                                            re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)), 
+                                            option["otherfield"]["objectName"])
+                        
+                        columns[mdd_col]["others"][mdd_other_col] = dict({
+                            "csv" : [csv_other_col],
+                            "datatype" : option["otherfield"]["datatype"]
+                        })
+            
+            if (self["datatype"].value == dataTypeConstants.mtObject.value):
+                columns[f'{mdd_col}{self["comment"]["objectName"]}'] = dict({
+                    "csv" : ["%s.%s" % (
+                                re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col)),
+                                self["comment"]["objectName"])],
+                    "datatype" : dataTypeConstants.mtText if int(self["comment"]["datatype"]) == 3 else dataTypeConstants.mtDouble
+                })
+        else:
+            columns[mdd_col] = dict({
+                "csv" : [re.sub(pattern="(}\])", repl="]", string=re.sub(pattern="(\[{)", repl="[", string=mdd_col))]
+            })
+        
+        return columns
+
+    def get_columns(self):
+        columns = list()
+
+        if "parents" not in self.keys():
+            columns.append(self.generate_columns()) 
+        else:
+            parents = self.get_parents(0)
+            
+            for parent_name in parents:
+                columns.append(self.generate_columns(parent_name=parent_name)) 
+
+        return columns
+            
     def get_parents(self, index):
         if index == len(self["parents"]):
             return 
@@ -284,6 +322,9 @@ class iAnswersRef(dict):
             if answer.attrib["id"] not in self:
                 self[answer.attrib["id"]] = dict()
             
+            if answer.attrib["id"] == '14039':
+                a = ""
+
             #print(answer.attrib["id"])
             self[answer.attrib["id"]]["attributes"] = answer.attrib
             self[answer.attrib["id"]]["options"] = iOptions(answer.findall('option'))
@@ -297,7 +338,7 @@ class iAnswers(dict):
         self["attributes"] = answers.attrib
         self["answerref"] = answersref[self["attributes"]["answerSetID"]]
     
-        if self["attributes"]["answerSetID"] != '8':
+        if self["attributes"]["answerSetID"] != '8' and self["attributes"]["answerSetID"] != '-1':
             self["options"] = iOptions(answers.find('options').findall('option'), self["answerref"]) 
             self["syntax"] = self.syntax()
 
@@ -328,12 +369,19 @@ class iOption(dict):
         if len(answerref) == 0:
             self["text"] = "" if option.find('text') is None else option.find('text').text
             self["attributes"] = option.attrib
+            
+            if option.find('otherField') is not None:
+                self["otherfield"] = option.find('otherField')
         else:
             self["text"] = self.format_text(answerref["options"][option.attrib["pos"]]["text"])
             self["objectname"] = option.attrib["objectName"]
             self["answersetreference"] = option.attrib["answerSetReference"]
             self["attributes"] = answerref["options"][option.attrib["pos"]]["attributes"]
-            self["otherfield"] = option.find('otherField')
+            
+            if option.find('otherField') is not None:
+                self["otherfield"] = answerref["options"][option.attrib["pos"]]["otherfield"].attrib
+                self["otherfield"]["objectName"] = option.find("otherField").attrib["objectName"]
+
             self["syntax"] = self.syntax()
             
     def syntax(self):
@@ -347,12 +395,12 @@ class iOption(dict):
                                 self["objectname"] if not re.match(pattern='^_(.*)$', string=self["objectname"]) else self["objectname"][1:len(self["objectname"])])
 
             if int(self["attributes"]['isOtherSpecify']) == 1:
-                otherdisplaytype = "text"
-
-                match int(self["attributes"]['otherDisplayType']):
+                match int(self["otherfield"]['datatype']):
                     case 2:
                         otherdisplaytype = "double"
                     case 3:
+                        otherdisplaytype = "text"
+                    case 4:
                         otherdisplaytype = "date"
 
                 s = f'{s} other({self["objectname"]} "" {otherdisplaytype})'

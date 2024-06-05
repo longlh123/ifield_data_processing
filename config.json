@@ -1,34 +1,37 @@
 {
     "project_name" : "SAMPI_PHASE_3",
     "run_mdd_source" : true, 
+    "source_initialization" : {
+        "default_language" : "VIT",
+        "delete_all" : true,
+        "remove_all_ids" : true,
+        "dummy_data_required": false
+    },
     "main" : {
         "xmls" : {
             "8742" : "ProtoSurvey_8742_{AFBB1C9F-D1E6-4F30-BAC8-FD99EBFC0D4D}.xml"
         },
-        "protoid_final" : "8742",
-        "csv" : "ExportData98CD6CE7771046A68C4599044A53236B.csv"
+        "protoid_final" : "8742"
     },
     "stages" : {
         "stage-1" : {
             "xmls" : {
-                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+                "--Enter a protodid 1--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402",
-            "csv" : "<!--Enter a csv file-->"
+            "protoid_final" : "--Enter a protodid 1--"
         },
         "stage-2" : {
             "xmls" : {
-                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+                "--Enter a protodid 1--" : "--Enter a xml file--",
+                "--Enter a protodid 2--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402",
-            "csv" : "<!--Enter a csv file-->"
+            "protoid_final" : "--Enter a protodid 2--"
         },
         "stage-3" : {
             "xmls" : {
-                "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+                "--Enter a protodid 1--" : "--Enter a xml file--"
             },
-            "protoid_final" : "8402",
-            "csv" : "<!--Enter a csv file-->"
+            "protoid_final" : "--Enter a protodid 1--"
         }
     }
 }
