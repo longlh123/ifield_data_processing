@@ -180,7 +180,7 @@ try:
                         v = list()
 
                         for key, question in isurvey["questions"].items():
-                            if question["attributes"]["objectName"] in ["Q6a_Text"]:
+                            if question["attributes"]["objectName"] in ["_Q22a"]:
                                 if row.name == 1609219:
                                     a = ""
 
@@ -207,7 +207,7 @@ try:
                                                         case 2:
                                                             v.append("{}".format(row[csv_other_obj["csv"][0]]))
                                                         case 3:
-                                                            v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
+                                                            v.append("'{}'".format(re.sub(pattern="\r|\n", repl=",", string=str(row[csv_other_obj["csv"][0]]))))
                                                         case 4:
                                                             v.append("'{}'".format(row[csv_other_obj["csv"][0]]))
                                         else:
