@@ -9,9 +9,9 @@
     },
     "main" : {
         "xmls" : {
-            "8402" : "ProtoSurvey_8402_{E96D6948-E537-4071-B21F-3E3D677585F9}.xml"
+            "8742" : "ProtoSurvey_8742_{AFBB1C9F-D1E6-4F30-BAC8-FD99EBFC0D4D}.xml"
         },
-        "protoid_final" : "8402"
+        "protoid_final" : "8742"
     },
     "stages" : {
         "stage-1" : {
