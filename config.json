@@ -5,7 +5,7 @@
         "default_language" : "VIT",
         "delete_all" : true,
         "remove_all_ids" : true,
-        "dummy_data_required": false
+        "dummy_data_required": true
     },
     "main" : {
         "xmls" : {
