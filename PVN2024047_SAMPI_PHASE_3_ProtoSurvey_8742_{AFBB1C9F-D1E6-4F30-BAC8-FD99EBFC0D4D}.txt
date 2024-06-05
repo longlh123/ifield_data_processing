@@ -1,0 +1,2187 @@
+Metadata(vi-VN, Question, Label, SystemVariables = false)
+'==================================================================================
+'  STANDARD DEFINED LISTS
+'==================================================================================
+_LST_WARDS "LIST" define
+{
+	_1 "01. " [value = "1", label = "01. ", position = "1"] keycode("1"),
+	_2 "02. " [value = "2", label = "02. ", position = "2"] keycode("2"),
+	_3 "03. " [value = "3", label = "03. ", position = "3"] keycode("3"),
+	_4 "04. " [value = "4", label = "04. ", position = "4"] keycode("4"),
+	_5 "05. " [value = "5", label = "05. ", position = "5"] keycode("5"),
+	_6 "06. " [value = "6", label = "06. ", position = "6"] keycode("6"),
+	_7 "07. " [value = "7", label = "07. ", position = "7"] keycode("7"),
+	_8 "08. " [value = "8", label = "08. ", position = "8"] keycode("8"),
+	_9 "09. " [value = "9", label = "09. ", position = "9"] keycode("9"),
+	_10 "10. " [value = "10", label = "10. ", position = "10"] keycode("10"),
+	_11 "11. " [value = "11", label = "11. ", position = "11"] keycode("11"),
+	_12 "12. " [value = "12", label = "12. ", position = "12"] keycode("12"),
+	_13 "13. " [value = "13", label = "13. ", position = "13"] keycode("13"),
+	_14 "14. " [value = "14", label = "14. ", position = "14"] keycode("14"),
+	_15 "15. " [value = "15", label = "15. ", position = "15"] keycode("15"),
+	_16 "16. " [value = "16", label = "16. ", position = "16"] keycode("16"),
+	_17 "17. " [value = "17", label = "17. ", position = "17"] keycode("17"),
+	_18 "18. " [value = "18", label = "18. ", position = "18"] keycode("18"),
+	_19 "19. " [value = "19", label = "19. ", position = "19"] keycode("19"),
+	_20 "20. " [value = "20", label = "20. ", position = "20"] keycode("20"),
+	_21 "21. " [value = "21", label = "21. ", position = "21"] keycode("21"),
+	_22 "22. " [value = "22", label = "22. ", position = "22"] keycode("22"),
+	_23 "23. " [value = "23", label = "23. ", position = "23"] keycode("23"),
+	_24 "24. " [value = "24", label = "24. ", position = "24"] keycode("24"),
+	_25 "25. " [value = "25", label = "25. ", position = "25"] keycode("25"),
+	_26 "26. " [value = "26", label = "26. ", position = "26"] keycode("26"),
+	_27 "27. " [value = "27", label = "27. ", position = "27"] keycode("27"),
+	_28 "28. " [value = "28", label = "28. ", position = "28"] keycode("28"),
+	_29 "29. " [value = "29", label = "29. ", position = "29"] keycode("29"),
+	_30 "30. " [value = "30", label = "30. ", position = "30"] keycode("30"),
+	_31 "31. " [value = "31", label = "31. ", position = "31"] keycode("31"),
+	_32 "32. " [value = "32", label = "32. ", position = "32"] keycode("32"),
+	_33 "33. " [value = "33", label = "33. ", position = "33"] keycode("33"),
+	_34 "34. " [value = "34", label = "34. ", position = "34"] keycode("34"),
+	_35 "35. " [value = "35", label = "35. ", position = "35"] keycode("35"),
+	_36 "36. " [value = "36", label = "36. ", position = "36"] keycode("36"),
+	_37 "37. " [value = "37", label = "37. ", position = "37"] keycode("37"),
+	_38 "38. " [value = "38", label = "38. ", position = "38"] keycode("38"),
+	_39 "39. " [value = "39", label = "39. ", position = "39"] keycode("39"),
+	_40 "40. " [value = "40", label = "40. ", position = "40"] keycode("40"),
+	_41 "41. " [value = "41", label = "41. ", position = "41"] keycode("41"),
+	_42 "42. " [value = "42", label = "42. ", position = "42"] keycode("42"),
+	_43 "43. " [value = "43", label = "43. ", position = "43"] keycode("43"),
+	_44 "44. " [value = "44", label = "44. ", position = "44"] keycode("44"),
+	_45 "45. " [value = "45", label = "45. ", position = "45"] keycode("45"),
+	_46 "46. " [value = "46", label = "46. ", position = "46"] keycode("46"),
+	_47 "47. " [value = "47", label = "47. ", position = "47"] keycode("47"),
+	_48 "48. " [value = "48", label = "48. ", position = "48"] keycode("48"),
+	_49 "49. " [value = "49", label = "49. ", position = "49"] keycode("49"),
+	_50 "50. " [value = "50", label = "50. ", position = "50"] keycode("50")
+};
+
+_LST_DISTRICTS "LIST" define
+{
+	_1 "01. " [value = "1", label = "01. ", position = "1"] keycode("1"),
+	_2 "02. " [value = "2", label = "02. ", position = "2"] keycode("2"),
+	_3 "03. " [value = "3", label = "03. ", position = "3"] keycode("3"),
+	_4 "04. " [value = "4", label = "04. ", position = "4"] keycode("4"),
+	_5 "05. " [value = "5", label = "05. ", position = "5"] keycode("5"),
+	_6 "06. " [value = "6", label = "06. ", position = "6"] keycode("6"),
+	_7 "07. " [value = "7", label = "07. ", position = "7"] keycode("7"),
+	_8 "08. " [value = "8", label = "08. ", position = "8"] keycode("8"),
+	_9 "09. " [value = "9", label = "09. ", position = "9"] keycode("9"),
+	_10 "10. " [value = "10", label = "10. ", position = "10"] keycode("10"),
+	_11 "11. " [value = "11", label = "11. ", position = "11"] keycode("11"),
+	_12 "12. " [value = "12", label = "12. ", position = "12"] keycode("12"),
+	_13 "13. " [value = "13", label = "13. ", position = "13"] keycode("13"),
+	_14 "14. " [value = "14", label = "14. ", position = "14"] keycode("14"),
+	_15 "15. " [value = "15", label = "15. ", position = "15"] keycode("15"),
+	_16 "16. " [value = "16", label = "16. ", position = "16"] keycode("16"),
+	_17 "17. " [value = "17", label = "17. ", position = "17"] keycode("17"),
+	_18 "18. " [value = "18", label = "18. ", position = "18"] keycode("18"),
+	_19 "19. " [value = "19", label = "19. ", position = "19"] keycode("19"),
+	_20 "20. " [value = "20", label = "20. ", position = "20"] keycode("20"),
+	_21 "21. " [value = "21", label = "21. ", position = "21"] keycode("21"),
+	_22 "22. " [value = "22", label = "22. ", position = "22"] keycode("22"),
+	_23 "23. " [value = "23", label = "23. ", position = "23"] keycode("23"),
+	_24 "24. " [value = "24", label = "24. ", position = "24"] keycode("24"),
+	_25 "25. " [value = "25", label = "25. ", position = "25"] keycode("25"),
+	_26 "26. " [value = "26", label = "26. ", position = "26"] keycode("26"),
+	_27 "27. " [value = "27", label = "27. ", position = "27"] keycode("27"),
+	_28 "28. " [value = "28", label = "28. ", position = "28"] keycode("28"),
+	_29 "29. " [value = "29", label = "29. ", position = "29"] keycode("29"),
+	_30 "30. " [value = "30", label = "30. ", position = "30"] keycode("30")
+};
+
+_LST_PROVINCES "LIST" define
+{
+	_1 "Hồ Chí Minh" [value = "1", label = "Hồ Chí Minh", position = "1"] keycode("1"),
+	_2 "Hà Nội" [value = "2", label = "Hà Nội", position = "2"] keycode("2"),
+	_3 "Đà Nẵng" [value = "3", label = "Đà Nẵng", position = "3"] keycode("3"),
+	_4 "Cần Thơ" [value = "4", label = "Cần Thơ", position = "4"] keycode("4"),
+	_5 "Khánh Hòa" [value = "5", label = "Khánh Hòa", position = "5"] keycode("5"),
+	_6 "Đồng Nai" [value = "6", label = "Đồng Nai", position = "6"] keycode("6"),
+	_7 "Hải Phòng" [value = "7", label = "Hải Phòng", position = "7"] keycode("7"),
+	_8 "Tiền Giang" [value = "8", label = "Tiền Giang", position = "8"] keycode("8"),
+	_9 "An Giang" [value = "9", label = "An Giang", position = "9"] keycode("9"),
+	_10 "Bắc Giang" [value = "10", label = "Bắc Giang", position = "10"] keycode("10"),
+	_11 "Nam Định" [value = "11", label = "Nam Định", position = "11"] keycode("11"),
+	_12 "Thanh Hóa" [value = "12", label = "Thanh Hóa", position = "12"] keycode("12"),
+	_13 "Nghệ An" [value = "13", label = "Nghệ An", position = "13"] keycode("13"),
+	_14 "Thừa Thiên - Huế" [value = "14", label = "Thừa Thiên - Huế", position = "14"] keycode("14"),
+	_15 "Thái Nguyên" [value = "15", label = "Thái Nguyên", position = "15"] keycode("15"),
+	_16 "Vĩnh Phúc" [value = "16", label = "Vĩnh Phúc", position = "16"] keycode("16"),
+	_17 "Bình Dương" [value = "17", label = "Bình Dương", position = "17"] keycode("17"),
+	_18 "Quảng Ninh" [value = "18", label = "Quảng Ninh", position = "18"] keycode("18"),
+	_19 "Sơn La" [value = "19", label = "Sơn La", position = "19"] keycode("19"),
+	_20 "Bình Định" [value = "20", label = "Bình Định", position = "20"] keycode("20"),
+	_21 "Kiên Giang" [value = "21", label = "Kiên Giang", position = "21"] keycode("21"),
+	_22 "Vĩnh Long" [value = "22", label = "Vĩnh Long", position = "22"] keycode("22"),
+	_23 "Đắk Lắk" [value = "23", label = "Đắk Lắk", position = "23"] keycode("23"),
+	_24 "Long An" [value = "24", label = "Long An", position = "24"] keycode("24"),
+	_25 "Lâm Đồng" [value = "25", label = "Lâm Đồng", position = "25"] keycode("25"),
+	_26 "Đồng Tháp" [value = "26", label = "Đồng Tháp", position = "26"] keycode("26"),
+	_27 "Bình Thuận" [value = "27", label = "Bình Thuận", position = "27"] keycode("27"),
+	_28 "Cà Mau" [value = "28", label = "Cà Mau", position = "28"] keycode("28"),
+	_29 "Phú Thọ" [value = "29", label = "Phú Thọ", position = "29"] keycode("29"),
+	_30 "Tây Ninh" [value = "30", label = "Tây Ninh", position = "30"] keycode("30"),
+	_31 "Hưng Yên" [value = "31", label = "Hưng Yên", position = "31"] keycode("31"),
+	_32 "Thái Bình" [value = "32", label = "Thái Bình", position = "32"] keycode("32"),
+	_33 "Quảng Nam" [value = "33", label = "Quảng Nam", position = "33"] keycode("33"),
+	_34 "Bến Tre" [value = "34", label = "Bến Tre", position = "34"] keycode("34"),
+	_35 "Quảng Ngãi" [value = "35", label = "Quảng Ngãi", position = "35"] keycode("35"),
+	_36 "Lạng Sơn" [value = "36", label = "Lạng Sơn", position = "36"] keycode("36"),
+	_37 "Hải Dương" [value = "37", label = "Hải Dương", position = "37"] keycode("37"),
+	_38 "Ninh Bình" [value = "38", label = "Ninh Bình", position = "38"] keycode("38"),
+	_39 "Bắc Kạn" [value = "39", label = "Bắc Kạn", position = "39"] keycode("39"),
+	_40 "Cao Bằng" [value = "40", label = "Cao Bằng", position = "40"] keycode("40"),
+	_41 "Hà Giang" [value = "41", label = "Hà Giang", position = "41"] keycode("41"),
+	_42 "Tuyên Quang" [value = "42", label = "Tuyên Quang", position = "42"] keycode("42"),
+	_43 "Điện Biên" [value = "43", label = "Điện Biên", position = "43"] keycode("43"),
+	_44 "Hòa Bình" [value = "44", label = "Hòa Bình", position = "44"] keycode("44"),
+	_45 "Lai Châu" [value = "45", label = "Lai Châu", position = "45"] keycode("45"),
+	_46 "Lào Cai" [value = "46", label = "Lào Cai", position = "46"] keycode("46"),
+	_47 "Yên Bái" [value = "47", label = "Yên Bái", position = "47"] keycode("47"),
+	_48 "Bắc Ninh" [value = "48", label = "Bắc Ninh", position = "48"] keycode("48"),
+	_49 "Hà Nam" [value = "49", label = "Hà Nam", position = "49"] keycode("49"),
+	_50 "Ninh Thuận" [value = "50", label = "Ninh Thuận", position = "50"] keycode("50"),
+	_51 "Phú Yên" [value = "51", label = "Phú Yên", position = "51"] keycode("51"),
+	_52 "Hà Tĩnh" [value = "52", label = "Hà Tĩnh", position = "52"] keycode("52"),
+	_53 "Quảng Bình" [value = "53", label = "Quảng Bình", position = "53"] keycode("53"),
+	_54 "Quảng Trị" [value = "54", label = "Quảng Trị", position = "54"] keycode("54"),
+	_55 "Đắk Nông" [value = "55", label = "Đắk Nông", position = "55"] keycode("55"),
+	_56 "Gia Lai" [value = "56", label = "Gia Lai", position = "56"] keycode("56"),
+	_57 "Kon Tum" [value = "57", label = "Kon Tum", position = "57"] keycode("57"),
+	_58 "Bà Rịa - Vũng Tàu" [value = "58", label = "Bà Rịa - Vũng Tàu", position = "58"] keycode("58"),
+	_59 "Bình Phước" [value = "59", label = "Bình Phước", position = "59"] keycode("59"),
+	_60 "Bạc Liêu" [value = "60", label = "Bạc Liêu", position = "60"] keycode("60"),
+	_61 "Hậu Giang" [value = "61", label = "Hậu Giang", position = "61"] keycode("61"),
+	_62 "Sóc Trăng" [value = "62", label = "Sóc Trăng", position = "62"] keycode("62"),
+	_63 "Trà Vinh" [value = "63", label = "Trà Vinh", position = "63"] keycode("63")
+};
+
+_LST_Other "" define
+{
+	_971 "Khác, ghi rõ:" [value = "971", label = "Khác, ghi rõ:", position = "1"] keycode("971") other(_971 "" text[ .. ]) fix,
+	_972 "Khác, ghi rõ:" [value = "972", label = "Khác, ghi rõ:", position = "2"] keycode("972") other(_972 "" text[ .. ]) fix,
+	_973 "Khác, ghi rõ:" [value = "973", label = "Khác, ghi rõ:", position = "3"] keycode("973") other(_973 "" text[ .. ]) fix
+};
+
+
+'==================================================================================
+'  STANDARD QUESTIONS
+'==================================================================================
+
+InstanceID "System_LocationID" 
+text[ .. ];
+
+System_LocationID "System_LocationID" 
+text[ .. ];
+
+ProtoSurveyID "System_LocationID" 
+text[ .. ];
+
+NWB_STATUS "NWB Case data status:" 
+categorical[1..1]
+{
+	_1 "Suspended (Quit)" [value = "1", label = "Suspended (Quit)", position = "1"] keycode("1"),
+	_2 "Complete" [value = "2", label = "Complete", position = "2"] keycode("2"),
+	_3 "Cancelled" [value = "3", label = "Cancelled", position = "3"] keycode("3"),
+	_4 "Deleted" [value = "4", label = "Deleted", position = "4"] keycode("4")
+};
+
+NWB_LAST_SAVE_ON_SERVER "Last Save on Server:" 
+date[ .. ];
+
+NWB_LAST_SUBMIT "Last Submit:" 
+date[ .. ];
+
+NWB_CANCEL_REASON "Reason for cancellation:" 
+categorical[1..1]
+{
+	DCH "Data checks (straightlining, verbatims, etc.)" [value = "DCH", label = "Data checks (straightlining, verbatims, etc.)", position = "1"] keycode("DCH"),
+	DUP "Duplicate/repeated phone number" [value = "DUP", label = "Duplicate/repeated phone number", position = "2"] keycode("DUP"),
+	FOL "Follow up done with wrong person" [value = "FOL", label = "Follow up done with wrong person", position = "3"] keycode("FOL"),
+	FRA "Fraudulent interview (not done at all)" [value = "FRA", label = "Fraudulent interview (not done at all)", position = "4"] keycode("FRA"),
+	GAP "Interviews done in close succession/Productivity too high" [value = "GAP", label = "Interviews done in close succession/Productivity too high", position = "5"] keycode("GAP"),
+	GPS "Outside SP limit/Distance between Qs/Too many missing" [value = "GPS", label = "Outside SP limit/Distance between Qs/Too many missing", position = "6"] keycode("GPS"),
+	INC "Incomplete interview/Missed reading statements or questions" [value = "INC", label = "Incomplete interview/Missed reading statements or questions", position = "7"] keycode("INC"),
+	INE "Ineligible respondent/Screen out (e.g. MR/ad agency/PR)" [value = "INE", label = "Ineligible respondent/Screen out (e.g. MR/ad agency/PR)", position = "8"] keycode("INE"),
+	LOI "LOI below the minimum" [value = "LOI", label = "LOI below the minimum", position = "9"] keycode("LOI"),
+	MIS "Mismatch in answers/Wrongly asked/Prompted respondent" [value = "MIS", label = "Mismatch in answers/Wrongly asked/Prompted respondent", position = "10"] keycode("MIS"),
+	NON "Too many non-contactable phone numbers" [value = "NON", label = "Too many non-contactable phone numbers", position = "11"] keycode("NON"),
+	OOQ "Out of quota and not required" [value = "OOQ", label = "Out of quota and not required", position = "12"] keycode("OOQ"),
+	TOD "Interview done at wrong time of day" [value = "TOD", label = "Interview done at wrong time of day", position = "13"] keycode("TOD"),
+	TPI "Test/practice interview" [value = "TPI", label = "Test/practice interview", position = "14"] keycode("TPI"),
+	WPP "Wrong product placement" [value = "WPP", label = "Wrong product placement", position = "15"] keycode("WPP"),
+	ZZZ "Other (the comment here would be mandatory)" [value = "ZZZ", label = "Other (the comment here would be mandatory)", position = "16"] keycode("ZZZ") other(ZZZ "" text[ .. ])
+};
+
+SHELL_QFA "Quality Flag A" 
+text[ .. ];
+
+SHELL_QFB "Quality Flag B" 
+text[ .. ];
+
+SHELL_QFC "Quality Flag C" 
+text[ .. ];
+
+SHELL_QFD "Quality Flag D" 
+text[ .. ];
+
+SHELL_QFE "Quality Flag E" 
+text[ .. ];
+
+SHELL_QFF "Quality Flag F" 
+text[ .. ];
+
+System_Date "Date" 
+date[ .. ];
+
+System_TimeIn "TimeIn" 
+date[ .. ];
+
+System_TimeOut "TimeOut" 
+date[ .. ];
+
+SHELL_START_DATE "Interview start date" 
+date[ .. ];
+
+SHELL_START_TIME "Interview start time" 
+date[ .. ];
+
+SHELL_INT_LENGTH "Interview length (in min)" 
+text[ .. ];
+
+SHELL_BLOCK "SHELL_BLOCK" block fields
+(
+	SHELL_APPLICATION_ID "SHELL_APPLICATION_ID" 
+	text[ .. ];
+
+	SHELL_INTERVIEWER_LOGIN "SHELL_INTERVIEWER_LOGIN" 
+	text[ .. ];
+
+	SHELL_SCH1 "Scheduling Hierarchy level 1" 
+	text[ .. ];
+
+	SHELL_SCH2 "Scheduling Hierarchy level 2" 
+	text[ .. ];
+
+	SHELL_SCH3 "Scheduling Hierarchy level 3" 
+	text[ .. ];
+
+	SHELL_GEOLOCATION_OUTCOME "Accurate location capture: State" 
+	categorical[1..1]
+	{
+		_1 "Accurate GeoLocation already achieved in the last session" [value = "1", label = "Accurate GeoLocation already achieved in the last session", position = "1"] keycode("1"),
+		_2 "Accurate GeoLocation found at the end of the interview" [value = "2", label = "Accurate GeoLocation found at the end of the interview", position = "2"] keycode("2"),
+		_3 "Accurate GeoLocation not found within the timeout period" [value = "3", label = "Accurate GeoLocation not found within the timeout period", position = "3"] keycode("3"),
+		_4 "No GPS available (Android) / No capability to provide GeoLocation (Windows)" [value = "4", label = "No GPS available (Android) / No capability to provide GeoLocation (Windows)", position = "4"] keycode("4"),
+		_5 "Accurate GeoLocation capture not (yet) attempted" [value = "5", label = "Accurate GeoLocation capture not (yet) attempted", position = "5"] keycode("5")
+	};
+
+	SHELL_GEOLOCATION_LATITUDE "Accurate location capture: Latitude" 
+	text[ .. ];
+
+	SHELL_GEOLOCATION_LONGITUDE "Accurate location capture: Longitude" 
+	text[ .. ];
+
+	SHELL_GEOLOCATION_ACCURACY "Accurate location capture: Accuracy" 
+	text[ .. ];
+
+	SHELL_GEOLOCATION_TIMESTAMP "Accurate location capture: Timestamp" 
+	text[ .. ];
+
+);
+
+SHELL_CHAINID "SHELL CHAINID" 
+text[ .. ];
+
+SHELL_COUNTRY "Country" 
+categorical[1..1]
+{
+	_A1 "India" [value = "A1", label = "India", position = "1"] keycode("A1"),
+	_A2 "Mexico" [value = "A2", label = "Mexico", position = "2"] keycode("A2"),
+	_A3 "Poland" [value = "A3", label = "Poland", position = "3"] keycode("A3"),
+	_A4 "Egypt" [value = "A4", label = "Egypt", position = "4"] keycode("A4"),
+	_A5 "KSA" [value = "A5", label = "KSA", position = "5"] keycode("A5"),
+	_A6 "UAE" [value = "A6", label = "UAE", position = "6"] keycode("A6"),
+	_A7 "Algeria" [value = "A7", label = "Algeria", position = "7"] keycode("A7"),
+	_A8 "Morocco" [value = "A8", label = "Morocco", position = "8"] keycode("A8"),
+	_A9 "Tunisia" [value = "A9", label = "Tunisia", position = "9"] keycode("A9"),
+	_A10 "Nigeria" [value = "A10", label = "Nigeria", position = "10"] keycode("A10"),
+	_A11 "Kenya" [value = "A11", label = "Kenya", position = "11"] keycode("A11"),
+	_A12 "Uganda" [value = "A12", label = "Uganda", position = "12"] keycode("A12"),
+	_A13 "Brazil" [value = "A13", label = "Brazil", position = "13"] keycode("A13"),
+	_A14 "China" [value = "A14", label = "China", position = "14"] keycode("A14"),
+	_A15 "Peru" [value = "A15", label = "Peru", position = "15"] keycode("A15"),
+	_A16 "Philippines" [value = "A16", label = "Philippines", position = "16"] keycode("A16"),
+	_A17 "Thailand" [value = "A17", label = "Thailand", position = "17"] keycode("A17"),
+	_A18 "Vietnam" [value = "A18", label = "Vietnam", position = "18"] keycode("A18"),
+	_A19 "Cote d’Ivoire" [value = "A19", label = "Cote d’Ivoire", position = "19"] keycode("A19"),
+	_A20 "Ghana" [value = "A20", label = "Ghana", position = "20"] keycode("A20"),
+	_A21 "Lebanon" [value = "A21", label = "Lebanon", position = "21"] keycode("A21"),
+	_A22 "Jordan" [value = "A22", label = "Jordan", position = "22"] keycode("A22"),
+	_A23 "Pakistan" [value = "A23", label = "Pakistan", position = "23"] keycode("A23"),
+	_A24 "Indonesia" [value = "A24", label = "Indonesia", position = "24"] keycode("A24"),
+	_A25 "Malaysia" [value = "A25", label = "Malaysia", position = "25"] keycode("A25"),
+	_A26 "Singapore" [value = "A26", label = "Singapore", position = "26"] keycode("A26"),
+	_A27 "Argentina" [value = "A27", label = "Argentina", position = "27"] keycode("A27"),
+	_A28 "Bolivia" [value = "A28", label = "Bolivia", position = "28"] keycode("A28"),
+	_A29 "Chile" [value = "A29", label = "Chile", position = "29"] keycode("A29"),
+	_A30 "Mozambique" [value = "A30", label = "Mozambique", position = "30"] keycode("A30"),
+	_A31 "Tanzania" [value = "A31", label = "Tanzania", position = "31"] keycode("A31"),
+	_A32 "Zambia" [value = "A32", label = "Zambia", position = "32"] keycode("A32"),
+	_A33 "Bahrain" [value = "A33", label = "Bahrain", position = "33"] keycode("A33"),
+	_A34 "Qatar" [value = "A34", label = "Qatar", position = "34"] keycode("A34"),
+	_A35 "Kuwait" [value = "A35", label = "Kuwait", position = "35"] keycode("A35"),
+	_A36 "Hong Kong" [value = "A36", label = "Hong Kong", position = "36"] keycode("A36"),
+	_A37 "South Korea" [value = "A37", label = "South Korea", position = "37"] keycode("A37"),
+	_A38 "Taiwan" [value = "A38", label = "Taiwan", position = "38"] keycode("A38"),
+	_A39 "Iraq" [value = "A39", label = "Iraq", position = "39"] keycode("A39"),
+	_A40 "South Africa" [value = "A40", label = "South Africa", position = "40"] keycode("A40"),
+	_A41 "Bulgaria" [value = "A41", label = "Bulgaria", position = "41"] keycode("A41"),
+	_A42 "Romania" [value = "A42", label = "Romania", position = "42"] keycode("A42"),
+	_A43 "Kazakhstan" [value = "A43", label = "Kazakhstan", position = "43"] keycode("A43"),
+	_A44 "Russia" [value = "A44", label = "Russia", position = "44"] keycode("A44"),
+	_A45 "Ukraine" [value = "A45", label = "Ukraine", position = "45"] keycode("A45"),
+	_A46 "Croatia" [value = "A46", label = "Croatia", position = "46"] keycode("A46"),
+	_A47 "Serbia" [value = "A47", label = "Serbia", position = "47"] keycode("A47"),
+	_A48 "Belgium" [value = "A48", label = "Belgium", position = "48"] keycode("A48"),
+	_A49 "France" [value = "A49", label = "France", position = "49"] keycode("A49"),
+	_A50 "Spain" [value = "A50", label = "Spain", position = "50"] keycode("A50"),
+	_A51 "Ethiopia" [value = "A51", label = "Ethiopia", position = "51"] keycode("A51"),
+	_A52 "United Kingdom" [value = "A52", label = "United Kingdom", position = "52"] keycode("A52"),
+	_A53 "Hungary" [value = "A53", label = "Hungary", position = "53"] keycode("A53"),
+	_A54 "Germany" [value = "A54", label = "Germany", position = "54"] keycode("A54"),
+	_A55 "United States" [value = "A55", label = "United States", position = "55"] keycode("A55"),
+	_A56 "Senegal" [value = "A56", label = "Senegal", position = "56"] keycode("A56"),
+	_A57 "Eritrea" [value = "A57", label = "Eritrea", position = "57"] keycode("A57"),
+	_A58 "Angola" [value = "A58", label = "Angola", position = "58"] keycode("A58"),
+	_A59 "Iran" [value = "A59", label = "Iran", position = "59"] keycode("A59"),
+	_A60 "Oman" [value = "A60", label = "Oman", position = "60"] keycode("A60"),
+	_A61 "Albania" [value = "A61", label = "Albania", position = "61"] keycode("A61"),
+	_A62 "Bosnia and Herzegovina" [value = "A62", label = "Bosnia and Herzegovina", position = "62"] keycode("A62"),
+	_A63 "Kosovo" [value = "A63", label = "Kosovo", position = "63"] keycode("A63"),
+	_A64 "Macedonia" [value = "A64", label = "Macedonia", position = "64"] keycode("A64"),
+	_A65 "Montenegro" [value = "A65", label = "Montenegro", position = "65"] keycode("A65"),
+	_A66 "Slovenia" [value = "A66", label = "Slovenia", position = "66"] keycode("A66"),
+	_A67 "Panama" [value = "A67", label = "Panama", position = "67"] keycode("A67"),
+	_A68 "Costa Rica" [value = "A68", label = "Costa Rica", position = "68"] keycode("A68"),
+	_A69 "Puerto Rico" [value = "A69", label = "Puerto Rico", position = "69"] keycode("A69"),
+	_A70 "Dominican Republic" [value = "A70", label = "Dominican Republic", position = "70"] keycode("A70"),
+	_A71 "Guatemala" [value = "A71", label = "Guatemala", position = "71"] keycode("A71"),
+	_A72 "El Salvador" [value = "A72", label = "El Salvador", position = "72"] keycode("A72"),
+	_A73 "Honduras" [value = "A73", label = "Honduras", position = "73"] keycode("A73"),
+	_A74 "Nicaragua" [value = "A74", label = "Nicaragua", position = "74"] keycode("A74"),
+	_A75 "Austria" [value = "A75", label = "Austria", position = "75"] keycode("A75"),
+	_A76 "Cyprus" [value = "A76", label = "Cyprus", position = "76"] keycode("A76"),
+	_A77 "Czech Republic" [value = "A77", label = "Czech Republic", position = "77"] keycode("A77"),
+	_A78 "Denmark" [value = "A78", label = "Denmark", position = "78"] keycode("A78"),
+	_A79 "Estonia" [value = "A79", label = "Estonia", position = "79"] keycode("A79"),
+	_A80 "Finland" [value = "A80", label = "Finland", position = "80"] keycode("A80"),
+	_A81 "Greece" [value = "A81", label = "Greece", position = "81"] keycode("A81"),
+	_A82 "Ireland" [value = "A82", label = "Ireland", position = "82"] keycode("A82"),
+	_A83 "Italy" [value = "A83", label = "Italy", position = "83"] keycode("A83"),
+	_A84 "Latvia" [value = "A84", label = "Latvia", position = "84"] keycode("A84"),
+	_A85 "Lithuania" [value = "A85", label = "Lithuania", position = "85"] keycode("A85"),
+	_A86 "Luxembourg" [value = "A86", label = "Luxembourg", position = "86"] keycode("A86"),
+	_A87 "Malta" [value = "A87", label = "Malta", position = "87"] keycode("A87"),
+	_A88 "Netherlands" [value = "A88", label = "Netherlands", position = "88"] keycode("A88"),
+	_A89 "Portugal" [value = "A89", label = "Portugal", position = "89"] keycode("A89"),
+	_A90 "Slovakia" [value = "A90", label = "Slovakia", position = "90"] keycode("A90"),
+	_A91 "Colombia" [value = "A91", label = "Colombia", position = "91"] keycode("A91"),
+	_A92 "Canada" [value = "A92", label = "Canada", position = "92"] keycode("A92"),
+	_A93 "Sweden" [value = "A93", label = "Sweden", position = "93"] keycode("A93"),
+	_A94 "Norway" [value = "A94", label = "Norway", position = "94"] keycode("A94"),
+	_A95 "Ecuador" [value = "A95", label = "Ecuador", position = "95"] keycode("A95"),
+	_A96 "Cameroon" [value = "A96", label = "Cameroon", position = "96"] keycode("A96"),
+	_A97 "Benin" [value = "A97", label = "Benin", position = "97"] keycode("A97"),
+	_A98 "Congo Brazzaville" [value = "A98", label = "Congo Brazzaville", position = "98"] keycode("A98"),
+	_A99 "Guinea Bissau" [value = "A99", label = "Guinea Bissau", position = "99"] keycode("A99"),
+	_A100 "Guinea Conakry" [value = "A100", label = "Guinea Conakry", position = "100"] keycode("A100"),
+	_A101 "Liberia" [value = "A101", label = "Liberia", position = "101"] keycode("A101"),
+	_A102 "Rwanda" [value = "A102", label = "Rwanda", position = "102"] keycode("A102"),
+	_A103 "South Sudan" [value = "A103", label = "South Sudan", position = "103"] keycode("A103"),
+	_A104 "Swaziland" [value = "A104", label = "Swaziland", position = "104"] keycode("A104"),
+	_A105 "Botswana" [value = "A105", label = "Botswana", position = "105"] keycode("A105"),
+	_A106 "Namibia" [value = "A106", label = "Namibia", position = "106"] keycode("A106"),
+	_A107 "Sudan" [value = "A107", label = "Sudan", position = "107"] keycode("A107"),
+	_A108 "Turkey" [value = "A108", label = "Turkey", position = "108"] keycode("A108"),
+	_A109 "Myanmar" [value = "A109", label = "Myanmar", position = "109"] keycode("A109"),
+	_A110 "Sri Lanka" [value = "A110", label = "Sri Lanka", position = "110"] keycode("A110"),
+	_A111 "Bangladesh" [value = "A111", label = "Bangladesh", position = "111"] keycode("A111"),
+	_A112 "Georgia" [value = "A112", label = "Georgia", position = "112"] keycode("A112"),
+	_A113 "Switzerland" [value = "A113", label = "Switzerland", position = "113"] keycode("A113"),
+	_A114 "Lesotho" [value = "A114", label = "Lesotho", position = "114"] keycode("A114"),
+	_A115 "Malawi" [value = "A115", label = "Malawi", position = "115"] keycode("A115"),
+	_A116 "Zimbabwe" [value = "A116", label = "Zimbabwe", position = "116"] keycode("A116"),
+	_A117 "Liechtenstein" [value = "A117", label = "Liechtenstein", position = "117"] keycode("A117"),
+	_A118 "Iceland" [value = "A118", label = "Iceland", position = "118"] keycode("A118"),
+	_A119 "Australia" [value = "A119", label = "Australia", position = "119"] keycode("A119"),
+	_A120 "Afghanistan" [value = "A120", label = "Afghanistan", position = "120"] keycode("A120"),
+	_A121 "Uruguay" [value = "A121", label = "Uruguay", position = "121"] keycode("A121"),
+	_A122 "Venezuela" [value = "A122", label = "Venezuela", position = "122"] keycode("A122"),
+	_A123 "Mali" [value = "A123", label = "Mali", position = "123"] keycode("A123"),
+	_A124 "Yemen" [value = "A124", label = "Yemen", position = "124"] keycode("A124"),
+	_A125 "Kyrgyzstan" [value = "A125", label = "Kyrgyzstan", position = "125"] keycode("A125"),
+	_A126 "Uzbekistan" [value = "A126", label = "Uzbekistan", position = "126"] keycode("A126"),
+	_A127 "Cambodia" [value = "A127", label = "Cambodia", position = "127"] keycode("A127"),
+	_A128 "Jamaica" [value = "A128", label = "Jamaica", position = "128"] keycode("A128")
+};
+
+SHELL_LANGUAGE "Language selection" 
+categorical[1..1]
+{
+	_A1 "English" [value = "A1", label = "English", position = "1"] keycode("A1"),
+	_A2 "Assamese" [value = "A2", label = "Assamese", position = "2"] keycode("A2"),
+	_A3 "Bengali" [value = "A3", label = "Bengali", position = "3"] keycode("A3"),
+	_A4 "Gujarati" [value = "A4", label = "Gujarati", position = "4"] keycode("A4"),
+	_A5 "Hindi" [value = "A5", label = "Hindi", position = "5"] keycode("A5"),
+	_A6 "Kannada" [value = "A6", label = "Kannada", position = "6"] keycode("A6"),
+	_A7 "Malayalam" [value = "A7", label = "Malayalam", position = "7"] keycode("A7"),
+	_A8 "Marathi" [value = "A8", label = "Marathi", position = "8"] keycode("A8"),
+	_A9 "Oriya" [value = "A9", label = "Oriya", position = "9"] keycode("A9"),
+	_A10 "Tamil" [value = "A10", label = "Tamil", position = "10"] keycode("A10"),
+	_A11 "Telugu" [value = "A11", label = "Telugu", position = "11"] keycode("A11"),
+	_A12 "Spanish" [value = "A12", label = "Spanish", position = "12"] keycode("A12"),
+	_A13 "Polish" [value = "A13", label = "Polish", position = "13"] keycode("A13"),
+	_A14 "Arabic" [value = "A14", label = "Arabic", position = "14"] keycode("A14"),
+	_A15 "French" [value = "A15", label = "French", position = "15"] keycode("A15"),
+	_A16 "Igbo" [value = "A16", label = "Igbo", position = "16"] keycode("A16"),
+	_A17 "Hausa" [value = "A17", label = "Hausa", position = "17"] keycode("A17"),
+	_A18 "Yoruba" [value = "A18", label = "Yoruba", position = "18"] keycode("A18"),
+	_A19 "Swahili" [value = "A19", label = "Swahili", position = "19"] keycode("A19"),
+	_A20 "Acholi" [value = "A20", label = "Acholi", position = "20"] keycode("A20"),
+	_A21 "Ateso" [value = "A21", label = "Ateso", position = "21"] keycode("A21"),
+	_A22 "Luganda" [value = "A22", label = "Luganda", position = "22"] keycode("A22"),
+	_A23 "Luo" [value = "A23", label = "Luo", position = "23"] keycode("A23"),
+	_A24 "Runyankole/Rukiga" [value = "A24", label = "Runyankole/Rukiga", position = "24"] keycode("A24"),
+	_A25 "Runyoro/Rutoro" [value = "A25", label = "Runyoro/Rutoro", position = "25"] keycode("A25"),
+	_A26 "Portuguese" [value = "A26", label = "Portuguese", position = "26"] keycode("A26"),
+	_A27 "Chinese" [value = "A27", label = "Chinese", position = "27"] keycode("A27"),
+	_A29 "Tagalog" [value = "A29", label = "Tagalog", position = "28"] keycode("A29"),
+	_A30 "Cebuano" [value = "A30", label = "Cebuano", position = "29"] keycode("A30"),
+	_A31 "Ilonggo" [value = "A31", label = "Ilonggo", position = "30"] keycode("A31"),
+	_A32 "Ilokano" [value = "A32", label = "Ilokano", position = "31"] keycode("A32"),
+	_A33 "Bicolano" [value = "A33", label = "Bicolano", position = "32"] keycode("A33"),
+	_A34 "Waray" [value = "A34", label = "Waray", position = "33"] keycode("A34"),
+	_A35 "Thai" [value = "A35", label = "Thai", position = "34"] keycode("A35"),
+	_A36 "Vietnamese" [value = "A36", label = "Vietnamese", position = "35"] keycode("A36"),
+	_A37 "Baoulé" [value = "A37", label = "Baoulé", position = "36"] keycode("A37"),
+	_A38 "Bété" [value = "A38", label = "Bété", position = "37"] keycode("A38"),
+	_A39 "Dioula" [value = "A39", label = "Dioula", position = "38"] keycode("A39"),
+	_A40 "Senoufo" [value = "A40", label = "Senoufo", position = "39"] keycode("A40"),
+	_A41 "Akan" [value = "A41", label = "Akan", position = "40"] keycode("A41"),
+	_A42 "Dagbani" [value = "A42", label = "Dagbani", position = "41"] keycode("A42"),
+	_A43 "Ga" [value = "A43", label = "Ga", position = "42"] keycode("A43"),
+	_A44 "Ewe" [value = "A44", label = "Ewe", position = "43"] keycode("A44"),
+	_A45 "Farsi" [value = "A45", label = "Farsi", position = "44"] keycode("A45"),
+	_A46 "Russian" [value = "A46", label = "Russian", position = "45"] keycode("A46"),
+	_A47 "Urdu" [value = "A47", label = "Urdu", position = "46"] keycode("A47"),
+	_A48 "Indonesian" [value = "A48", label = "Indonesian", position = "47"] keycode("A48"),
+	_A49 "Malay" [value = "A49", label = "Malay", position = "48"] keycode("A49"),
+	_A50 "Macua" [value = "A50", label = "Macua", position = "49"] keycode("A50"),
+	_A51 "Ndau" [value = "A51", label = "Ndau", position = "50"] keycode("A51"),
+	_A52 "Sena" [value = "A52", label = "Sena", position = "51"] keycode("A52"),
+	_A53 "Tsonga" [value = "A53", label = "Tsonga", position = "52"] keycode("A53"),
+	_A54 "Bemba" [value = "A54", label = "Bemba", position = "53"] keycode("A54"),
+	_A55 "Kaonde" [value = "A55", label = "Kaonde", position = "54"] keycode("A55"),
+	_A56 "Lozi" [value = "A56", label = "Lozi", position = "55"] keycode("A56"),
+	_A57 "Lunda" [value = "A57", label = "Lunda", position = "56"] keycode("A57"),
+	_A58 "Luvale" [value = "A58", label = "Luvale", position = "57"] keycode("A58"),
+	_A59 "Nyanja" [value = "A59", label = "Nyanja", position = "58"] keycode("A59"),
+	_A60 "Tonga (Zambezi)" [value = "A60", label = "Tonga (Zambezi)", position = "59"] keycode("A60"),
+	_A61 "Hong Kong Cantonese" [value = "A61", label = "Hong Kong Cantonese", position = "60"] keycode("A61"),
+	_A62 "Korean" [value = "A62", label = "Korean", position = "61"] keycode("A62"),
+	_A63 "Taiwanese Mandarin" [value = "A63", label = "Taiwanese Mandarin", position = "62"] keycode("A63"),
+	_A64 "Kurdish" [value = "A64", label = "Kurdish", position = "63"] keycode("A64"),
+	_A65 "Bulgarian" [value = "A65", label = "Bulgarian", position = "64"] keycode("A65"),
+	_A66 "Romanian" [value = "A66", label = "Romanian", position = "65"] keycode("A66"),
+	_A67 "Kazakh" [value = "A67", label = "Kazakh", position = "66"] keycode("A67"),
+	_A68 "Ukrainian" [value = "A68", label = "Ukrainian", position = "67"] keycode("A68"),
+	_A69 "Croatian" [value = "A69", label = "Croatian", position = "68"] keycode("A69"),
+	_A70 "Serbian" [value = "A70", label = "Serbian", position = "69"] keycode("A70"),
+	_A71 "Albanian" [value = "A71", label = "Albanian", position = "70"] keycode("A71"),
+	_A72 "Hungarian" [value = "A72", label = "Hungarian", position = "71"] keycode("A72"),
+	_A73 "Dutch" [value = "A73", label = "Dutch", position = "72"] keycode("A73"),
+	_A74 "German" [value = "A74", label = "German", position = "73"] keycode("A74"),
+	_A75 "Catalan" [value = "A75", label = "Catalan", position = "74"] keycode("A75"),
+	_A76 "Spanish - Spain" [value = "A76", label = "Spanish - Spain", position = "75"] keycode("A76"),
+	_A77 "Amharic" [value = "A77", label = "Amharic", position = "76"] keycode("A77"),
+	_A78 "Wolof" [value = "A78", label = "Wolof", position = "77"] keycode("A78"),
+	_A79 "Bosnian" [value = "A79", label = "Bosnian", position = "78"] keycode("A79"),
+	_A80 "Macedonian" [value = "A80", label = "Macedonian", position = "79"] keycode("A80"),
+	_A81 "Montenegrin" [value = "A81", label = "Montenegrin", position = "80"] keycode("A81"),
+	_A82 "Slovenian" [value = "A82", label = "Slovenian", position = "81"] keycode("A82"),
+	_A83 "Tigrinya" [value = "A83", label = "Tigrinya", position = "82"] keycode("A83"),
+	_A84 "Greek" [value = "A84", label = "Greek", position = "83"] keycode("A84"),
+	_A85 "Turkish" [value = "A85", label = "Turkish", position = "84"] keycode("A85"),
+	_A86 "Czech" [value = "A86", label = "Czech", position = "85"] keycode("A86"),
+	_A87 "Slovak" [value = "A87", label = "Slovak", position = "86"] keycode("A87"),
+	_A88 "Danish" [value = "A88", label = "Danish", position = "87"] keycode("A88"),
+	_A89 "Estonian" [value = "A89", label = "Estonian", position = "88"] keycode("A89"),
+	_A90 "Finnish" [value = "A90", label = "Finnish", position = "89"] keycode("A90"),
+	_A91 "Swedish" [value = "A91", label = "Swedish", position = "90"] keycode("A91"),
+	_A92 "Italian" [value = "A92", label = "Italian", position = "91"] keycode("A92"),
+	_A93 "Latvian" [value = "A93", label = "Latvian", position = "92"] keycode("A93"),
+	_A94 "Lithuanian" [value = "A94", label = "Lithuanian", position = "93"] keycode("A94"),
+	_A95 "Luxembourgish" [value = "A95", label = "Luxembourgish", position = "94"] keycode("A95"),
+	_A96 "Maltese" [value = "A96", label = "Maltese", position = "95"] keycode("A96"),
+	_A97 "Slovak" [value = "A97", label = "Slovak", position = "96"] keycode("A97"),
+	_A98 "Norwegian" [value = "A98", label = "Norwegian", position = "97"] keycode("A98"),
+	_A99 "German - Austria" [value = "A99", label = "German - Austria", position = "98"] keycode("A99"),
+	_A100 "Oromo" [value = "A100", label = "Oromo", position = "99"] keycode("A100"),
+	_A101 "Karamojong" [value = "A101", label = "Karamojong", position = "100"] keycode("A101"),
+	_A102 "Runyakitara" [value = "A102", label = "Runyakitara", position = "101"] keycode("A102"),
+	_A103 "Lugbara" [value = "A103", label = "Lugbara", position = "102"] keycode("A103"),
+	_A104 "Somali" [value = "A104", label = "Somali", position = "103"] keycode("A104"),
+	_A105 "Afrikaans" [value = "A105", label = "Afrikaans", position = "104"] keycode("A105"),
+	_A106 "Zulu" [value = "A106", label = "Zulu", position = "105"] keycode("A106"),
+	_A107 "Xhosa" [value = "A107", label = "Xhosa", position = "106"] keycode("A107"),
+	_A108 "Sotho" [value = "A108", label = "Sotho", position = "107"] keycode("A108"),
+	_A109 "Sepedi" [value = "A109", label = "Sepedi", position = "108"] keycode("A109"),
+	_A110 "Lingala" [value = "A110", label = "Lingala", position = "109"] keycode("A110"),
+	_A111 "Kinyarwanda" [value = "A111", label = "Kinyarwanda", position = "110"] keycode("A111"),
+	_A112 "Arabic Juba" [value = "A112", label = "Arabic Juba", position = "111"] keycode("A112"),
+	_A113 "Siswati" [value = "A113", label = "Siswati", position = "112"] keycode("A113"),
+	_A114 "Setswana" [value = "A114", label = "Setswana", position = "113"] keycode("A114"),
+	_A115 "Burmese" [value = "A115", label = "Burmese", position = "114"] keycode("A115"),
+	_A116 "Sinhalese" [value = "A116", label = "Sinhalese", position = "115"] keycode("A116"),
+	_A117 "Georgian" [value = "A117", label = "Georgian", position = "116"] keycode("A117"),
+	_A118 "Dari (Afghanistan)" [value = "A118", label = "Dari (Afghanistan)", position = "117"] keycode("A118"),
+	_A119 "Pashto (Afghanistan)" [value = "A119", label = "Pashto (Afghanistan)", position = "118"] keycode("A119"),
+	_A120 "Kyrgyz" [value = "A120", label = "Kyrgyz", position = "119"] keycode("A120"),
+	_A121 "Uzbek" [value = "A121", label = "Uzbek", position = "120"] keycode("A121"),
+	_A122 "Khmer" [value = "A122", label = "Khmer", position = "121"] keycode("A122"),
+	_A123 "English - United Kingdom" [value = "A123", label = "English - United Kingdom", position = "122"] keycode("A123")
+};
+
+SHELL_INTRO_GDPR "Good morning/afternoon/evening, I am__________ from Ipsos, a market research company. We are currently conducting studies on various products and services and your opinion would be of great value to us. There are no right or wrong answers, and please be assured that the information collected from you will be treated completely confidentially. Your answers will be combined with information from other participants and only the total aggregated and anonymized results will be used for market research reporting.Are you happy to proceed with the interview?" 
+categorical[1..1]
+{
+	_A1 "Yes" [value = "A1", label = "Yes", position = "1"] keycode("A1"),
+	_A2 "No" [value = "A2", label = "No", position = "2"] keycode("A2")
+};
+
+SHELL_RECORDING_CONFIRMATION "For quality control purpose on the survey, we would like to audio record some of the questions during the survey. This will automatically be done by the device. We appreciate your consent in advance.Do you agree with the audio recording?" 
+categorical[1..1]
+{
+	_A1 "Yes" [value = "A1", label = "Yes", position = "1"] keycode("A1"),
+	_A2 "No" [value = "A2", label = "No", position = "2"] keycode("A2")
+};
+
+SHELL_PRIVACY_NOTICE "Before we continue, there is also certain information that I need to bring to your attention as a legal requirement, the information is in this privacy notice which explains about the legal basis and the purposes for processing your personal data as well as your rights under data protection regulations.Do you agree to continue with the interview?" 
+categorical[1..1]
+{
+	_A1 "Yes" [value = "A1", label = "Yes", position = "1"] keycode("A1"),
+	_A2 "No" [value = "A2", label = "No", position = "2"] keycode("A2")
+};
+
+SHELL_GENDER "Gender" 
+categorical[1..1]
+{
+	_A1 "Male" [value = "A1", label = "Male", position = "1"] keycode("A1"),
+	_A2 "Female" [value = "A2", label = "Female", position = "2"] keycode("A2")
+};
+
+SHELL_AGE "What was your age last birthday?" 
+categorical[1..1]
+{
+	_A1 "Exact Age" [value = "A1", label = "Exact Age", position = "1"] keycode("A1") other(_A1 "" double[-2147483648 .. 2147483647]),
+	_A2 "Refused" [value = "A2", label = "Refused", position = "2"] keycode("A2")
+};
+
+SHELL_AGE_RECODED "Age groups" 
+categorical[1..1]
+{
+	_A0 "10-15 years old" [value = "A0", label = "10-15 years old", position = "1"] keycode("A0"),
+	_A1 "16-24 years old" [value = "A1", label = "16-24 years old", position = "2"] keycode("A1"),
+	_A2 "25-34 years old" [value = "A2", label = "25-34 years old", position = "3"] keycode("A2"),
+	_A3 "35-44 years old" [value = "A3", label = "35-44 years old", position = "4"] keycode("A3"),
+	_A4 "45-54 years old" [value = "A4", label = "45-54 years old", position = "5"] keycode("A4"),
+	_A5 "55-64 years old" [value = "A5", label = "55-64 years old", position = "6"] keycode("A5"),
+	_A6 "65+ years old" [value = "A6", label = "65+ years old", position = "7"] keycode("A6"),
+	_A7 "Refuse" [value = "A7", label = "Refuse", position = "8"] keycode("A7")
+};
+
+SHELL_INFO_PROJECTSCRIPT_START "Scripter, add the project specific questions after this Info item and before the SHELL_CLOSE question." 
+info;
+
+_Quota_City "Thành Phố" 
+categorical[1..1]
+{
+	use _LST_PROVINCES
+};
+
+_Quota_Gender "Giới tính của đáp viên" 
+categorical[1..1]
+{
+	_1 "Nam" [value = "1", label = "Nam", position = "1"] keycode("1"),
+	_2 "Nữ" [value = "2", label = "Nữ", position = "2"] keycode("2")
+};
+
+_Quota_AgeGroup "Độ tuổi của đáp viên" 
+categorical[1..1]
+{
+	_2 "18 - 23" [value = "2", label = "18 - 23", position = "1"] keycode("2"),
+	_3 "24 - 29" [value = "3", label = "24 - 29", position = "2"] keycode("3")
+};
+
+_Quota_Class "Class" 
+categorical[1..1]
+{
+	_1 "Class F" [value = "1", label = "Class F", position = "1"] keycode("1"),
+	_2 "Class E" [value = "2", label = "Class E", position = "2"] keycode("2"),
+	_3 "Class D" [value = "3", label = "Class D", position = "3"] keycode("3"),
+	_4 "Class C" [value = "4", label = "Class C", position = "4"] keycode("4"),
+	_5 "Class B" [value = "5", label = "Class B", position = "5"] keycode("5"),
+	_6 "Class A" [value = "6", label = "Class A", position = "6"] keycode("6"),
+	_98 "Không biết/ Từ chối (Không SHOWTABLET)" [value = "98", label = "Không biết/ Từ chối (Không SHOWTABLET)", position = "7"] keycode("98")
+};
+
+_Quota_LSM "LSM" 
+categorical[1..1]
+{
+	_1 "LSM 0 - 4" [value = "1", label = "LSM 0 - 4", position = "1"] keycode("1"),
+	_2 "LSM 5 - 7" [value = "2", label = "LSM 5 - 7", position = "2"] keycode("2"),
+	_3 "LSM 8 - 10" [value = "3", label = "LSM 8 - 10", position = "3"] keycode("3"),
+	_4 "LSM 11 - 19" [value = "4", label = "LSM 11 - 19", position = "4"] keycode("4")
+};
+
+_ProjectName "Project Name" 
+text[ .. ];
+
+_Introduction "LỜI GIỚI THIỆUXin chào bác sĩ, tôi tên là ..........................., là phỏng vấn viên của IPSOS, một trong những công ty chuyên nghiệp về nghiên cứu thị trường tại Việt Nam. Chúng tôi hiện đang tiến hành một cuộc thăm dò ý kiến các bác sĩ làm việc tại bệnh viện về vắc xin và tiêm chủng.Những thông tin bác sĩ cung cấp để hoàn thành bảng câu hỏi này sẽ được giữ bảo mật và chỉ được sử dụng cho mục đích nghiên cứu thị trường. Thông tin này sẽ không được cung cấp cho bất kỳ bên thứ ba nào mà không có sự cho phép của bác sĩ. Chúng tôi mong rằng các bác sĩ có thể dành chút thời gian để tham dự buổi phỏng vấn này. Bài phỏng vấn này sẽ kéo dài khoảng 15 phút.Việc bảo vệ thông tin cá nhân và bí mật của bạn được chúng tôi tuân theo các quy tắc nghiêm ngặt về quyền riêng tư để đảm bảo điều này. Chúng tôi cũng bảo vệ thông tin bí mật của khách hàng với tầm quan trọng tương tự. Vì lợi ích của khách hàng của chúng tôi, điều đó là bắt buộc, bằng cách tham gia vào nghiên cứu này, bạn đồng ý rằng bạn sẽ không:1. Chia sẻ bất kỳ thông tin bí mật và độc quyền nào có trong nghiên cứu này, chẳng hạn như khái niệm kỹ thuật, nội dung phỏng vấn, hoặc sử dụng thông tin đó vì lợi ích của riêng bạn hoặc lợi ích của bên thứ ba.2. Chụp ảnh, ghi lại, xuất bản trên internet, sao chép hoặc sao chép bằng bất kỳ hình thức nào khác bất kỳ thông tin bí mật nào có trong nghiên cứu này" 
+info;
+
+_ResName "Họ & Tên Đáp Viên" 
+text[ .. ];
+
+_Area "PVV: Ghi nhận khu vực phỏng vấn (SA)" 
+categorical[1..1]
+{
+	_1 "Thành thị" [value = "1", label = "Thành thị", position = "1"] keycode("1"),
+	_2 "Nông thôn" [value = "2", label = "Nông thôn", position = "2"] keycode("2")
+};
+
+_ResAddress "Địa chỉ nhà" 
+text[ .. ];
+
+_ResHouseNo "Số nhà/ căn hộ" 
+text[ .. ];
+
+_ResStreet "Đường" 
+text[ .. ];
+
+_ResProvinces "Tỉnh" 
+categorical[1..1]
+{
+	use _LST_PROVINCES
+};
+
+_ResDistricts "Quận/ Huyện" 
+categorical[1..1]
+{
+	use _LST_DISTRICTS
+};
+
+_ResDistrictSelected "Quận / Huyện" 
+text[ .. ];
+
+_ResWards "Phường/ Xã" 
+categorical[1..1]
+{
+	use _LST_WARDS
+};
+
+_ResWardSelected "Phường/ Xã" 
+text[ .. ];
+
+_S4 "S4. PVV chọn Bệnh viện/Cơ sở y tế mà Bác sĩ đang làm việc" 
+categorical[1..1]
+{
+	_1 "BV 7A_HO CHI MINH" [value = "1", label = "BV 7A_HO CHI MINH", position = "1"] keycode("1"),
+	_2 "BV DH Y DUOC TP HCM CS1_HO CHI MINH" [value = "2", label = "BV DH Y DUOC TP HCM CS1_HO CHI MINH", position = "2"] keycode("2"),
+	_3 "BV DK MY DUC_HO CHI MINH" [value = "3", label = "BV DK MY DUC_HO CHI MINH", position = "3"] keycode("3"),
+	_4 "BV DK QT HOAN MY THU DUC_HO CHI MINH" [value = "4", label = "BV DK QT HOAN MY THU DUC_HO CHI MINH", position = "4"] keycode("4"),
+	_5 "BV DK TAM ANH TP HCM_HO CHI MINH" [value = "5", label = "BV DK TAM ANH TP HCM_HO CHI MINH", position = "5"] keycode("5"),
+	_6 "BV DK TN AN SINH_HO CHI MINH" [value = "6", label = "BV DK TN AN SINH_HO CHI MINH", position = "6"] keycode("6"),
+	_7 "BV DK TN TRIEU AN_HO CHI MINH" [value = "7", label = "BV DK TN TRIEU AN_HO CHI MINH", position = "7"] keycode("7"),
+	_8 "BV NHAN DAN GIA DINH_HO CHI MINH" [value = "8", label = "BV NHAN DAN GIA DINH_HO CHI MINH", position = "8"] keycode("8"),
+	_9 "BV PHAM NGOC THACH_HO CHI MINH" [value = "9", label = "BV PHAM NGOC THACH_HO CHI MINH", position = "9"] keycode("9"),
+	_10 "BV VIET PHAP_HO CHI MINH" [value = "10", label = "BV VIET PHAP_HO CHI MINH", position = "10"] keycode("10"),
+	_11 "BV DK HOAN MY SAI GON_HO CHI MINH" [value = "11", label = "BV DK HOAN MY SAI GON_HO CHI MINH", position = "11"] keycode("11"),
+	_12 "PK DK JIO HEALTH SMART CLINIC_HO CHI MINH" [value = "12", label = "PK DK JIO HEALTH SMART CLINIC_HO CHI MINH", position = "12"] keycode("12"),
+	_13 "TTYT QUAN BINH THANH_HO CHI MINH" [value = "13", label = "TTYT QUAN BINH THANH_HO CHI MINH", position = "13"] keycode("13"),
+	_14 "BV DK QT VINMEC_HO CHI MINH" [value = "14", label = "BV DK QT VINMEC_HO CHI MINH", position = "14"] keycode("14"),
+	_15 "BV DK XUYEN A_HO CHI MINH" [value = "15", label = "BV DK XUYEN A_HO CHI MINH", position = "15"] keycode("15"),
+	_16 "BV DK QT HANH PHUC Q2_HO CHI MINH" [value = "16", label = "BV DK QT HANH PHUC Q2_HO CHI MINH", position = "16"] keycode("16"),
+	_17 "BV DK VAN HANH_HO CHI MINH" [value = "17", label = "BV DK VAN HANH_HO CHI MINH", position = "17"] keycode("17"),
+	_18 "BV NGUYEN TRI PHUONG_HO CHI MINH" [value = "18", label = "BV NGUYEN TRI PHUONG_HO CHI MINH", position = "18"] keycode("18"),
+	_19 "BV QT CITY_HO CHI MINH" [value = "19", label = "BV QT CITY_HO CHI MINH", position = "19"] keycode("19"),
+	_20 "BV QT MY QUAN 2_HO CHI MINH" [value = "20", label = "BV QT MY QUAN 2_HO CHI MINH", position = "20"] keycode("20"),
+	_21 "TTYT QUAN TAN PHU_HO CHI MINH" [value = "21", label = "TTYT QUAN TAN PHU_HO CHI MINH", position = "21"] keycode("21"),
+	_22 "BV DK QT NAM SAI GON_HO CHI MINH" [value = "22", label = "BV DK QT NAM SAI GON_HO CHI MINH", position = "22"] keycode("22"),
+	_23 "BV DH Y DUOC TP HCM CS2_HO CHI MINH" [value = "23", label = "BV DH Y DUOC TP HCM CS2_HO CHI MINH", position = "23"] keycode("23"),
+	_24 "BV DK HONG DUC III_HO CHI MINH" [value = "24", label = "BV DK HONG DUC III_HO CHI MINH", position = "24"] keycode("24"),
+	_25 "BV DK KV CU CHI_HO CHI MINH" [value = "25", label = "BV DK KV CU CHI_HO CHI MINH", position = "25"] keycode("25"),
+	_26 "BV LE VAN THINH Q2_HO CHI MINH" [value = "26", label = "BV LE VAN THINH Q2_HO CHI MINH", position = "26"] keycode("26"),
+	_27 "BV TP THU DUC_HO CHI MINH" [value = "27", label = "BV TP THU DUC_HO CHI MINH", position = "27"] keycode("27"),
+	_28 "PK GIA DINH FAMILY MEDICAL PRACTICE CS1_HO CHI MINH" [value = "28", label = "PK GIA DINH FAMILY MEDICAL PRACTICE CS1_HO CHI MINH", position = "28"] keycode("28"),
+	_29 "BV 175_HO CHI MINH" [value = "29", label = "BV 175_HO CHI MINH", position = "29"] keycode("29"),
+	_30 "BV NHAN DAN 115_HO CHI MINH" [value = "30", label = "BV NHAN DAN 115_HO CHI MINH", position = "30"] keycode("30"),
+	_31 "PK DK CHAC_HO CHI MINH" [value = "31", label = "PK DK CHAC_HO CHI MINH", position = "31"] keycode("31"),
+	_32 "BV HUYEN BINH CHANH_HO CHI MINH" [value = "32", label = "BV HUYEN BINH CHANH_HO CHI MINH", position = "32"] keycode("32"),
+	_33 "BV QUAN BINH TAN_HO CHI MINH" [value = "33", label = "BV QUAN BINH TAN_HO CHI MINH", position = "33"] keycode("33"),
+	_34 "BV THONG NHAT_HO CHI MINH" [value = "34", label = "BV THONG NHAT_HO CHI MINH", position = "34"] keycode("34"),
+	_35 "PK DK NGOC MINH_HO CHI MINH" [value = "35", label = "PK DK NGOC MINH_HO CHI MINH", position = "35"] keycode("35"),
+	_36 "BV CHO RAY_HO CHI MINH" [value = "36", label = "BV CHO RAY_HO CHI MINH", position = "36"] keycode("36"),
+	_37 "BV HOA HAO_HO CHI MINH" [value = "37", label = "BV HOA HAO_HO CHI MINH", position = "37"] keycode("37"),
+	_38 "BV RHM TW TP HCM Q5_HO CHI MINH" [value = "38", label = "BV RHM TW TP HCM Q5_HO CHI MINH", position = "38"] keycode("38"),
+	_39 "PK DK VAN PHUC_HO CHI MINH" [value = "39", label = "PK DK VAN PHUC_HO CHI MINH", position = "39"] keycode("39"),
+	_40 "PK TT DIEU TRI BENH HO HAP PHOI VIET_HO CHI MINH" [value = "40", label = "PK TT DIEU TRI BENH HO HAP PHOI VIET_HO CHI MINH", position = "40"] keycode("40"),
+	_41 "BV AN BINH_HO CHI MINH" [value = "41", label = "BV AN BINH_HO CHI MINH", position = "41"] keycode("41"),
+	_42 "BV BENH NHIET DOI TP HCM_HO CHI MINH" [value = "42", label = "BV BENH NHIET DOI TP HCM_HO CHI MINH", position = "42"] keycode("42"),
+	_43 "BV DK TAM TRI SAI GON_HO CHI MINH" [value = "43", label = "BV DK TAM TRI SAI GON_HO CHI MINH", position = "43"] keycode("43"),
+	_44 "BV DK TN QUOC ANH_HO CHI MINH" [value = "44", label = "BV DK TN QUOC ANH_HO CHI MINH", position = "44"] keycode("44"),
+	_45 "BV QUAN 1_HO CHI MINH" [value = "45", label = "BV QUAN 1_HO CHI MINH", position = "45"] keycode("45"),
+	_46 "BV QUAN 11_HO CHI MINH" [value = "46", label = "BV QUAN 11_HO CHI MINH", position = "46"] keycode("46"),
+	_47 "BV QUAN TAN PHU_HO CHI MINH" [value = "47", label = "BV QUAN TAN PHU_HO CHI MINH", position = "47"] keycode("47"),
+	_48 "CHAN VAN 315 CHAIN" [value = "48", label = "CHAN VAN 315 CHAIN", position = "48"] keycode("48"),
+	_49 "PK BV DH Y DUOC 1_HO CHI MINH" [value = "49", label = "PK BV DH Y DUOC 1_HO CHI MINH", position = "49"] keycode("49"),
+	_50 "PK DK CTY TNHH Y TE DAI PHUOC_HO CHI MINH" [value = "50", label = "PK DK CTY TNHH Y TE DAI PHUOC_HO CHI MINH", position = "50"] keycode("50"),
+	_51 "PK DK QT CAREPLUS QUAN 1_HO CHI MINH" [value = "51", label = "PK DK QT CAREPLUS QUAN 1_HO CHI MINH", position = "51"] keycode("51"),
+	_52 "PK DK QT CAREPLUS QUAN TAN BINH _HO CHI MINH" [value = "52", label = "PK DK QT CAREPLUS QUAN TAN BINH _HO CHI MINH", position = "52"] keycode("52"),
+	_53 "PK QT CAREPLUS QUAN 7_HO CHI MINH" [value = "53", label = "PK QT CAREPLUS QUAN 7_HO CHI MINH", position = "53"] keycode("53"),
+	_54 "PK SIM MEDICAL CENTER_HO CHI MINH" [value = "54", label = "PK SIM MEDICAL CENTER_HO CHI MINH", position = "54"] keycode("54"),
+	_55 "VICTORIA CHAIN_PHU NHUAN" [value = "55", label = "VICTORIA CHAIN_PHU NHUAN", position = "55"] keycode("55"),
+	_57 "BV BINH DAN_HO CHI MINH" [value = "57", label = "BV BINH DAN_HO CHI MINH", position = "56"] keycode("57"),
+	_58 "BV DA LIEU TP HCM_HO CHI MINH" [value = "58", label = "BV DA LIEU TP HCM_HO CHI MINH", position = "57"] keycode("58"),
+	_59 "BV DK TAN HUNG_HO CHI MINH" [value = "59", label = "BV DK TAN HUNG_HO CHI MINH", position = "58"] keycode("59"),
+	_60 "BV GIA AN 115_HO CHI MINH" [value = "60", label = "BV GIA AN 115_HO CHI MINH", position = "59"] keycode("60"),
+	_61 "BV HUYEN NHA BE_HO CHI MINH" [value = "61", label = "BV HUYEN NHA BE_HO CHI MINH", position = "60"] keycode("61"),
+	_62 "BV QT MINH ANH_HO CHI MINH" [value = "62", label = "BV QT MINH ANH_HO CHI MINH", position = "61"] keycode("62"),
+	_63 "BV QUAN 4_HO CHI MINH" [value = "63", label = "BV QUAN 4_HO CHI MINH", position = "62"] keycode("63"),
+	_64 "CTY TNHH DP ATIPHARM - Q1_HO CHI MINH" [value = "64", label = "CTY TNHH DP ATIPHARM - Q1_HO CHI MINH", position = "63"] keycode("64"),
+	_65 "DDKD SO 28 CTY CP Y TECHAN VAN_HO CHI MINH" [value = "65", label = "DDKD SO 28 CTY CP Y TECHAN VAN_HO CHI MINH", position = "64"] keycode("65"),
+	_66 "PK DK CHAC 2_HO CHI MINH" [value = "66", label = "PK DK CHAC 2_HO CHI MINH", position = "65"] keycode("66"),
+	_67 "PK DK HUNG DUNG NT HUNG DUNG_HO CHI MINH" [value = "67", label = "PK DK HUNG DUNG NT HUNG DUNG_HO CHI MINH", position = "66"] keycode("67"),
+	_68 "PK DK QT SAI GON_HO CHI MINH" [value = "68", label = "PK DK QT SAI GON_HO CHI MINH", position = "67"] keycode("68"),
+	_69 "PK DK SAI GON BINH CHANH_HO CHI MINH" [value = "69", label = "PK DK SAI GON BINH CHANH_HO CHI MINH", position = "68"] keycode("69"),
+	_70 "PK DK TAM AN HCM_HO CHI MINH" [value = "70", label = "PK DK TAM AN HCM_HO CHI MINH", position = "69"] keycode("70"),
+	_71 "PK DK THIEN Y_HO CHI MINH" [value = "71", label = "PK DK THIEN Y_HO CHI MINH", position = "70"] keycode("71"),
+	_72 "PK DK VIET GIA_HO CHI MINH" [value = "72", label = "PK DK VIET GIA_HO CHI MINH", position = "71"] keycode("72"),
+	_73 "BV BACH MAI_HA NOI" [value = "73", label = "BV BACH MAI_HA NOI", position = "72"] keycode("73"),
+	_74 "BV DH Y HA NOI_HA NOI" [value = "74", label = "BV DH Y HA NOI_HA NOI", position = "73"] keycode("74"),
+	_75 "BV DK HA DONG_HA NOI" [value = "75", label = "BV DK HA DONG_HA NOI", position = "74"] keycode("75"),
+	_76 "BV DK HONG NGOC PHUC TRUONG MINH_HA NOI" [value = "76", label = "BV DK HONG NGOC PHUC TRUONG MINH_HA NOI", position = "75"] keycode("76"),
+	_77 "BV DK HONG NGOC_HA NOI" [value = "77", label = "BV DK HONG NGOC_HA NOI", position = "76"] keycode("77"),
+	_78 "BV DK NONG NGHIEP_HA NOI" [value = "78", label = "BV DK NONG NGHIEP_HA NOI", position = "77"] keycode("78"),
+	_79 "BV DK PHUONG DONG_HA NOI" [value = "79", label = "BV DK PHUONG DONG_HA NOI", position = "78"] keycode("79"),
+	_80 "BV DK TAM ANH HA NOI_HA NOI" [value = "80", label = "BV DK TAM ANH HA NOI_HA NOI", position = "79"] keycode("80"),
+	_81 "BV VIET PHAP HA NOI_HA NOI" [value = "81", label = "BV VIET PHAP HA NOI_HA NOI", position = "80"] keycode("81"),
+	_82 "PK BV DH QUOC GIA HA NOI_HA NOI" [value = "82", label = "PK BV DH QUOC GIA HA NOI_HA NOI", position = "81"] keycode("82"),
+	_83 "PK DK QT THU CUC_HA NOI" [value = "83", label = "PK DK QT THU CUC_HA NOI", position = "82"] keycode("83"),
+	_84 "BV DK QT VINMEC HA NOI_HA NOI" [value = "84", label = "BV DK QT VINMEC HA NOI_HA NOI", position = "83"] keycode("84"),
+	_85 "BV LAO PHOI TW_HA NOI" [value = "85", label = "BV LAO PHOI TW_HA NOI", position = "84"] keycode("85"),
+	_86 "BV DK QT BAC HA_HA NOI" [value = "86", label = "BV DK QT BAC HA_HA NOI", position = "85"] keycode("86"),
+	_87 "BV DK TU NHAN AN SINH PHUC TRUONG MINH_HA NOI" [value = "87", label = "BV DK TU NHAN AN SINH PHUC TRUONG MINH_HA NOI", position = "86"] keycode("87"),
+	_88 "BV DK QT THU CUC_HA NOI" [value = "88", label = "BV DK QT THU CUC_HA NOI", position = "87"] keycode("88"),
+	_89 "BV DK XANH PON_HA NOI" [value = "89", label = "BV DK XANH PON_HA NOI", position = "88"] keycode("89"),
+	_90 "BV HUU NGHI VIET NAM CU BA_HA NOI" [value = "90", label = "BV HUU NGHI VIET NAM CU BA_HA NOI", position = "89"] keycode("90"),
+	_91 "BV E_HA NOI" [value = "91", label = "BV E_HA NOI", position = "90"] keycode("91"),
+	_92 "PK DK THUOC CTY CP TT BAC SI GIA DINH HN_HA NOI" [value = "92", label = "PK DK THUOC CTY CP TT BAC SI GIA DINH HN_HA NOI", position = "91"] keycode("92"),
+	_93 "BV BUU DIEN CS2_HA NOI" [value = "93", label = "BV BUU DIEN CS2_HA NOI", position = "92"] keycode("93"),
+	_94 "BV DK DUC GIANG_HA NOI" [value = "94", label = "BV DK DUC GIANG_HA NOI", position = "93"] keycode("94"),
+	_95 "BV TW QUAN DOI 108_HA NOI" [value = "95", label = "BV TW QUAN DOI 108_HA NOI", position = "94"] keycode("95"),
+	_96 "TTYT HUYEN SOC SON_HA NOI" [value = "96", label = "TTYT HUYEN SOC SON_HA NOI", position = "95"] keycode("96"),
+	_97 "BV DK MEDLATEC_HA NOI" [value = "97", label = "BV DK MEDLATEC_HA NOI", position = "96"] keycode("97"),
+	_98 "BV DK TN HA THANH_HA NOI" [value = "98", label = "BV DK TN HA THANH_HA NOI", position = "97"] keycode("98"),
+	_99 "PK DK TRUONG DH Y TE CONG CONG_HA NOI" [value = "99", label = "PK DK TRUONG DH Y TE CONG CONG_HA NOI", position = "98"] keycode("99"),
+	_100 "TTYT HUYEN THACH THAT_HA NOI" [value = "100", label = "TTYT HUYEN THACH THAT_HA NOI", position = "99"] keycode("100"),
+	_101 "BV 354_HA NOI" [value = "101", label = "BV 354_HA NOI", position = "100"] keycode("101"),
+	_102 "BV CK NAM HOC VA HIEM MUON HA NOI_HA NOI" [value = "102", label = "BV CK NAM HOC VA HIEM MUON HA NOI_HA NOI", position = "101"] keycode("102"),
+	_103 "BV DA LIEU TW_HA NOI" [value = "103", label = "BV DA LIEU TW_HA NOI", position = "102"] keycode("103"),
+	_104 "BV DK AN VIET_HA NOI" [value = "104", label = "BV DK AN VIET_HA NOI", position = "103"] keycode("104"),
+	_105 "BV DK HUYEN GIA LAM_HA NOI" [value = "105", label = "BV DK HUYEN GIA LAM_HA NOI", position = "104"] keycode("105"),
+	_106 "BV DK SON TAY_HA NOI" [value = "106", label = "BV DK SON TAY_HA NOI", position = "105"] keycode("106"),
+	_107 "BV HUU NGHI VIET DUC_HA NOI" [value = "107", label = "BV HUU NGHI VIET DUC_HA NOI", position = "106"] keycode("107"),
+	_108 "BV TIM HA NOI_HA NOI" [value = "108", label = "BV TIM HA NOI_HA NOI", position = "107"] keycode("108"),
+	_109 "BV UNG BUOU HUNG VIET_HA NOI" [value = "109", label = "BV UNG BUOU HUNG VIET_HA NOI", position = "108"] keycode("109"),
+	_110 "NT THANH PHUONG 3_HA NOI" [value = "110", label = "NT THANH PHUONG 3_HA NOI", position = "109"] keycode("110"),
+	_111 "PTC TT BAC SY GIA DINH_HA NOI" [value = "111", label = "PTC TT BAC SY GIA DINH_HA NOI", position = "110"] keycode("111"),
+	_112 "BV DK BAO SON 2_HA NOI" [value = "112", label = "BV DK BAO SON 2_HA NOI", position = "111"] keycode("112"),
+	_113 "BV DK TN THIEN DUC_HA NOI" [value = "113", label = "BV DK TN THIEN DUC_HA NOI", position = "112"] keycode("113"),
+	_114 "PTTT CTY CP BV HUU NGHI QT HA NOI_HA NOI" [value = "114", label = "PTTT CTY CP BV HUU NGHI QT HA NOI_HA NOI", position = "113"] keycode("114"),
+	_115 "TTYT HUYEN BA VI_HA NOI" [value = "115", label = "TTYT HUYEN BA VI_HA NOI", position = "114"] keycode("115"),
+	_116 "BV DK DONG DA_HA NOI" [value = "116", label = "BV DK DONG DA_HA NOI", position = "115"] keycode("116"),
+	_117 "BV DK TN HA NOI_HA NOI" [value = "117", label = "BV DK TN HA NOI_HA NOI", position = "116"] keycode("117"),
+	_118 "BV DONG DO_HA NOI" [value = "118", label = "BV DONG DO_HA NOI", position = "117"] keycode("118"),
+	_119 "BV HUU NGHI_HA NOI" [value = "119", label = "BV HUU NGHI_HA NOI", position = "118"] keycode("119"),
+	_120 "BV K CS TAN TRIEU_HA NOI" [value = "120", label = "BV K CS TAN TRIEU_HA NOI", position = "119"] keycode("120"),
+	_121 "BV NAM THANG LONG_HA NOI" [value = "121", label = "BV NAM THANG LONG_HA NOI", position = "120"] keycode("121"),
+	_122 "BV NOI TIET TW CS THANH TRI_HA NOI" [value = "122", label = "BV NOI TIET TW CS THANH TRI_HA NOI", position = "121"] keycode("122"),
+	_123 "BV RHM TW_HA NOI" [value = "123", label = "BV RHM TW_HA NOI", position = "122"] keycode("123"),
+	_124 "NT PK GIA DINH_HA NOI" [value = "124", label = "NT PK GIA DINH_HA NOI", position = "123"] keycode("124"),
+	_125 "NT TIN THANG GPP SO 2_HA NOI" [value = "125", label = "NT TIN THANG GPP SO 2_HA NOI", position = "124"] keycode("125"),
+	_126 "PK DK 12A DINH CONG TRANG_HA NOI" [value = "126", label = "PK DK 12A DINH CONG TRANG_HA NOI", position = "125"] keycode("126"),
+	_127 "PK DK MEDELAB_HA NOI" [value = "127", label = "PK DK MEDELAB_HA NOI", position = "126"] keycode("127"),
+	_128 "PK DK QT HA NOI_HA NOI" [value = "128", label = "PK DK QT HA NOI_HA NOI", position = "127"] keycode("128"),
+	_129 "HOAN MY CHAIN" [value = "129", label = "HOAN MY CHAIN", position = "128"] keycode("129"),
+	_130 "BV QT PHUONG CHAU_CAN THO" [value = "130", label = "BV QT PHUONG CHAU_CAN THO", position = "129"] keycode("130"),
+	_131 "PK DK VAN PHUOC CAN THO_CAN THO" [value = "131", label = "PK DK VAN PHUOC CAN THO_CAN THO", position = "130"] keycode("131"),
+	_132 "BV DK TAM MINH DUC CAN THO_CAN THO" [value = "132", label = "BV DK TAM MINH DUC CAN THO_CAN THO", position = "131"] keycode("132"),
+	_133 "BV DK QT SIS CAN THO_CAN THO" [value = "133", label = "BV DK QT SIS CAN THO_CAN THO", position = "132"] keycode("133"),
+	_134 "CTY DP VA TTBYT PHUONG CHAU_30419341_CAN THO" [value = "134", label = "CTY DP VA TTBYT PHUONG CHAU_30419341_CAN THO", position = "133"] keycode("134"),
+	_135 "BV DK TW CAN THO_CAN THO" [value = "135", label = "BV DK TW CAN THO_CAN THO", position = "134"] keycode("135"),
+	_136 "BV DK HOA HAO MEDIC CAN THO_CAN THO" [value = "136", label = "BV DK HOA HAO MEDIC CAN THO_CAN THO", position = "135"] keycode("136"),
+	_137 "BV UNG BUOU TP CAN THO_CAN THO" [value = "137", label = "BV UNG BUOU TP CAN THO_CAN THO", position = "136"] keycode("137"),
+	_138 "BV DK QT VINMEC DA NANG_DA NANG" [value = "138", label = "BV DK QT VINMEC DA NANG_DA NANG", position = "137"] keycode("138"),
+	_139 "BV DK GIA DINH_DA NANG" [value = "139", label = "BV DK GIA DINH_DA NANG", position = "138"] keycode("139"),
+	_140 "BV DK HOAN MY DA NANG_DA NANG" [value = "140", label = "BV DK HOAN MY DA NANG_DA NANG", position = "139"] keycode("140"),
+	_141 "BV DK TAM TRI DA NANG_DA NANG" [value = "141", label = "BV DK TAM TRI DA NANG_DA NANG", position = "140"] keycode("141"),
+	_142 "TTYT HUYEN HOA VANG_DA NANG" [value = "142", label = "TTYT HUYEN HOA VANG_DA NANG", position = "141"] keycode("142"),
+	_143 "BV 199_DA NANG" [value = "143", label = "BV 199_DA NANG", position = "142"] keycode("143"),
+	_144 "TTYT QUAN LIEN CHIEU_DA NANG" [value = "144", label = "TTYT QUAN LIEN CHIEU_DA NANG", position = "143"] keycode("144"),
+	_145 "BV DK DA NANG_DA NANG" [value = "145", label = "BV DK DA NANG_DA NANG", position = "144"] keycode("145"),
+	_146 "BV DK QT VINMEC_HAI PHONG" [value = "146", label = "BV DK QT VINMEC_HAI PHONG", position = "145"] keycode("146"),
+	_147 "BV DK QT HAI PHONG VINH BAO_HAI PHONG" [value = "147", label = "BV DK QT HAI PHONG VINH BAO_HAI PHONG", position = "146"] keycode("147"),
+	_148 "BV DK QT HAI PHONG_HAI PHONG" [value = "148", label = "BV DK QT HAI PHONG_HAI PHONG", position = "147"] keycode("148"),
+	_149 "BV QT GREEN_HAI PHONG" [value = "149", label = "BV QT GREEN_HAI PHONG", position = "148"] keycode("149"),
+	_150 "BV HUU NGHI VIET TIEP_HAI PHONG" [value = "150", label = "BV HUU NGHI VIET TIEP_HAI PHONG", position = "149"] keycode("150"),
+	_151 "PK QT QUANG THANH_HAI PHONG" [value = "151", label = "PK QT QUANG THANH_HAI PHONG", position = "150"] keycode("151"),
+	_152 "BV DH Y DUOC TP HCM 3_HO CHI MINH" [value = "152", label = "BV DH Y DUOC TP HCM 3_HO CHI MINH", position = "151"] keycode("152"),
+	_153 "BV DK XUYEN A DUC HOA_LONG AN" [value = "153", label = "BV DK XUYEN A DUC HOA_LONG AN", position = "152"] keycode("153"),
+	_154 "BV DK XUYEN A TAY NINH_TAY NINH" [value = "154", label = "BV DK XUYEN A TAY NINH_TAY NINH", position = "153"] keycode("154"),
+	_155 "BV DK XUYEN A VINH LONG_VINH LONG" [value = "155", label = "BV DK XUYEN A VINH LONG_VINH LONG", position = "154"] keycode("155"),
+	_156 "BV DK PHUONG CHAU SA DEC_DONG THAP" [value = "156", label = "BV DK PHUONG CHAU SA DEC_DONG THAP", position = "155"] keycode("156"),
+	_157 "BV DK QT VINMEC PHU QUOC_KIEN GIANG" [value = "157", label = "BV DK QT VINMEC PHU QUOC_KIEN GIANG", position = "156"] keycode("157"),
+	_158 "BV DK QT VINMEC_KHANH HOA" [value = "158", label = "BV DK QT VINMEC_KHANH HOA", position = "157"] keycode("158"),
+	_159 "BV DK QT VINMEC_QUANG NINH" [value = "159", label = "BV DK QT VINMEC_QUANG NINH", position = "158"] keycode("159"),
+	_160 "BV DK THANH VU MEDIC BAC LIEU_BAC LIEU" [value = "160", label = "BV DK THANH VU MEDIC BAC LIEU_BAC LIEU", position = "159"] keycode("160"),
+	_161 "BV DK TINH DONG NAI_DONG NAI" [value = "161", label = "BV DK TINH DONG NAI_DONG NAI", position = "160"] keycode("161"),
+	_162 "BV DK TINH KHANH HOA_KHANH HOA" [value = "162", label = "BV DK TINH KHANH HOA_KHANH HOA", position = "161"] keycode("162"),
+	_163 "BV DK TINH PHU THO_PHU THO" [value = "163", label = "BV DK TINH PHU THO_PHU THO", position = "162"] keycode("163"),
+	_164 "BV QT PHUONG CHAU SOC TRANG_SOC TRANG" [value = "164", label = "BV QT PHUONG CHAU SOC TRANG_SOC TRANG", position = "163"] keycode("164"),
+	_165 "PK CK NOI HOANG PHONG_HAI PHONG" [value = "165", label = "PK CK NOI HOANG PHONG_HAI PHONG", position = "164"] keycode("165"),
+	_166 "PK DK QT NGOC LAN_LANG SON" [value = "166", label = "PK DK QT NGOC LAN_LANG SON", position = "165"] keycode("166"),
+	_167 "PK DK VINMEC_HO CHI MINH" [value = "167", label = "PK DK VINMEC_HO CHI MINH", position = "166"] keycode("167"),
+	_168 "BV DH BUON MA THUOT_DAK LAK" [value = "168", label = "BV DH BUON MA THUOT_DAK LAK", position = "167"] keycode("168"),
+	_169 "BV DK HOAN MY DA LAT_LAM DONG" [value = "169", label = "BV DK HOAN MY DA LAT_LAM DONG", position = "168"] keycode("169"),
+	_170 "BV DK HOAN MY MINH HAI_CA MAU" [value = "170", label = "BV DK HOAN MY MINH HAI_CA MAU", position = "169"] keycode("170"),
+	_171 "BV DK HONG HUNG_TAY NINH" [value = "171", label = "BV DK HONG HUNG_TAY NINH", position = "170"] keycode("171"),
+	_172 "BV DK MINH DUC_BEN TRE" [value = "172", label = "BV DK MINH DUC_BEN TRE", position = "171"] keycode("172"),
+	_173 "BV DK NHAT TAN_AN GIANG" [value = "173", label = "BV DK NHAT TAN_AN GIANG", position = "172"] keycode("173"),
+	_174 "BV DK QT BECAMEX_BINH DUONG" [value = "174", label = "BV DK QT BECAMEX_BINH DUONG", position = "173"] keycode("174"),
+	_175 "BV DK TAM TRI DONG THAP_DONG THAP" [value = "175", label = "BV DK TAM TRI DONG THAP_DONG THAP", position = "174"] keycode("175"),
+	_176 "BV DK THIEN HANH_DAK LAK" [value = "176", label = "BV DK THIEN HANH_DAK LAK", position = "175"] keycode("176"),
+	_177 "BV DONG NAI 2_DONG NAI" [value = "177", label = "BV DONG NAI 2_DONG NAI", position = "176"] keycode("177"),
+	_178 "BV TW HUE_THUA THIEN HUE" [value = "178", label = "BV TW HUE_THUA THIEN HUE", position = "177"] keycode("178"),
+	_179 "Bệnh Viện Lão khoa Trung Ương" [value = "179", label = "Bệnh Viện Lão khoa Trung Ương", position = "178"] keycode("179"),
+	_180 "Phòng khám Thông minh Jio Health tại TP.HCM" [value = "180", label = "Phòng khám Thông minh Jio Health tại TP.HCM", position = "179"] keycode("180"),
+	_181 "Phòng khám Thông minh Jio Health Tân Bình" [value = "181", label = "Phòng khám Thông minh Jio Health Tân Bình", position = "180"] keycode("181"),
+	_182 "Phòng khám Thông minh Jio Health Thảo Điền" [value = "182", label = "Phòng khám Thông minh Jio Health Thảo Điền", position = "181"] keycode("182"),
+	_183 "Phòng khám Thông minh Jio Health Hà Nội" [value = "183", label = "Phòng khám Thông minh Jio Health Hà Nội", position = "182"] keycode("183"),
+	_184 "VICTORIA CHAIN_THU DUC" [value = "184", label = "VICTORIA CHAIN_THU DUC", position = "183"] keycode("184"),
+	_185 "VICTORIA CHAIN_Q1" [value = "185", label = "VICTORIA CHAIN_Q1", position = "184"] keycode("185"),
+	_186 "VICTORIA CHAIN_Q7" [value = "186", label = "VICTORIA CHAIN_Q7", position = "185"] keycode("186"),
+	_187 "BV DK TN HUNG VUONG_PHU THO" [value = "187", label = "BV DK TN HUNG VUONG_PHU THO", position = "186"] keycode("187"),
+	_188 "BV DK TN LE NGOC TUNG_TAY NINH" [value = "188", label = "BV DK TN LE NGOC TUNG_TAY NINH", position = "187"] keycode("188"),
+	_189 "PK ĐA KHOA NGOC MINH CO SO 1_HCM" [value = "189", label = "PK ĐA KHOA NGOC MINH CO SO 1_HCM", position = "188"] keycode("189"),
+	_190 "PK ĐA KHOA NGOC MINH CO SO 2_HCM" [value = "190", label = "PK ĐA KHOA NGOC MINH CO SO 2_HCM", position = "189"] keycode("190")
+};
+
+_S4_Selected "Bệnh viện/Cơ sở y tế" 
+text[ .. ];
+
+_ResPhone "Điện thoại cố định" 
+categorical[1..1]
+{
+	_1 "Số điện thoại cố định" [value = "1", label = "Số điện thoại cố định", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+	_2 "Từ chối/Không có" [value = "2", label = "Từ chối/Không có", position = "2"] keycode("2")
+};
+
+_ResCellPhone "Điện thoại di động" 
+categorical[1..1]
+{
+	_1 "Số điện thoại di động" [value = "1", label = "Số điện thoại di động", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+	_2 "Từ chối/Không có" [value = "2", label = "Từ chối/Không có", position = "2"] keycode("2")
+};
+
+_Email "Địa chỉ Email" 
+categorical[1..1]
+{
+	_1 "Địa chỉ Email" [value = "1", label = "Địa chỉ Email", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+	_2 "Từ chối/Không có" [value = "2", label = "Từ chối/Không có", position = "2"] keycode("2")
+};
+
+_Screener_Infor "SCREENER" 
+info;
+
+_Sampling "Phương pháp chọn mẫu" 
+categorical[1..1]
+{
+	_1 "Random" [value = "1", label = "Random", position = "1"] keycode("1"),
+	_2 "Purposive/ Snowball" [value = "2", label = "Purposive/ Snowball", position = "2"] keycode("2"),
+	_3 "Intercept" [value = "3", label = "Intercept", position = "3"] keycode("3"),
+	_4 "CATI recruit from database" [value = "4", label = "CATI recruit from database", position = "4"] keycode("4"),
+	_97 "Khác (nêu rõ……..)" [value = "97", label = "Khác (nêu rõ……..)", position = "5"] keycode("97") other(_97 "" text[ .. ]) fix
+};
+
+_Sample "Loại Phiếu" 
+categorical[1..1]
+{
+	_1 "Phiếu Main" [value = "1", label = "Phiếu Main", position = "1"] keycode("1"),
+	_2 "Phiếu Booster" [value = "2", label = "Phiếu Booster", position = "2"] keycode("2"),
+	_3 "Phiếu Non" [value = "3", label = "Phiếu Non", position = "3"] keycode("3")
+};
+
+_S1 "S1. PVV tự ghi nhận khu vực phỏng vấn (SA)" 
+categorical[1..1]
+{
+	_1 "Hồ Chí Minh" [value = "1", label = "Hồ Chí Minh", position = "1"] keycode("1"),
+	_2 "Hà Nội" [value = "2", label = "Hà Nội", position = "2"] keycode("2"),
+	_3 "Cần Thơ" [value = "3", label = "Cần Thơ", position = "3"] keycode("3"),
+	_4 "Đà Nẵng" [value = "4", label = "Đà Nẵng", position = "4"] keycode("4"),
+	_5 "Hải Phòng" [value = "5", label = "Hải Phòng", position = "5"] keycode("5"),
+	_6 "An Giang" [value = "6", label = "An Giang", position = "6"] keycode("6"),
+	_7 "Bạc Liêu" [value = "7", label = "Bạc Liêu", position = "7"] keycode("7"),
+	_8 "Bến Tre" [value = "8", label = "Bến Tre", position = "8"] keycode("8"),
+	_9 "Bình Dương" [value = "9", label = "Bình Dương", position = "9"] keycode("9"),
+	_10 "Cà Mau" [value = "10", label = "Cà Mau", position = "10"] keycode("10"),
+	_11 "Đăk Lăk" [value = "11", label = "Đăk Lăk", position = "11"] keycode("11"),
+	_12 "Đồng Nai" [value = "12", label = "Đồng Nai", position = "12"] keycode("12"),
+	_13 "Đồng Tháp" [value = "13", label = "Đồng Tháp", position = "13"] keycode("13"),
+	_14 "Thừa Thiên Huế" [value = "14", label = "Thừa Thiên Huế", position = "14"] keycode("14"),
+	_15 "Khánh Hòa" [value = "15", label = "Khánh Hòa", position = "15"] keycode("15"),
+	_16 "Kiên Giang" [value = "16", label = "Kiên Giang", position = "16"] keycode("16"),
+	_17 "Lâm Đồng" [value = "17", label = "Lâm Đồng", position = "17"] keycode("17"),
+	_18 "Lạng Sơn" [value = "18", label = "Lạng Sơn", position = "18"] keycode("18"),
+	_19 "Long An" [value = "19", label = "Long An", position = "19"] keycode("19"),
+	_20 "Phú Thọ" [value = "20", label = "Phú Thọ", position = "20"] keycode("20"),
+	_21 "Quảng Ninh" [value = "21", label = "Quảng Ninh", position = "21"] keycode("21"),
+	_22 "Sóc Trăng" [value = "22", label = "Sóc Trăng", position = "22"] keycode("22"),
+	_23 "Tây Ninh" [value = "23", label = "Tây Ninh", position = "23"] keycode("23"),
+	_24 "Vĩnh Long" [value = "24", label = "Vĩnh Long", position = "24"] keycode("24")
+};
+
+_S3 "S3. Địa chỉ bệnh viện/Cơ sở y tế" 
+categorical[1..1]
+{
+	_1 "1. 466 Nguyen Trai- P. 8" [value = "1", label = "1. 466 Nguyen Trai- P. 8", position = "1"] keycode("1"),
+	_2 "2. 215 Hong Bang- P. 11" [value = "2", label = "2. 215 Hong Bang- P. 11", position = "2"] keycode("2"),
+	_3 "3. 4 Nui Thanh- P. 13" [value = "3", label = "3. 4 Nui Thanh- P. 13", position = "3"] keycode("3"),
+	_4 "4. 241 Quoc Lo 1K- P. Linh Xuan" [value = "4", label = "4. 241 Quoc Lo 1K- P. Linh Xuan", position = "4"] keycode("4"),
+	_5 "5. 2B Pho Quang- P. 2" [value = "5", label = "5. 2B Pho Quang- P. 2", position = "5"] keycode("5"),
+	_6 "6. 10 Tran Huy Lieu- P. 12" [value = "6", label = "6. 10 Tran Huy Lieu- P. 12", position = "6"] keycode("6"),
+	_7 "7. 425 Kinh Duong Vuong- P. An Lac" [value = "7", label = "7. 425 Kinh Duong Vuong- P. An Lac", position = "7"] keycode("7"),
+	_8 "8. 1 No Trang Long- P. 7" [value = "8", label = "8. 1 No Trang Long- P. 7", position = "8"] keycode("8"),
+	_9 "9. 120 Hong Bang- P. 12" [value = "9", label = "9. 120 Hong Bang- P. 12", position = "9"] keycode("9"),
+	_10 "10. 6 Nguyen Luong Bang- P. Tan Phu" [value = "10", label = "10. 6 Nguyen Luong Bang- P. Tan Phu", position = "10"] keycode("10"),
+	_11 "11. 60-60A Phan Xich Long- P. 1" [value = "11", label = "11. 60-60A Phan Xich Long- P. 1", position = "11"] keycode("11"),
+	_12 "12. 30 Nguyen Van Lac- P. 19" [value = "12", label = "12. 30 Nguyen Van Lac- P. 19", position = "12"] keycode("12"),
+	_13 "13. 99/6 No Trang Long- P. 11" [value = "13", label = "13. 99/6 No Trang Long- P. 11", position = "13"] keycode("13"),
+	_14 "14. 458 Pho Minh Khai- P. Vinh Tuy" [value = "14", label = "14. 458 Pho Minh Khai- P. Vinh Tuy", position = "14"] keycode("14"),
+	_15 "15. 42 Quoc Lo 22- Ap Cho- Xa Tan Phu Trung" [value = "15", label = "15. 42 Quoc Lo 22- Ap Cho- Xa Tan Phu Trung", position = "15"] keycode("15"),
+	_16 "16. L5-04-05-06- Tang 5- Toa Nha Estella- 88 Song Hanh- P. An Phu" [value = "16", label = "16. L5-04-05-06- Tang 5- Toa Nha Estella- 88 Song Hanh- P. An Phu", position = "16"] keycode("16"),
+	_17 "17. 700 Su Van Hanh- P. 12" [value = "17", label = "17. 700 Su Van Hanh- P. 12", position = "17"] keycode("17"),
+	_18 "18. 468 Nguyen Trai- P. 8" [value = "18", label = "18. 468 Nguyen Trai- P. 8", position = "18"] keycode("18"),
+	_19 "19. Khu Y Te Ky Thuat Cao 532A Kinh Duong Vuong" [value = "19", label = "19. Khu Y Te Ky Thuat Cao 532A Kinh Duong Vuong", position = "19"] keycode("19"),
+	_20 "20. 6 Bac Nam 3- P. An Phu" [value = "20", label = "20. 6 Bac Nam 3- P. An Phu", position = "20"] keycode("20"),
+	_21 "21. 83/1 Vuon Lai- P. Phu Tho Hoa" [value = "21", label = "21. 83/1 Vuon Lai- P. Phu Tho Hoa", position = "21"] keycode("21"),
+	_22 "22. 88 Duong So 8- KDC Trung Son- Xa Binh Hung" [value = "22", label = "22. 88 Duong So 8- KDC Trung Son- Xa Binh Hung", position = "22"] keycode("22"),
+	_23 "23. 201 Nguyen Chi Thanh- P. 12" [value = "23", label = "23. 201 Nguyen Chi Thanh- P. 12", position = "23"] keycode("23"),
+	_24 "24. 32/2 Thong Nhat- P. 10" [value = "24", label = "24. 32/2 Thong Nhat- P. 10", position = "24"] keycode("24"),
+	_25 "25. Nguyen Van Hoai- Ap Bau Tre 2- Xa Tan An Hoi" [value = "25", label = "25. Nguyen Van Hoai- Ap Bau Tre 2- Xa Tan An Hoi", position = "25"] keycode("25"),
+	_26 "26. 130 Le Van Thinh- P. Binh Trung Tay" [value = "26", label = "26. 130 Le Van Thinh- P. Binh Trung Tay", position = "26"] keycode("26"),
+	_27 "27. 29 Phu Chau- P. Tam Phu" [value = "27", label = "27. 29 Phu Chau- P. Tam Phu", position = "27"] keycode("27"),
+	_28 "28. TN Diamond Plaza- 34 Le Duan" [value = "28", label = "28. TN Diamond Plaza- 34 Le Duan", position = "28"] keycode("28"),
+	_29 "29. 786 Nguyen Kiem- P. 3" [value = "29", label = "29. 786 Nguyen Kiem- P. 3", position = "29"] keycode("29"),
+	_30 "30. 527 Su Van Hanh- P. 12" [value = "30", label = "30. 527 Su Van Hanh- P. 12", position = "30"] keycode("30"),
+	_31 "31. 110A Ngo Quyen- P. 8" [value = "31", label = "31. 110A Ngo Quyen- P. 8", position = "31"] keycode("31"),
+	_32 "32. 1 Duong So 1- Khu Trung Tam Hanh Chinh- Thi Tran Tan Tuc" [value = "32", label = "32. 1 Duong So 1- Khu Trung Tam Hanh Chinh- Thi Tran Tan Tuc", position = "32"] keycode("32"),
+	_33 "33. 809 Huong Lo 2- P. Binh Tri Dong A" [value = "33", label = "33. 809 Huong Lo 2- P. Binh Tri Dong A", position = "33"] keycode("33"),
+	_34 "34. 1 Ly Thuong Kiet- P. 7" [value = "34", label = "34. 1 Ly Thuong Kiet- P. 7", position = "34"] keycode("34"),
+	_35 "35. 68 Le Van Luong- P. Tan Hung" [value = "35", label = "35. 68 Le Van Luong- P. Tan Hung", position = "35"] keycode("35"),
+	_36 "36. 201B Nguyen Chi Thanh- P. 12" [value = "36", label = "36. 201B Nguyen Chi Thanh- P. 12", position = "36"] keycode("36"),
+	_37 "37. 254 Hoa Hao- P. 4" [value = "37", label = "37. 254 Hoa Hao- P. 4", position = "37"] keycode("37"),
+	_38 "38. 263  Tran Hung Dao" [value = "38", label = "38. 263  Tran Hung Dao", position = "38"] keycode("38"),
+	_39 "39. 83 Le Hoang Phai- P. 17" [value = "39", label = "39. 83 Le Hoang Phai- P. 17", position = "39"] keycode("39"),
+	_40 "40. 20-22 Ngo Quyen- P. 5" [value = "40", label = "40. 20-22 Ngo Quyen- P. 5", position = "40"] keycode("40"),
+	_41 "41. 146 An Binh- P. 7" [value = "41", label = "41. 146 An Binh- P. 7", position = "41"] keycode("41"),
+	_42 "42. 764 Vo Van Kiet- P. 1" [value = "42", label = "42. 764 Vo Van Kiet- P. 1", position = "42"] keycode("42"),
+	_43 "43. 171/3 Truong Chinh- P. Tan Thoi Nhat" [value = "43", label = "43. 171/3 Truong Chinh- P. Tan Thoi Nhat", position = "43"] keycode("43"),
+	_44 "44. 104 Duong So 54- P. Tan Tao" [value = "44", label = "44. 104 Duong So 54- P. Tan Tao", position = "44"] keycode("44"),
+	_45 "45. 338 Hai Ba Trung- P. Tan Dinh" [value = "45", label = "45. 338 Hai Ba Trung- P. Tan Dinh", position = "45"] keycode("45"),
+	_46 "46. 72 Duong So 5- Cu Xa Binh Thoi" [value = "46", label = "46. 72 Duong So 5- Cu Xa Binh Thoi", position = "46"] keycode("46"),
+	_47 "47. 609-611 Au Co- P. Phu Trung" [value = "47", label = "47. 609-611 Au Co- P. Phu Trung", position = "47"] keycode("47"),
+	_48 "48. 541/21 Su Van Hanh ,Phuong 13 ,Quan 10 ,TP. Ho Chi Minh ,Viet Nam" [value = "48", label = "48. 541/21 Su Van Hanh ,Phuong 13 ,Quan 10 ,TP. Ho Chi Minh ,Viet Nam", position = "48"] keycode("48"),
+	_49 "49. 20-22 Duong Quang Trung- P. 12" [value = "49", label = "49. 20-22 Duong Quang Trung- P. 12", position = "49"] keycode("49"),
+	_50 "50. 829-829A-831 Duong 3/2- P. 7" [value = "50", label = "50. 829-829A-831 Duong 3/2- P. 7", position = "50"] keycode("50"),
+	_51 "51. 66-68 Nam Ky Khoi Nghia, P. Nguyen Thai Binh, Q 1, TP.HCM, Viet Nam" [value = "51", label = "51. 66-68 Nam Ky Khoi Nghia, P. Nguyen Thai Binh, Q 1, TP.HCM, Viet Nam", position = "51"] keycode("51"),
+	_52 "52. 107 Tan Hai, Phuong 13, Quan Tan Binh, TP.HCM" [value = "52", label = "52. 107 Tan Hai, Phuong 13, Quan Tan Binh, TP.HCM", position = "52"] keycode("52"),
+	_53 "53. Lau 2 Toa nha Crescent Plaza, 105 Ton Dat Tien, P. Tan Phu, Quan 7, Tp. HCM" [value = "53", label = "53. Lau 2 Toa nha Crescent Plaza, 105 Ton Dat Tien, P. Tan Phu, Quan 7, Tp. HCM", position = "53"] keycode("53"),
+	_54 "54. RS05-SH02- RS07-SH01 Richstar Residence- 239-241 Hoa Binh- P. Hiep Tan" [value = "54", label = "54. RS05-SH02- RS07-SH01 Richstar Residence- 239-241 Hoa Binh- P. Hiep Tan", position = "54"] keycode("54"),
+	_55 "55. 135A Nguyen Van Troi- P. 11" [value = "55", label = "55. 135A Nguyen Van Troi- P. 11", position = "55"] keycode("55"),
+	_56 "56. 135A Nguyen Van Troi- P. 11" [value = "56", label = "56. 135A Nguyen Van Troi- P. 11", position = "56"] keycode("56"),
+	_57 "57. 371 Dien Bien Phu" [value = "57", label = "57. 371 Dien Bien Phu", position = "57"] keycode("57"),
+	_58 "58. 2 Nguyen Thong- P. Vo Thi Sau" [value = "58", label = "58. 2 Nguyen Thong- P. Vo Thi Sau", position = "58"] keycode("58"),
+	_59 "59. 871 Tran Xuan Soan- P. Tan Hung" [value = "59", label = "59. 871 Tran Xuan Soan- P. Tan Hung", position = "59"] keycode("59"),
+	_60 "60. 5 Duong 17A- KP11- P. Binh Tri Dong B" [value = "60", label = "60. 5 Duong 17A- KP11- P. Binh Tri Dong B", position = "60"] keycode("60"),
+	_61 "61. 281A Le Van Luong- Xa Phuoc Kien" [value = "61", label = "61. 281A Le Van Luong- Xa Phuoc Kien", position = "61"] keycode("61"),
+	_62 "62. 36 Duong 1B- P. Binh Tri Dong B" [value = "62", label = "62. 36 Duong 1B- P. Binh Tri Dong B", position = "62"] keycode("62"),
+	_63 "63. 63-65 Ben Van Don- P. 12" [value = "63", label = "63. 63-65 Ben Van Don- P. 12", position = "63"] keycode("63"),
+	_64 "64. 20-20Bis-22 Dinh Tien Hoang- P. Da Kao" [value = "64", label = "64. 20-20Bis-22 Dinh Tien Hoang- P. Da Kao", position = "64"] keycode("64"),
+	_65 "65. Lau 1- 17 Au Co- P. 14" [value = "65", label = "65. Lau 1- 17 Au Co- P. 14", position = "65"] keycode("65"),
+	_66 "66. 42 Dang Van Bi- P. Binh Tho" [value = "66", label = "66. 42 Dang Van Bi- P. Binh Tho", position = "66"] keycode("66"),
+	_67 "67. 525/15 Su Van Hanh (noi dai)- P. 12" [value = "67", label = "67. 525/15 Su Van Hanh (noi dai)- P. 12", position = "67"] keycode("67"),
+	_68 "68. 9-11-13-15 Trinh Van Can- P. Cau Ong Lanh" [value = "68", label = "68. 9-11-13-15 Trinh Van Can- P. Cau Ong Lanh", position = "68"] keycode("68"),
+	_69 "69. 3A35 Tran Van Giau- Xa Pham Van Hai" [value = "69", label = "69. 3A35 Tran Van Giau- Xa Pham Van Hai", position = "69"] keycode("69"),
+	_70 "70. 47/4- 47/6 Huynh Tan Phat- KP6- TT. Nha Be" [value = "70", label = "70. 47/4- 47/6 Huynh Tan Phat- KP6- TT. Nha Be", position = "70"] keycode("70"),
+	_71 "71. 703 Quoc Lo 22- Khu Pho 5- Thi Tran Cu Chi" [value = "71", label = "71. 703 Quoc Lo 22- Khu Pho 5- Thi Tran Cu Chi", position = "71"] keycode("71"),
+	_72 "72. Nguyen Van Thu Phuong Da Kao" [value = "72", label = "72. Nguyen Van Thu Phuong Da Kao", position = "72"] keycode("72"),
+	_73 "73. Duong Giai Phong" [value = "73", label = "73. Duong Giai Phong", position = "73"] keycode("73"),
+	_74 "74. 1 Ton That Tung- P. Trung Tu" [value = "74", label = "74. 1 Ton That Tung- P. Trung Tu", position = "74"] keycode("74"),
+	_75 "75. 2 Be Van Dan- P. Quang Trung" [value = "75", label = "75. 2 Be Van Dan- P. Quang Trung", position = "75"] keycode("75"),
+	_76 "76. 8 Chau Van Liem- P. Phu Do" [value = "76", label = "76. 8 Chau Van Liem- P. Phu Do", position = "76"] keycode("76"),
+	_77 "77. 55 Yen Ninh- P. Truc Bach" [value = "77", label = "77. 55 Yen Ninh- P. Truc Bach", position = "77"] keycode("77"),
+	_78 "78. KM 13- Duong Ngoc Hoi" [value = "78", label = "78. KM 13- Duong Ngoc Hoi", position = "78"] keycode("78"),
+	_79 "79. 9 Pho Vien- P. Co Nhue 2" [value = "79", label = "79. 9 Pho Vien- P. Co Nhue 2", position = "79"] keycode("79"),
+	_80 "80. 108  Hoang Nhu Tiep  P. Bo De" [value = "80", label = "80. 108  Hoang Nhu Tiep  P. Bo De", position = "80"] keycode("80"),
+	_81 "81. 1 Phuong Mai- P. Phuong Mai" [value = "81", label = "81. 1 Phuong Mai- P. Phuong Mai", position = "81"] keycode("81"),
+	_82 "82. 144  Xuan Thuy" [value = "82", label = "82. 144  Xuan Thuy", position = "82"] keycode("82"),
+	_83 "83. 216 Tran Duy Hung- P. Trung Hoa" [value = "83", label = "83. 216 Tran Duy Hung- P. Trung Hoa", position = "83"] keycode("83"),
+	_84 "84. 458 Pho Minh Khai- P. Vinh Tuy" [value = "84", label = "84. 458 Pho Minh Khai- P. Vinh Tuy", position = "84"] keycode("84"),
+	_85 "85. 463 Hoang Hoa Tham- P. Vinh Phuc" [value = "85", label = "85. 463 Hoang Hoa Tham- P. Vinh Phuc", position = "85"] keycode("85"),
+	_86 "86. 137  Pho Nguyen Van Cu P. Ngoc Lam" [value = "86", label = "86. 137  Pho Nguyen Van Cu P. Ngoc Lam", position = "86"] keycode("86"),
+	_87 "87. So 8 duong Chau Van Liem, phuong Phu Do" [value = "87", label = "87. So 8 duong Chau Van Liem, phuong Phu Do", position = "87"] keycode("87"),
+	_88 "88. Thuy Khue- P. Buoi" [value = "88", label = "88. Thuy Khue- P. Buoi", position = "88"] keycode("88"),
+	_89 "89. 12 Chu Van An- P. Dien Bien" [value = "89", label = "89. 12 Chu Van An- P. Dien Bien", position = "89"] keycode("89"),
+	_90 "90. 37 Pho Hai Ba Trung- P. Trang Tien" [value = "90", label = "90. 37 Pho Hai Ba Trung- P. Trang Tien", position = "90"] keycode("90"),
+	_91 "91. 89 Tran Cung- P. Nghia Tan" [value = "91", label = "91. 89 Tran Cung- P. Nghia Tan", position = "91"] keycode("91"),
+	_92 "92. 75 Ho Me Tri- Xa Trung Van" [value = "92", label = "92. 75 Ho Me Tri- Xa Trung Van", position = "92"] keycode("92"),
+	_93 "93. 228  Le Trong Tan- P. Dinh Cong" [value = "93", label = "93. 228  Le Trong Tan- P. Dinh Cong", position = "93"] keycode("93"),
+	_94 "94. 54 Truong Lam- P. Duc Giang" [value = "94", label = "94. 54 Truong Lam- P. Duc Giang", position = "94"] keycode("94"),
+	_95 "95. 1 Tran Hung Dao- P. Bach Dang" [value = "95", label = "95. 1 Tran Hung Dao- P. Bach Dang", position = "95"] keycode("95"),
+	_96 "96. Thon Muc Bai- Xa Phu Linh" [value = "96", label = "96. Thon Muc Bai- Xa Phu Linh", position = "96"] keycode("96"),
+	_97 "97. So 42-44 Pho Nghia Dung, Phuong Phuc Xa" [value = "97", label = "97. So 42-44 Pho Nghia Dung, Phuong Phuc Xa", position = "97"] keycode("97"),
+	_98 "98. 61 Pho Vu Thanh- P. O Cho Dua" [value = "98", label = "98. 61 Pho Vu Thanh- P. O Cho Dua", position = "98"] keycode("98"),
+	_99 "99. 1A Duc Thang- P. Duc Thang" [value = "99", label = "99. 1A Duc Thang- P. Duc Thang", position = "99"] keycode("99"),
+	_100 "100. Thon Thai Hoa- Xa Binh Phu" [value = "100", label = "100. Thon Thai Hoa- Xa Binh Phu", position = "100"] keycode("100"),
+	_101 "101. 120 Pho Doc Ngu- P. Vinh Phuc" [value = "101", label = "101. 120 Pho Doc Ngu- P. Vinh Phuc", position = "101"] keycode("101"),
+	_102 "102. Lo 1-8A Cum TTCN Hai Ba Trung- P. Hoang Van Thu" [value = "102", label = "102. Lo 1-8A Cum TTCN Hai Ba Trung- P. Hoang Van Thu", position = "102"] keycode("102"),
+	_103 "103. 15 Phuong Mai" [value = "103", label = "103. 15 Phuong Mai", position = "103"] keycode("103"),
+	_104 "104. Truong Chinh" [value = "104", label = "104. Truong Chinh", position = "104"] keycode("104"),
+	_105 "105. Khu Do Thi Moi Trau Quy Thi Tran Trau Quy" [value = "105", label = "105. Khu Do Thi Moi Trau Quy Thi Tran Trau Quy", position = "105"] keycode("105"),
+	_106 "106. 304A Pho Le Loi- P. Le Loi" [value = "106", label = "106. 304A Pho Le Loi- P. Le Loi", position = "106"] keycode("106"),
+	_107 "107. 40 Trang Thi- P. Hang Bong" [value = "107", label = "107. 40 Trang Thi- P. Hang Bong", position = "107"] keycode("107"),
+	_108 "108. 92  Tran Hung Dao" [value = "108", label = "108. 92  Tran Hung Dao", position = "108"] keycode("108"),
+	_109 "109. 34  Pho Dai Co Viet P. Le Dai Hanh" [value = "109", label = "109. 34  Pho Dai Co Viet P. Le Dai Hanh", position = "109"] keycode("109"),
+	_110 "110. Tang 1- 126-136 Nguyen Trai- P. Thuong Dinh" [value = "110", label = "110. Tang 1- 126-136 Nguyen Trai- P. Thuong Dinh", position = "110"] keycode("110"),
+	_111 "111. 50C  Pho Hang Bai- P. Hang Bai" [value = "111", label = "111. 50C  Pho Hang Bai- P. Hang Bai", position = "111"] keycode("111"),
+	_112 "112. 52 Nguyen Chi Thanh- P. Lang Thuong" [value = "112", label = "112. 52 Nguyen Chi Thanh- P. Lang Thuong", position = "112"] keycode("112"),
+	_113 "113. 207 Phung Hung- P. Phuc La" [value = "113", label = "113. 207 Phung Hung- P. Phuc La", position = "113"] keycode("113"),
+	_114 "114. So 68-72 duong Tay Mo- TDP phuong- P.Tay Mo" [value = "114", label = "114. So 68-72 duong Tay Mo- TDP phuong- P.Tay Mo", position = "114"] keycode("114"),
+	_115 "115. Thi Tran Tay Dang" [value = "115", label = "115. Thi Tran Tay Dang", position = "115"] keycode("115"),
+	_116 "116. 180 Pho Nguyen Luong Bang- P. Quang Trung" [value = "116", label = "116. 180 Pho Nguyen Luong Bang- P. Quang Trung", position = "116"] keycode("116"),
+	_117 "117. 29 Han Thuyen- P. Pham Dinh Ho" [value = "117", label = "117. 29 Han Thuyen- P. Pham Dinh Ho", position = "117"] keycode("117"),
+	_118 "118. 5  Dao Duy Anh P. Phuong Lien" [value = "118", label = "118. 5  Dao Duy Anh P. Phuong Lien", position = "118"] keycode("118"),
+	_119 "119. 1 Tran Khanh Du- P. Bach Dang" [value = "119", label = "119. 1 Tran Khanh Du- P. Bach Dang", position = "119"] keycode("119"),
+	_120 "120. 30 Cau Buou- Xa Tan Trieu" [value = "120", label = "120. 30 Cau Buou- Xa Tan Trieu", position = "120"] keycode("120"),
+	_121 "121. 38  Tan Xuan P. Xuan Dinh" [value = "121", label = "121. 38  Tan Xuan P. Xuan Dinh", position = "121"] keycode("121"),
+	_122 "122. BV Noi Tiet Trung Uong- 80 Ngo 26 Pho Yen Lang-- P. Thinh Quang" [value = "122", label = "122. BV Noi Tiet Trung Uong- 80 Ngo 26 Pho Yen Lang-- P. Thinh Quang", position = "122"] keycode("122"),
+	_123 "123. 40B Trang Thi" [value = "123", label = "123. 40B Trang Thi", position = "123"] keycode("123"),
+	_124 "124. 108 Nha A3- Khu Doan Ngoai Giao Van Phuc- (298 Pho Kim Ma)- P. Kim Ma" [value = "124", label = "124. 108 Nha A3- Khu Doan Ngoai Giao Van Phuc- (298 Pho Kim Ma)- P. Kim Ma", position = "124"] keycode("124"),
+	_125 "125. 51 Xuan Dieu- P. Quang An" [value = "125", label = "125. 51 Xuan Dieu- P. Quang An", position = "125"] keycode("125"),
+	_126 "126. 12 Pho Dinh Cong Trang- P. Phan Chu Trinh" [value = "126", label = "126. 12 Pho Dinh Cong Trang- P. Phan Chu Trinh", position = "126"] keycode("126"),
+	_127 "127. 86-88  Nguyen Luong Bang P. Nam Dong" [value = "127", label = "127. 86-88  Nguyen Luong Bang P. Nam Dong", position = "127"] keycode("127"),
+	_128 "128. 152  Pho Xa Dan P. Phuong Lien" [value = "128", label = "128. 152  Pho Xa Dan P. Phuong Lien", position = "128"] keycode("128"),
+	_129 "129. 60-60A Phan Xich Long- P. 1" [value = "129", label = "129. 60-60A Phan Xich Long- P. 1", position = "129"] keycode("129"),
+	_130 "130. 300 Nguyen Van Cu (noi dai)- P. An Khanh" [value = "130", label = "130. 300 Nguyen Van Cu (noi dai)- P. An Khanh", position = "130"] keycode("130"),
+	_131 "131. 19 Nguyen Van Linh- P. Hung Loi" [value = "131", label = "131. 19 Nguyen Van Linh- P. Hung Loi", position = "131"] keycode("131"),
+	_132 "132. 551 Tran Quang Dieu- P. An Thoi" [value = "132", label = "132. 551 Tran Quang Dieu- P. An Thoi", position = "132"] keycode("132"),
+	_133 "133. 397 Nguyen Van Cu- P. An Binh" [value = "133", label = "133. 397 Nguyen Van Cu- P. An Binh", position = "133"] keycode("133"),
+	_134 "134. 300 Nguyen Van Cu (noi dai)- P. An Khanh" [value = "134", label = "134. 300 Nguyen Van Cu (noi dai)- P. An Khanh", position = "134"] keycode("134"),
+	_135 "135. 315 Nguyen Van Linh- P. An Khanh" [value = "135", label = "135. 315 Nguyen Van Linh- P. An Khanh", position = "135"] keycode("135"),
+	_136 "136. 102 Cach Mang Thang 8- P. Cai Khe" [value = "136", label = "136. 102 Cach Mang Thang 8- P. Cai Khe", position = "136"] keycode("136"),
+	_137 "137. 4 Chau Van Liem- P. Tan An" [value = "137", label = "137. 4 Chau Van Liem- P. Tan An", position = "137"] keycode("137"),
+	_138 "138. 458 Pho Minh Khai- P. Vinh Tuy" [value = "138", label = "138. 458 Pho Minh Khai- P. Vinh Tuy", position = "138"] keycode("138"),
+	_139 "139. 73 Nguyen Huu Tho- P. Hoa Thuan Tay" [value = "139", label = "139. 73 Nguyen Huu Tho- P. Hoa Thuan Tay", position = "139"] keycode("139"),
+	_140 "140. 161 Nguyen Van Linh- P. Thac Gian" [value = "140", label = "140. 161 Nguyen Van Linh- P. Thac Gian", position = "140"] keycode("140"),
+	_141 "141. 64 Cach Mang Thang Tam- P. Khue Trung" [value = "141", label = "141. 64 Cach Mang Thang Tam- P. Khue Trung", position = "141"] keycode("141"),
+	_142 "142. Thon Thach Dong- Xa Hoa Nhon" [value = "142", label = "142. Thon Thach Dong- Xa Hoa Nhon", position = "142"] keycode("142"),
+	_143 "143. 216 Nguyen Cong Tru- P. An Hai Dong" [value = "143", label = "143. 216 Nguyen Cong Tru- P. An Hai Dong", position = "143"] keycode("143"),
+	_144 "144. 525 Ton Duc Thang" [value = "144", label = "144. 525 Ton Duc Thang", position = "144"] keycode("144"),
+	_145 "145. 124 Hai Phong- P. Thach Thang" [value = "145", label = "145. 124 Hai Phong- P. Thach Thang", position = "145"] keycode("145"),
+	_146 "146. 458 Pho Minh Khai- P. Vinh Tuy" [value = "146", label = "146. 458 Pho Minh Khai- P. Vinh Tuy", position = "146"] keycode("146"),
+	_147 "147. Khu Pho Tan Hoa- Thi Tran Vinh Bao" [value = "147", label = "147. Khu Pho Tan Hoa- Thi Tran Vinh Bao", position = "147"] keycode("147"),
+	_148 "148. 124 Nguyen Duc Canh- P. Cat Dai" [value = "148", label = "148. 124 Nguyen Duc Canh- P. Cat Dai", position = "148"] keycode("148"),
+	_149 "149. 738  Nguyen Van Linh P. Niem Nghia" [value = "149", label = "149. 738  Nguyen Van Linh P. Niem Nghia", position = "149"] keycode("149"),
+	_150 "150. 1 Nha Thuong- P. Cat Dai" [value = "150", label = "150. 1 Nha Thuong- P. Cat Dai", position = "150"] keycode("150"),
+	_151 "151. Thon Cau Ha A- Xa Quang Trung" [value = "151", label = "151. Thon Cau Ha A- Xa Quang Trung", position = "151"] keycode("151"),
+	_152 "152. 221B  Hoang Van Thu, Q. PHU NHUAN" [value = "152", label = "152. 221B  Hoang Van Thu, Q. PHU NHUAN", position = "152"] keycode("152"),
+	_153 "153. 459 Tinh Lo 825- O 4- Khu A- Thi Tran Hau Nghia , H. DUC HOA" [value = "153", label = "153. 459 Tinh Lo 825- O 4- Khu A- Thi Tran Hau Nghia , H. DUC HOA", position = "153"] keycode("153"),
+	_154 "154. 10 Xuyen A- Ap Tram Vang 3- Xa Thanh Phuoc , H. GO DAU" [value = "154", label = "154. 10 Xuyen A- Ap Tram Vang 3- Xa Thanh Phuoc , H. GO DAU", position = "154"] keycode("154"),
+	_155 "155. 68E Pham Hung- To 69- Khom 2- P. 9  , TP. VINH LONG" [value = "155", label = "155. 68E Pham Hung- To 69- Khom 2- P. 9  , TP. VINH LONG", position = "155"] keycode("155"),
+	_156 "156. 153 Nguyen Sinh Sac- P. 2  , TP. SA DEC" [value = "156", label = "156. 153 Nguyen Sinh Sac- P. 2  , TP. SA DEC", position = "156"] keycode("156"),
+	_157 "157. Khu Bai Dai,  Xa Ganh Dau, Huyen Phu Quoc, Tinh Kien Giang, TP. PHU QUOC" [value = "157", label = "157. Khu Bai Dai,  Xa Ganh Dau, Huyen Phu Quoc, Tinh Kien Giang, TP. PHU QUOC", position = "157"] keycode("157"),
+	_158 "158. 42A Trần Phú, Vĩnh Nguyên, Nha Trang" [value = "158", label = "158. 42A Trần Phú, Vĩnh Nguyên, Nha Trang", position = "158"] keycode("158"),
+	_159 "159. 10A Lê Thánh Tông, Hồng Gai, TP. Hạ Long" [value = "159", label = "159. 10A Lê Thánh Tông, Hồng Gai, TP. Hạ Long", position = "159"] keycode("159"),
+	_160 "160. 02DN Tranh Quoc Lo 1A- Khom 1- P. 7 , TP. BAC LIEU" [value = "160", label = "160. 02DN Tranh Quoc Lo 1A- Khom 1- P. 7 , TP. BAC LIEU", position = "160"] keycode("160"),
+	_161 "161. 2  Duong Dong Khoi P. Tam Hoa , TP. BIEN HOA" [value = "161", label = "161. 2  Duong Dong Khoi P. Tam Hoa , TP. BIEN HOA", position = "161"] keycode("161"),
+	_162 "162. 19 Yersin- P. Loc Tho  , TP. NHA TRANG" [value = "162", label = "162. 19 Yersin- P. Loc Tho  , TP. NHA TRANG", position = "162"] keycode("162"),
+	_163 "163. Nguyen Tat Thanh- P. Tan Dan  , TP. VIET TRI" [value = "163", label = "163. Nguyen Tat Thanh- P. Tan Dan  , TP. VIET TRI", position = "163"] keycode("163"),
+	_164 "164. 373 Phu Loi- P. 2  , TP. SOC TRANG" [value = "164", label = "164. 373 Phu Loi- P. 2  , TP. SOC TRANG", position = "164"] keycode("164"),
+	_165 "165. Khu Pho 1/5- TT. Vinh Bao  , H. VINH BAO" [value = "165", label = "165. Khu Pho 1/5- TT. Vinh Bao  , H. VINH BAO", position = "165"] keycode("165"),
+	_166 "166. So 102 Duong Ly Thuong Kiet- P. Hoang Van Thu , TP. LANG SON" [value = "166", label = "166. So 102 Duong Ly Thuong Kiet- P. Hoang Van Thu , TP. LANG SON", position = "166"] keycode("166"),
+	_167 "167. Lo L3-01,Tang TTTM Vincom Center Dong Khoi,So 72 Le Thanh Ton,Q1" [value = "167", label = "167. Lo L3-01,Tang TTTM Vincom Center Dong Khoi,So 72 Le Thanh Ton,Q1", position = "167"] keycode("167"),
+	_168 "168. 298 Ha Huy Tap- P. Tan An  , TP. BUON ME THUOT" [value = "168", label = "168. 298 Ha Huy Tap- P. Tan An  , TP. BUON ME THUOT", position = "168"] keycode("168"),
+	_169 "169. Doi Long Tho- P. 10  , TP. DA LAT" [value = "169", label = "169. Doi Long Tho- P. 10  , TP. DA LAT", position = "169"] keycode("169"),
+	_170 "170. 9 Lac Long Quan, Khom 5, P7, TP. Ca mau," [value = "170", label = "170. 9 Lac Long Quan, Khom 5, P7, TP. Ca mau,", position = "170"] keycode("170"),
+	_171 "171. 187 Pham Van Dong- Khu Pho Hiep Long- P. Hiep Tan , TX. HOA THANH" [value = "171", label = "171. 187 Pham Van Dong- Khu Pho Hiep Long- P. Hiep Tan , TX. HOA THANH", position = "171"] keycode("171"),
+	_172 "172. 333D Doan Hoang Minh- P. 6  , TP. BEN TRE" [value = "172", label = "172. 333D Doan Hoang Minh- P. 6  , TP. BEN TRE", position = "172"] keycode("172"),
+	_173 "173. 32 Pham Ngoc Thach- Khom Chau Long 7- P. Chau Phu B , TP. CHAU DOC" [value = "173", label = "173. 32 Pham Ngoc Thach- Khom Chau Long 7- P. Chau Phu B , TP. CHAU DOC", position = "173"] keycode("173"),
+	_174 "174. Khu Go Cat- P. Lai Thieu  , TP. THUAN AN" [value = "174", label = "174. Khu Go Cat- P. Lai Thieu  , TP. THUAN AN", position = "174"] keycode("174"),
+	_175 "175. 700 Quoc Lo 30- Xa My Tan  , TP. CAO LANH" [value = "175", label = "175. 700 Quoc Lo 30- Xa My Tan  , TP. CAO LANH", position = "175"] keycode("175"),
+	_176 "176. 17  Nguyen Chi Thanh P. Tan An , TP. BUON ME THUOT" [value = "176", label = "176. 17  Nguyen Chi Thanh P. Tan An , TP. BUON ME THUOT", position = "176"] keycode("176"),
+	_177 "177. 2 Dong Khoi- P. Tam Hoa  , TP. BIEN HOA" [value = "177", label = "177. 2 Dong Khoi- P. Tam Hoa  , TP. BIEN HOA", position = "177"] keycode("177"),
+	_178 "178. 16 Le Loi- P. Vinh Ninh  ," [value = "178", label = "178. 16 Le Loi- P. Vinh Ninh  ,", position = "178"] keycode("178"),
+	_179 "179. 1A Pho Phuong Mai- P. Phuong Mai  , Q. DONG DA" [value = "179", label = "179. 1A Pho Phuong Mai- P. Phuong Mai  , Q. DONG DA", position = "179"] keycode("179"),
+	_180 "180. Tầng 1, mPlaza, 39 Lê Duẩn, P. Bến Nghé, Quận 1" [value = "180", label = "180. Tầng 1, mPlaza, 39 Lê Duẩn, P. Bến Nghé, Quận 1", position = "180"] keycode("180"),
+	_181 "181. Tầng 1, Republic Plaza, 18E Cộng Hòa, Phường 4, Quận Tân Bình" [value = "181", label = "181. Tầng 1, Republic Plaza, 18E Cộng Hòa, Phường 4, Quận Tân Bình", position = "181"] keycode("181"),
+	_182 "182. Worc@Q2, 21 Võ Trường Toản, Cổng Đường số 10, An Phú, Thảo Điền" [value = "182", label = "182. Worc@Q2, 21 Võ Trường Toản, Cổng Đường số 10, An Phú, Thảo Điền", position = "182"] keycode("182"),
+	_183 "183. Capital Place, 29 Liễu Giai, Ngọc Khánh, Quận Ba Đình" [value = "183", label = "183. Capital Place, 29 Liễu Giai, Ngọc Khánh, Quận Ba Đình", position = "183"] keycode("183"),
+	_184 "184. 37-39 Lương Định Của, P. An Khánh, TP Thủ Đức" [value = "184", label = "184. 37-39 Lương Định Của, P. An Khánh, TP Thủ Đức", position = "184"] keycode("184"),
+	_185 "185. 20-20Bis-22 Đinh Tiên Hoàng, P. Đa Kao, Quận 1" [value = "185", label = "185. 20-20Bis-22 Đinh Tiên Hoàng, P. Đa Kao, Quận 1", position = "185"] keycode("185"),
+	_186 "186. 1056 Nguyễn Văn Linh, Sky Garden 1, Phú Mỹ Hưng, Quận 7" [value = "186", label = "186. 1056 Nguyễn Văn Linh, Sky Garden 1, Phú Mỹ Hưng, Quận 7", position = "186"] keycode("186"),
+	_187 "187. Quốc lộ 2, xã Chí Đám, huyện Đoan Hùng" [value = "187", label = "187. Quốc lộ 2, xã Chí Đám, huyện Đoan Hùng", position = "187"] keycode("187"),
+	_188 "188. 500 Cách Mạng Tháng Tám, Khu phố 3" [value = "188", label = "188. 500 Cách Mạng Tháng Tám, Khu phố 3", position = "188"] keycode("188"),
+	_189 "189. 20-22 Lãnh Binh Thăng, Phường 13, Quận 11" [value = "189", label = "189. 20-22 Lãnh Binh Thăng, Phường 13, Quận 11", position = "189"] keycode("189"),
+	_190 "190. 262/4 Lạc Long Quân, Phường 10, Quận 11" [value = "190", label = "190. 262/4 Lạc Long Quân, Phường 10, Quận 11", position = "190"] keycode("190")
+};
+
+_S3_Selected "Địa chỉ" 
+text[ .. ];
+
+_S5 "S5. Khu vực" 
+categorical[1..1]
+{
+	_1 "Miền Nam - Đông Nam Bộ" [value = "1", label = "Miền Nam - Đông Nam Bộ", position = "1"] keycode("1"),
+	_2 "Miền Bắc" [value = "2", label = "Miền Bắc", position = "2"] keycode("2"),
+	_3 "Miền Trung – Tây Nguyên" [value = "3", label = "Miền Trung – Tây Nguyên", position = "3"] keycode("3"),
+	_4 "Đồng Bằng Sông Cửu Long" [value = "4", label = "Đồng Bằng Sông Cửu Long", position = "4"] keycode("4")
+};
+
+_S6 "S6. Phân loại bệnh viện" 
+categorical[1..1]
+{
+	_1 "Treated hospital - Bệnh viện không có phòng tiêm chủng" [value = "1", label = "Treated hospital - Bệnh viện không có phòng tiêm chủng", position = "1"] keycode("1"),
+	_2 "Treated & Vaccination hospital - Bệnh viện có phòng tiêm chủng" [value = "2", label = "Treated & Vaccination hospital - Bệnh viện có phòng tiêm chủng", position = "2"] keycode("2"),
+	_3 "." [value = "3", label = ".", position = "3"] keycode("3")
+};
+
+_S7 "S7. PVV tự ghi nhận BV công tư" 
+categorical[1..1]
+{
+	_1 "Bệnh viện công" [value = "1", label = "Bệnh viện công", position = "1"] keycode("1"),
+	_2 "Bệnh viện tư" [value = "2", label = "Bệnh viện tư", position = "2"] keycode("2")
+};
+
+_S8 "S8. Phase" 
+categorical[1..1]
+{
+	_1 "Phase 1" [value = "1", label = "Phase 1", position = "1"] keycode("1"),
+	_2 "Phase 2" [value = "2", label = "Phase 2", position = "2"] keycode("2"),
+	_3 "Phase 3" [value = "3", label = "Phase 3", position = "3"] keycode("3")
+};
+
+_Gender "PVV: Ghi nhận giới tính đáp viên (SA)" 
+categorical[1..1]
+{
+	_1 "Nam" [value = "1", label = "Nam", position = "1"] keycode("1"),
+	_2 "Nữ" [value = "2", label = "Nữ", position = "2"] keycode("2")
+};
+
+_YearOfBirth "Bạn sinh năm mấy?" 
+long[-2147483648 .. 2147483647];
+
+_Age "Tuổi:" 
+long[-2147483648 .. 2147483647];
+
+_AgeGroup "Độ tuổi:" 
+categorical[1..1]
+{
+	_1 "Dưới 18 tuổi" [value = "1", label = "Dưới 18 tuổi", position = "1"] keycode("1"),
+	_2 "18 - 23" [value = "2", label = "18 - 23", position = "2"] keycode("2"),
+	_3 "24 – 29" [value = "3", label = "24 – 29", position = "3"] keycode("3"),
+	_4 "Trên 29 tuổi" [value = "4", label = "Trên 29 tuổi", position = "4"] keycode("4")
+};
+
+_HouseHoldIncome "SHOWTABLETThu nhập hàng tháng của tất cả mọi người trong gia đình bạn là khoảng bao nhiêu? (SA)" 
+categorical[1..1]
+{
+	_1 "Dưới 3,000,001 VND" [value = "1", label = "Dưới 3,000,001 VND", position = "1"] keycode("1"),
+	_2 "3,000,001 – 4,000,000 VND" [value = "2", label = "3,000,001 – 4,000,000 VND", position = "2"] keycode("2"),
+	_3 "4,000,001 – 7,500,000 VND" [value = "3", label = "4,000,001 – 7,500,000 VND", position = "3"] keycode("3"),
+	_4 "7,500,001 – 12,000,000 VND" [value = "4", label = "7,500,001 – 12,000,000 VND", position = "4"] keycode("4"),
+	_5 "12,000,001 – 23,500,000 VND" [value = "5", label = "12,000,001 – 23,500,000 VND", position = "5"] keycode("5"),
+	_6 "23,500,001 VND trở lên" [value = "6", label = "23,500,001 VND trở lên", position = "6"] keycode("6"),
+	_98 "Không biết/ Từ chối (Không SHOWTABLET)" [value = "98", label = "Không biết/ Từ chối (Không SHOWTABLET)", position = "7"] keycode("98")
+};
+
+_Class "Class" 
+categorical[1..1]
+{
+	_1 "Class F" [value = "1", label = "Class F", position = "1"] keycode("1"),
+	_2 "Class E" [value = "2", label = "Class E", position = "2"] keycode("2"),
+	_3 "Class D" [value = "3", label = "Class D", position = "3"] keycode("3"),
+	_4 "Class C" [value = "4", label = "Class C", position = "4"] keycode("4"),
+	_5 "Class B" [value = "5", label = "Class B", position = "5"] keycode("5"),
+	_6 "Class A" [value = "6", label = "Class A", position = "6"] keycode("6"),
+	_98 "Không biết/ Từ chối (Không SHOWTABLET)" [value = "98", label = "Không biết/ Từ chối (Không SHOWTABLET)", position = "7"] keycode("98")
+};
+
+_ThamgiaNCTT "Bạn có tham gia bất kì cuộc phỏng vấn nào liên quan đến sản phẩm chăm sóc vệ sinh phụ nữ (băng vệ sinh, tampon) trong 3 tháng qua không? (SA)" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_NganhCam "SHOWTABLETCó ai trong nhà bạn làm việc trong những ngành nghề sau đây không? (MA)" 
+categorical[1..]
+{
+	_1 "Quảng cáo/ PR/ Tiếp thị/ Marketing" [value = "1", label = "Quảng cáo/ PR/ Tiếp thị/ Marketing", position = "1"] keycode("1"),
+	_2 "Nghiên cứu thị trường" [value = "2", label = "Nghiên cứu thị trường", position = "2"] keycode("2"),
+	_3 "Báo chí/ Truyền thông/ Truyền hình" [value = "3", label = "Báo chí/ Truyền thông/ Truyền hình", position = "3"] keycode("3"),
+	_4 "Sản xuất, Bán sỉ hoặc Bán lẻ các sản phẩm chăm sóc vệ sinh phụ nữ (băng vệ sinh, tampon)" [value = "4", label = "Sản xuất, Bán sỉ hoặc Bán lẻ các sản phẩm chăm sóc vệ sinh phụ nữ (băng vệ sinh, tampon)", position = "4"] keycode("4"),
+	_5 "Các cửa hàng bán lẻ - siêu thị/ tạp hóa/ hiệu thuốc/ cửa hàng tiện lợi" [value = "5", label = "Các cửa hàng bán lẻ - siêu thị/ tạp hóa/ hiệu thuốc/ cửa hàng tiện lợi", position = "5"] keycode("5"),
+	_99 "Không ngành nào nêu trên" [value = "99", label = "Không ngành nào nêu trên", position = "6"] keycode("99") exclusive
+};
+
+_PersonalIncome "Thu nhập cá nhân" 
+categorical[1..1]
+{
+	_1 "0 – 1,499,999 VND" [value = "1", label = "0 – 1,499,999 VND", position = "1"] keycode("1"),
+	_2 "1,500,000 – 2,999,999 VND" [value = "2", label = "1,500,000 – 2,999,999 VND", position = "2"] keycode("2"),
+	_3 "3,000,000 – 4,499,999 VND" [value = "3", label = "3,000,000 – 4,499,999 VND", position = "3"] keycode("3"),
+	_4 "4,500,000 – 7,499,999 VND" [value = "4", label = "4,500,000 – 7,499,999 VND", position = "4"] keycode("4"),
+	_5 "7,500,000 – 14,999,999 VND" [value = "5", label = "7,500,000 – 14,999,999 VND", position = "5"] keycode("5"),
+	_6 "Từ 15,000,000 VND trở lên" [value = "6", label = "Từ 15,000,000 VND trở lên", position = "6"] keycode("6"),
+	_7 "15,000,000 – 29,999,999 VND" [value = "7", label = "15,000,000 – 29,999,999 VND", position = "7"] keycode("7"),
+	_8 "30,000,000 – 44,999,999 VND" [value = "8", label = "30,000,000 – 44,999,999 VND", position = "8"] keycode("8"),
+	_9 "45,000,000 – 74,999,999 VND" [value = "9", label = "45,000,000 – 74,999,999 VND", position = "9"] keycode("9"),
+	_10 "75,000,000 – 149,999,999 VND" [value = "10", label = "75,000,000 – 149,999,999 VND", position = "10"] keycode("10"),
+	_11 "150,000,000 VND trở lên" [value = "11", label = "150,000,000 VND trở lên", position = "11"] keycode("11"),
+	_98 "Không biết/ Từ chối (Không SHOWTABLET)" [value = "98", label = "Không biết/ Từ chối (Không SHOWTABLET)", position = "12"] keycode("98") exclusive
+};
+
+_Note_1 "PHẦN 2 - THÔNG TIN CỦA BÁC SĨ" 
+info;
+
+_Q3a "SHOWTABLETQ3a. Xin cho biết chuyên khoa hiện tại của Bác sĩ? (MA)" 
+categorical[1..]
+{
+	_1 "Tim mạch" [value = "1", label = "Tim mạch", position = "1"] keycode("1"),
+	_2 "Da liễu" [value = "2", label = "Da liễu", position = "2"] keycode("2"),
+	_3 "Lão khoa" [value = "3", label = "Lão khoa", position = "3"] keycode("3"),
+	_4 "Thận học – Tiết niệu" [value = "4", label = "Thận học – Tiết niệu", position = "4"] keycode("4"),
+	_5 "Nội Thần kinh" [value = "5", label = "Nội Thần kinh", position = "5"] keycode("5"),
+	_6 "Nội tiết" [value = "6", label = "Nội tiết", position = "6"] keycode("6"),
+	_7 "Cơ xương khớp/Thấp khớp" [value = "7", label = "Cơ xương khớp/Thấp khớp", position = "7"] keycode("7"),
+	_8 "Tôi làm nhân viên hành chính/viên chức ở phòng ban" [value = "8", label = "Tôi làm nhân viên hành chính/viên chức ở phòng ban", position = "8"] keycode("8") exclusive,
+	_97 "Chuyên khoa khác (ghi rõ)" [value = "97", label = "Chuyên khoa khác (ghi rõ)", position = "9"] keycode("97") other(_97 "" text[ .. ])
+};
+
+_Q3b "SHOWTABLETQ3b. Hiện bác sĩ đang làm việc tại khoa/phòng ban nào? (MA)" 
+categorical[1..]
+{
+	SUP_SUB_01 "<b>KHOA</b>"
+	{
+		_1 "Khoa Tim mạch" [value = "1", label = "Khoa Tim mạch", position = "2"] keycode("1"),
+		_2 "Khoa Da liễu" [value = "2", label = "Khoa Da liễu", position = "3"] keycode("2"),
+		_3 "Khoa Lão khoa" [value = "3", label = "Khoa Lão khoa", position = "4"] keycode("3"),
+		_4 "Khoa Thận học – Tiết niệu" [value = "4", label = "Khoa Thận học – Tiết niệu", position = "5"] keycode("4"),
+		_5 "Khoa Nội Thần kinh" [value = "5", label = "Khoa Nội Thần kinh", position = "6"] keycode("5"),
+		_6 "Khoa Nội tiết" [value = "6", label = "Khoa Nội tiết", position = "7"] keycode("6"),
+		_7 "Khoa Cơ xương khớp/Thấp khớp" [value = "7", label = "Khoa Cơ xương khớp/Thấp khớp", position = "8"] keycode("7"),
+		_8 "Khoa Nội trú" [value = "8", label = "Khoa Nội trú", position = "9"] keycode("8"),
+		_9 "Khoa Ngoại trú/Phòng khám" [value = "9", label = "Khoa Ngoại trú/Phòng khám", position = "10"] keycode("9"),
+		_10 "Khoa/ Đơn vị Tiêm chủng" [value = "10", label = "Khoa/ Đơn vị Tiêm chủng", position = "11"] keycode("10"),
+		_16 "Khoa nội tổng hợp/ nội tổng quát" [value = "16", label = "Khoa nội tổng hợp/ nội tổng quát", position = "12"] keycode("16"),
+		_17 "Khoa cấp cứu/hồi sức cấp cứu/ICU" [value = "17", label = "Khoa cấp cứu/hồi sức cấp cứu/ICU", position = "13"] keycode("17")
+	},
+	SUP_SUB_02 "<b>PHÒNG/BAN</b>"
+	{
+		_11 "Khoa dược" [value = "11", label = "Khoa dược", position = "15"] keycode("11"),
+		_12 "Phòng Kế hoạch tổng hợp" [value = "12", label = "Phòng Kế hoạch tổng hợp", position = "16"] keycode("12"),
+		_13 "Ban giám đốc bệnh viện" [value = "13", label = "Ban giám đốc bệnh viện", position = "17"] keycode("13"),
+		_14 "Phòng tài chính kế toán" [value = "14", label = "Phòng tài chính kế toán", position = "18"] keycode("14"),
+		_15 "Phòng tổ chức - hành chính - quản trị" [value = "15", label = "Phòng tổ chức - hành chính - quản trị", position = "19"] keycode("15")
+	},
+	_97 "Khác (ghi rõ)" [value = "97", label = "Khác (ghi rõ)", position = "20"] keycode("97") other(_97 "" text[ .. ])
+};
+
+_Loop_Q4 "SHOWTABLETQ4. Bác sĩ đã làm việc tại {@} bao nhiêu năm rồi? (SA)" loop
+{
+	SUP_SUB_01 "<b>KHOA</b>"
+	{
+		_1 "Khoa Tim mạch" [value = "1", label = "Khoa Tim mạch", position = "2"] keycode("1"),
+		_2 "Khoa Da liễu" [value = "2", label = "Khoa Da liễu", position = "3"] keycode("2"),
+		_3 "Khoa Lão khoa" [value = "3", label = "Khoa Lão khoa", position = "4"] keycode("3"),
+		_4 "Khoa Thận học – Tiết niệu" [value = "4", label = "Khoa Thận học – Tiết niệu", position = "5"] keycode("4"),
+		_5 "Khoa Nội Thần kinh" [value = "5", label = "Khoa Nội Thần kinh", position = "6"] keycode("5"),
+		_6 "Khoa Nội tiết" [value = "6", label = "Khoa Nội tiết", position = "7"] keycode("6"),
+		_7 "Khoa Cơ xương khớp/Thấp khớp" [value = "7", label = "Khoa Cơ xương khớp/Thấp khớp", position = "8"] keycode("7"),
+		_8 "Khoa Nội trú" [value = "8", label = "Khoa Nội trú", position = "9"] keycode("8"),
+		_9 "Khoa Ngoại trú/Phòng khám" [value = "9", label = "Khoa Ngoại trú/Phòng khám", position = "10"] keycode("9"),
+		_10 "Khoa/ Đơn vị Tiêm chủng" [value = "10", label = "Khoa/ Đơn vị Tiêm chủng", position = "11"] keycode("10"),
+		_16 "Khoa nội tổng hợp/ nội tổng quát" [value = "16", label = "Khoa nội tổng hợp/ nội tổng quát", position = "12"] keycode("16"),
+		_17 "Khoa cấp cứu/hồi sức cấp cứu/ICU" [value = "17", label = "Khoa cấp cứu/hồi sức cấp cứu/ICU", position = "13"] keycode("17")
+	},
+	SUP_SUB_02 "<b>PHÒNG/BAN</b>"
+	{
+		_11 "Khoa dược" [value = "11", label = "Khoa dược", position = "15"] keycode("11"),
+		_12 "Phòng Kế hoạch tổng hợp" [value = "12", label = "Phòng Kế hoạch tổng hợp", position = "16"] keycode("12"),
+		_13 "Ban giám đốc bệnh viện" [value = "13", label = "Ban giám đốc bệnh viện", position = "17"] keycode("13"),
+		_14 "Phòng tài chính kế toán" [value = "14", label = "Phòng tài chính kế toán", position = "18"] keycode("14"),
+		_15 "Phòng tổ chức - hành chính - quản trị" [value = "15", label = "Phòng tổ chức - hành chính - quản trị", position = "19"] keycode("15")
+	},
+	_97 "" [value = "97", label = "", position = "20"] keycode("97")
+} fields
+(
+	_Loop_Q4_Num "SHOWTABLETQ4. Bác sĩ đã làm việc tại {@} bao nhiêu năm rồi? (SA)" 
+	double[ .. ];
+
+	_Loop_Q4_Recode "SHOWTABLETQ4. Bác sĩ đã làm việc tại {@} bao nhiêu năm rồi? (SA)" 
+	categorical[1..1]
+	{
+		_1 "Ít hơn 3 năm" [value = "1", label = "Ít hơn 3 năm", position = "1"] keycode("1"),
+		_2 "Từ 3 năm đến dưới 5 năm" [value = "2", label = "Từ 3 năm đến dưới 5 năm", position = "2"] keycode("2"),
+		_3 "Từ 5 năm đến dưới 10 năm" [value = "3", label = "Từ 5 năm đến dưới 10 năm", position = "3"] keycode("3"),
+		_4 "Từ 10 năm đến dưới 15 năm" [value = "4", label = "Từ 10 năm đến dưới 15 năm", position = "4"] keycode("4"),
+		_5 "Từ 15 năm trở lên" [value = "5", label = "Từ 15 năm trở lên", position = "5"] keycode("5")
+	};
+
+)expand grid;
+
+_Q4_Num "SHOWTABLETQ4. Bác sĩ đã làm việc tại  bao nhiêu năm rồi? (SA)" 
+double[ .. ];
+
+_Q4_Recode "SHOWTABLETQ4. Bác sĩ đã làm việc tại  bao nhiêu năm rồi? (SA)" 
+categorical[1..1]
+{
+	_1 "Ít hơn 3 năm" [value = "1", label = "Ít hơn 3 năm", position = "1"] keycode("1"),
+	_2 "Từ 3 năm đến dưới 5 năm" [value = "2", label = "Từ 3 năm đến dưới 5 năm", position = "2"] keycode("2"),
+	_3 "Từ 5 năm đến dưới 10 năm" [value = "3", label = "Từ 5 năm đến dưới 10 năm", position = "3"] keycode("3"),
+	_4 "Từ 10 năm đến dưới 15 năm" [value = "4", label = "Từ 10 năm đến dưới 15 năm", position = "4"] keycode("4"),
+	_5 "Từ 15 năm trở lên" [value = "5", label = "Từ 15 năm trở lên", position = "5"] keycode("5")
+};
+
+_Q5_Num "SHOWTABLETQ5. Bác sĩ đã làm việc tại  bao lâu rồi? (SA)" 
+double[ .. ];
+
+_Q5_Recode "SHOWTABLETQ5. Bác sĩ đã làm việc tại  bao lâu rồi? (SA)" 
+categorical[1..1]
+{
+	_1 "Ít hơn 1 năm" [value = "1", label = "Ít hơn 1 năm", position = "1"] keycode("1"),
+	_2 "Từ 1 năm đến dưới 3 năm" [value = "2", label = "Từ 1 năm đến dưới 3 năm", position = "2"] keycode("2"),
+	_3 "Từ 3 năm đến dưới 5 năm" [value = "3", label = "Từ 3 năm đến dưới 5 năm", position = "3"] keycode("3"),
+	_4 "Từ 5 năm đến dưới 10 năm" [value = "4", label = "Từ 5 năm đến dưới 10 năm", position = "4"] keycode("4"),
+	_5 "Từ 10 năm đến dưới 15 năm" [value = "5", label = "Từ 10 năm đến dưới 15 năm", position = "5"] keycode("5"),
+	_6 "Từ 15 năm trở lên" [value = "6", label = "Từ 15 năm trở lên", position = "6"] keycode("6")
+};
+
+_Q6a "SHOWTABLETQ6a. Xin cho biết chức vụ hiện tại của Bác sĩ ở bệnh viện này là gì?" 
+categorical[1..]
+{
+	_1 "Giám đốc bệnh viện" [value = "1", label = "Giám đốc bệnh viện", position = "1"] keycode("1"),
+	_2 "Phó giám đốc bệnh viện" [value = "2", label = "Phó giám đốc bệnh viện", position = "2"] keycode("2"),
+	_3 "Trưởng phòng/khoa/đơn vị" [value = "3", label = "Trưởng phòng/khoa/đơn vị", position = "3"] keycode("3"),
+	_4 "Phó phòng/khoa" [value = "4", label = "Phó phòng/khoa", position = "4"] keycode("4"),
+	_12 "PHÓ PHÒNG/KHOA KIÊM NHIỆM QUYỀN TRƯỞNG PHÒNG/KHOA" [value = "12", label = "PHÓ PHÒNG/KHOA KIÊM NHIỆM QUYỀN TRƯỞNG PHÒNG/KHOA", position = "5"] keycode("12"),
+	_5 "Giáo sư" [value = "5", label = "Giáo sư", position = "6"] keycode("5"),
+	_6 "Phó giáo sư" [value = "6", label = "Phó giáo sư", position = "7"] keycode("6"),
+	_7 "Tiến sĩ" [value = "7", label = "Tiến sĩ", position = "8"] keycode("7"),
+	_8 "Thạc sĩ" [value = "8", label = "Thạc sĩ", position = "9"] keycode("8"),
+	_9 "Bác sĩ chuyên khoa II" [value = "9", label = "Bác sĩ chuyên khoa II", position = "10"] keycode("9"),
+	_10 "Bác sĩ chuyên khoa I" [value = "10", label = "Bác sĩ chuyên khoa I", position = "11"] keycode("10"),
+	_11 "Bác sĩ" [value = "11", label = "Bác sĩ", position = "12"] keycode("11") exclusive,
+	_13 "Cử nhân Dược" [value = "13", label = "Cử nhân Dược", position = "13"] keycode("13"),
+	_97 "Chuyên viên/Dược sĩ nghiệp vụ dược (ghi rõ chức vụ của chuyên viên/Dược sĩ...)" [value = "97", label = "Chuyên viên/Dược sĩ nghiệp vụ dược (ghi rõ chức vụ của chuyên viên/Dược sĩ...)", position = "14"] keycode("97") other(_97 "" text[ .. ]) exclusive
+};
+
+_Q6b "SHOWTABLETQ6b. Và chức danh của Bác sĩ là ...? (MA)" 
+categorical[1..]
+{
+	_1 "Giám đốc bệnh viện" [value = "1", label = "Giám đốc bệnh viện", position = "1"] keycode("1"),
+	_2 "Phó giám đốc bệnh viện" [value = "2", label = "Phó giám đốc bệnh viện", position = "2"] keycode("2"),
+	_3 "Trưởng phòng/khoa/đơn vị" [value = "3", label = "Trưởng phòng/khoa/đơn vị", position = "3"] keycode("3"),
+	_4 "Phó phòng/khoa" [value = "4", label = "Phó phòng/khoa", position = "4"] keycode("4"),
+	_12 "PHÓ PHÒNG/KHOA KIÊM NHIỆM QUYỀN TRƯỞNG PHÒNG/KHOA" [value = "12", label = "PHÓ PHÒNG/KHOA KIÊM NHIỆM QUYỀN TRƯỞNG PHÒNG/KHOA", position = "5"] keycode("12"),
+	_5 "Giáo sư" [value = "5", label = "Giáo sư", position = "6"] keycode("5"),
+	_6 "Phó giáo sư" [value = "6", label = "Phó giáo sư", position = "7"] keycode("6"),
+	_7 "Tiến sĩ" [value = "7", label = "Tiến sĩ", position = "8"] keycode("7"),
+	_8 "Thạc sĩ" [value = "8", label = "Thạc sĩ", position = "9"] keycode("8"),
+	_9 "Bác sĩ chuyên khoa II" [value = "9", label = "Bác sĩ chuyên khoa II", position = "10"] keycode("9"),
+	_10 "Bác sĩ chuyên khoa I" [value = "10", label = "Bác sĩ chuyên khoa I", position = "11"] keycode("10"),
+	_11 "Bác sĩ" [value = "11", label = "Bác sĩ", position = "12"] keycode("11"),
+	_13 "Cử nhân Dược" [value = "13", label = "Cử nhân Dược", position = "13"] keycode("13"),
+	_97 "Chuyên viên/Dược sĩ nghiệp vụ dược (ghi rõ chức vụ của chuyên viên/Dược sĩ...)" [value = "97", label = "Chuyên viên/Dược sĩ nghiệp vụ dược (ghi rõ chức vụ của chuyên viên/Dược sĩ...)", position = "14"] keycode("97") other(_97 "" text[ .. ]) exclusive
+};
+
+_Q7a "SHOWTABLETQ7a. Ngoài  thì hiện tại Bác sĩ còn công tác tại bất kì bệnh viện/phòng khám hoặc cơ sở y tế nào khác không? (MA)" 
+categorical[1..]
+{
+	_1 "Không" [value = "1", label = "Không", position = "1"] keycode("1") exclusive,
+	_2 "Tôi CÓ khám tại (các) bệnh viện/phòng khám/cơ sở y tế khác (ghi nhận số lượng:)" [value = "2", label = "Tôi CÓ khám tại (các) bệnh viện/phòng khám/cơ sở y tế khác (ghi nhận số lượng:)", position = "2"] keycode("2") other(_2 "" double[-2147483648 .. 2147483647]),
+	_3 "Tôi CÓ khám thêm tại phòng khám tư nhân của riêng tôi (ghi nhận số lượng: )" [value = "3", label = "Tôi CÓ khám thêm tại phòng khám tư nhân của riêng tôi (ghi nhận số lượng: )", position = "3"] keycode("3") other(_3 "" double[-2147483648 .. 2147483647])
+};
+
+_Block_Q7b1 "SHOWTABLETQ7b1. Xin cho biết thông tin về tên và địa chỉ cụ thể của bệnh viện/phòng khám/cơ sở y tế khác mà bác sĩ đã đề cập ở trên? (OE)" block fields
+(
+	_Q7b1_1 "Thông tin CSYT (1): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (1)" [value = "1", label = "Thông tin CSYT (1)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b1_2 "Thông tin CSYT (2): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (2)" [value = "1", label = "Thông tin CSYT (2)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b1_3 "Thông tin CSYT (3): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (3)" [value = "1", label = "Thông tin CSYT (3)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b1_4 "Thông tin CSYT (4): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (4)" [value = "1", label = "Thông tin CSYT (4)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b1_5 "Thông tin CSYT (5): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (5)" [value = "1", label = "Thông tin CSYT (5)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+);
+
+_Block_Q7b2 "SHOWTABLETQ7b2. Xin cho biết thông tin về tên và địa chỉ cụ thể của phòng khám tư nhân của bác sĩ đã đề cập ở trên? (OE)" block fields
+(
+	_Q7b2_1 "Thông tin CSYT (1): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (1)" [value = "1", label = "Thông tin CSYT (1)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b2_2 "Thông tin CSYT (2): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (2)" [value = "1", label = "Thông tin CSYT (2)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b2_3 "Thông tin CSYT (3): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (3)" [value = "1", label = "Thông tin CSYT (3)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b2_4 "Thông tin CSYT (4): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (4)" [value = "1", label = "Thông tin CSYT (4)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+	_Q7b2_5 "Thông tin CSYT (5): -Tên: -Địa chỉ:" 
+	categorical[1..1]
+	{
+		_1 "Thông tin CSYT (5)" [value = "1", label = "Thông tin CSYT (5)", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_99 "Từ chối trả lời" [value = "99", label = "Từ chối trả lời", position = "2"] keycode("99")
+	};
+
+);
+
+_Q9 "SHOWTABLETQ9. Bác sĩ dành khoảng bao nhiêu phần trăm thời gian làm việc tại  để khám và điều trị cho bệnh nhân ngoại trú/phòng khám? (SA)" 
+categorical[1..1]
+{
+	_1 "Dưới 20% thời gian làm việc" [value = "1", label = "Dưới 20% thời gian làm việc", position = "1"] keycode("1"),
+	_2 "20% - 49% thời gian làm việc" [value = "2", label = "20% - 49% thời gian làm việc", position = "2"] keycode("2"),
+	_3 "50% - 74% thời gian làm việc" [value = "3", label = "50% - 74% thời gian làm việc", position = "3"] keycode("3"),
+	_4 "75% - 100% thời gian làm việc" [value = "4", label = "75% - 100% thời gian làm việc", position = "4"] keycode("4"),
+	_5 "Tôi không khám và điều trị cho bệnh nhân ngoại trú/phòng khám" [value = "5", label = "Tôi không khám và điều trị cho bệnh nhân ngoại trú/phòng khám", position = "5"] keycode("5")
+};
+
+_Q10b "Q10b.  có phòng tiêm chủng vắc xin dành cho người lớn không? (SA)" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q10a1 "SHOWTABLETQ10a1. Xin cho biết vai trò hiện tại của Bác sĩ trong việc chấp thuận đưa các loại vắc xin dành cho người lớn vào ? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi KHÔNG tham gia vào quá trình quyết định việc lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào " [value = "1", label = "Tôi KHÔNG tham gia vào quá trình quyết định việc lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào ", position = "1"] keycode("1"),
+	_2 "Tôi CÓ THAM GIA vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào " [value = "2", label = "Tôi CÓ THAM GIA vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào ", position = "2"] keycode("2"),
+	_3 "Tôi là NGƯỜI QUYẾT ĐỊNH CHÍNH vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào " [value = "3", label = "Tôi là NGƯỜI QUYẾT ĐỊNH CHÍNH vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn vào ", position = "3"] keycode("3"),
+	_4 "Bệnh viện chưa có/không có phòng tiêm chủng nên không/chưa biết có tham gia vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn hay không" [value = "4", label = "Bệnh viện chưa có/không có phòng tiêm chủng nên không/chưa biết có tham gia vào quá trình lựa chọn loại/nhãn hiệu vắc xin dành cho người lớn hay không", position = "4"] keycode("4")
+};
+
+_Q10a2 "SHOWTABLETQ10a2. Vậy với qui trình đưa thuốc mới vào bệnh viện thì như thế nào, nhận định nào sau đây phù hợp với vai trò của bác sĩ trong việc chấp thuận đưa các loại thuốc mới dành cho người lớn vào ? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi KHÔNG tham gia vào quá trình quyết định việc lựa chọn loại/nhãn hiệu thuốc mới dành cho người lớn vào " [value = "1", label = "Tôi KHÔNG tham gia vào quá trình quyết định việc lựa chọn loại/nhãn hiệu thuốc mới dành cho người lớn vào ", position = "1"] keycode("1"),
+	_2 "Tôi CÓ THAM GIA vào quá trình lựa chọn loại/nhãn hiệu thuốc mới dành cho người lớn vào " [value = "2", label = "Tôi CÓ THAM GIA vào quá trình lựa chọn loại/nhãn hiệu thuốc mới dành cho người lớn vào ", position = "2"] keycode("2"),
+	_3 "Tôi là NGƯỜI QUYẾT ĐỊNH CHÍNH vào quá trình lựa chọn loại/nhãn hiệu thuốc dành cho người lớn vào " [value = "3", label = "Tôi là NGƯỜI QUYẾT ĐỊNH CHÍNH vào quá trình lựa chọn loại/nhãn hiệu thuốc dành cho người lớn vào ", position = "3"] keycode("3")
+};
+
+_Q10c "SHOWTABLETQ10c. Bác sĩ có được trưởng phòng/khoa ủy quyền cho việc quyết định HOẶC tham gia vào quá trình lựa chọn loại/nhãn hiệu vắc xin/thuốc dành cho người lớn vào ?" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q11 "PHÂN LOẠI HCO-HCP" 
+categorical[1..1]
+{
+	_1 "HCP" [value = "1", label = "HCP", position = "1"] keycode("1"),
+	_2 "HCO1" [value = "2", label = "HCO1", position = "2"] keycode("2"),
+	_5 "HCO2" [value = "5", label = "HCO2", position = "3"] keycode("5"),
+	_3 "HCP cum HCO" [value = "3", label = "HCP cum HCO", position = "4"] keycode("3"),
+	_96 "None" [value = "96", label = "None", position = "5"] keycode("96")
+};
+
+_Q11_Situation "TRƯỜNG HỢP" 
+categorical[1..1]
+{
+	_1 "Trường hợp 1" [value = "1", label = "Trường hợp 1", position = "1"] keycode("1"),
+	_2 "Trường hợp 2" [value = "2", label = "Trường hợp 2", position = "2"] keycode("2"),
+	_3 "Trường hợp 3" [value = "3", label = "Trường hợp 3", position = "3"] keycode("3"),
+	_4 "Trường hợp 4" [value = "4", label = "Trường hợp 4", position = "4"] keycode("4"),
+	_5 "Trường hợp 5" [value = "5", label = "Trường hợp 5", position = "5"] keycode("5"),
+	_6 "Trường hợp 6" [value = "6", label = "Trường hợp 6", position = "6"] keycode("6"),
+	_7 "Trường hợp 7" [value = "7", label = "Trường hợp 7", position = "7"] keycode("7"),
+	_8 "Trường hợp 8" [value = "8", label = "Trường hợp 8", position = "8"] keycode("8"),
+	_9 "Trường hợp 9" [value = "9", label = "Trường hợp 9", position = "9"] keycode("9"),
+	_10 "Trường hợp 10" [value = "10", label = "Trường hợp 10", position = "10"] keycode("10"),
+	_11 "Trường hợp 11" [value = "11", label = "Trường hợp 11", position = "11"] keycode("11"),
+	_12 "Trường hợp 12" [value = "12", label = "Trường hợp 12", position = "12"] keycode("12"),
+	_13 "Trường hợp 13" [value = "13", label = "Trường hợp 13", position = "13"] keycode("13"),
+	_14 "Trường hợp 14" [value = "14", label = "Trường hợp 14", position = "14"] keycode("14"),
+	_15 "Trường hợp 15" [value = "15", label = "Trường hợp 15", position = "15"] keycode("15"),
+	_16 "Trường hợp 16" [value = "16", label = "Trường hợp 16", position = "16"] keycode("16"),
+	_17 "Trường hợp 17" [value = "17", label = "Trường hợp 17", position = "17"] keycode("17"),
+	_18 "Trường hợp 18" [value = "18", label = "Trường hợp 18", position = "18"] keycode("18"),
+	_19 "Trường hợp 19" [value = "19", label = "Trường hợp 19", position = "19"] keycode("19"),
+	_20 "Trường hợp 20" [value = "20", label = "Trường hợp 20", position = "20"] keycode("20"),
+	_21 "Trường hợp 21" [value = "21", label = "Trường hợp 21", position = "21"] keycode("21"),
+	_22 "Trường hợp 22" [value = "22", label = "Trường hợp 22", position = "22"] keycode("22"),
+	_23 "Trường hợp 23" [value = "23", label = "Trường hợp 23", position = "23"] keycode("23"),
+	_24 "Trường hợp 24" [value = "24", label = "Trường hợp 24", position = "24"] keycode("24"),
+	_25 "Trường hợp 25" [value = "25", label = "Trường hợp 25", position = "25"] keycode("25"),
+	_26 "Trường hợp 26" [value = "26", label = "Trường hợp 26", position = "26"] keycode("26"),
+	_27 "Trường hợp 27" [value = "27", label = "Trường hợp 27", position = "27"] keycode("27"),
+	_28 "Trường hợp 28" [value = "28", label = "Trường hợp 28", position = "28"] keycode("28"),
+	_29 "Trường hợp 29" [value = "29", label = "Trường hợp 29", position = "29"] keycode("29")
+};
+
+_Main_Infor "PHẦN 3 [HỎI CHO HCP]  - THÔNG TIN LIÊN QUAN TỚI BỆNH NHÂN/TIÊM CHỦNG" 
+info;
+
+_Q12 "Q12. Trung bình 1 tháng, tại " block fields
+(
+	_Q12a_Num "Q12a. Tổng số lượng bệnh nhân được Bác sĩ thăm khám là bao nhiêu?" 
+	long[-2147483648 .. 2147483647];
+
+	_Q12b_Num "Q12b. Trong đó số lượng bệnh nhân lớn tuổi, cụ thể là từ  50 tuổi trở lên là bao nhiêu?" 
+	long[-2147483648 .. 2147483647];
+
+	_Q12c_Num "Q12c. Tương tự, xin cho biết số lượng bệnh nhân người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch (VD: ung thư, ghép tạng, HIV, v.v..) hoặc đang sử dụng các thuốc ức chế miễn dịch (VD: corticoide liều cao, thuốc kháng thể đơn dòng - rituximad) là bao nhiêu?" 
+	long[-2147483648 .. 2147483647];
+
+);
+
+_Q13 "SHOWTABLETQ13. Trung bình 1 tháng, Bác sĩ có tư vấn hoặc chỉ định tiêm vắc xin cho người từ 50 tuổi trở lên hoặc người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch không? (MA)" 
+categorical[1..]
+{
+	_1 "Tôi CÓ tư vấn/chỉ định tiêm vắc xin cho người từ 50 tuổi trở lên" [value = "1", label = "Tôi CÓ tư vấn/chỉ định tiêm vắc xin cho người từ 50 tuổi trở lên", position = "1"] keycode("1"),
+	_2 "Tôi CÓ tư vấn/chỉ định tiêm vắc xin cho người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch" [value = "2", label = "Tôi CÓ tư vấn/chỉ định tiêm vắc xin cho người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch", position = "2"] keycode("2"),
+	_3 "Tôi KHÔNG tư vấn hoặc chỉ định tiêm vắc xin cho bệnh nhân" [value = "3", label = "Tôi KHÔNG tư vấn hoặc chỉ định tiêm vắc xin cho bệnh nhân", position = "3"] keycode("3") exclusive
+};
+
+_Q14 "SHOWTABLETQ14. Hiện tại Bác sĩ đã có chứng nhận sau khóa tập huấn chuyên môn về tiêm chủng hoặc giấy phép tiêm chủng không? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi KHÔNG có bất kì giấy chứng nhận/giấy phép tiêm chủng nào" [value = "1", label = "Tôi KHÔNG có bất kì giấy chứng nhận/giấy phép tiêm chủng nào", position = "1"] keycode("1"),
+	_2 "Tôi có chứng nhận sau khóa tập huấn chuyên môn về tiêm chủng" [value = "2", label = "Tôi có chứng nhận sau khóa tập huấn chuyên môn về tiêm chủng", position = "2"] keycode("2"),
+	_3 "Có, tôi có giấy phép tiêm chủng" [value = "3", label = "Có, tôi có giấy phép tiêm chủng", position = "3"] keycode("3"),
+	_4 "Tôi có hoàn thành khóa huấn luyện tiêm chủng nhưng không có giấy tờ chứng nhận" [value = "4", label = "Tôi có hoàn thành khóa huấn luyện tiêm chủng nhưng không có giấy tờ chứng nhận", position = "4"] keycode("4"),
+	_97 "Khác (ghi rõ tình trạng)" [value = "97", label = "Khác (ghi rõ tình trạng)", position = "5"] keycode("97") other(_97 "" text[ .. ])
+};
+
+_Information "[LỜI GIỚI THIỆU]Sau đây, chúng tôi muốn nghe ý kiến của bác sĩ về vắc xin ngừa Zona/Giời leo mới. Vui lòng đọc kỹ thông tin dưới đây trước khi chọn ”Tiếp theo”.NOTE CHO PVV: PVV ĐỌC CHO BÁC SĨ VÀ ĐƯA BÁC SĨ ĐỌC KỸ TRƯỚC KHI CHUYỂN SANG PHẦN TIẾP THEO.[Thông tin giới thiệu về Vắc xin ngừa Zona (Giời leo) mới] Có 1 loại vắc xin có thể được sử dụng để phòng ngừa bệnh Zona/Giời leo cho người lớn từ 50 tuổi trở lên và người lớn từ 18 tuổi trở lên có nguy cơ cao mắc HZ. Vắc xin này giúp cơ thể tự xây dựng khả năng bảo vệ để chống lại bệnh Zona/Giời leo và các biến chứng của bệnh, và được sản xuất bởi nhà sản xuất vắc xin toàn cầu.  Vắc xin này đã được sử dụng rộng rãi ở các nước như Mỹ, Canada và Đức, Trung Quốc, Nhật Bản, Bỉ, Thụy Điển, Hà Lan, Úc & Ý.Phác đồ chủng ngừa gồm 2 liều, tiêm cách nhau từ 2-6 tháng. Các nghiên cứu cho thấy 02 liều vắc xin có hơn 90% hiệu lực bảo vệ phòng ngừa mắc bệnh Zona/ Giời leo, và các biến chứng của bệnh, và có hiệu lực bảo vệ kéo dài lên đến 10 năm ở người từ 50 tuổi trở lên có hệ miễn dịch bình thường.Giống như các loại vắc xin khác, tiêm vắc xin này cũng có thể gây ra một số tác dụng phụ như đau, sưng đỏ quanh chỗ tiêm, và/hoặc sốt sau khi tiêm. Các tác dụng phụ này thường có khả năng tự giới hạn sau 2 - 3 ngày." 
+info;
+
+_Q15a "SHOWTABLETQ15a. Nếu sắp tới có 1 loại vắc xin phòng bệnh zona/Herpes cho người trên 50 tuổi hoặc người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch như phần giới thiệu ở trên thì mức độ sẵn sàng đưa vắc xin này vào danh mục vắc xin của bệnh viện là như thế nào? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "1", label = "Tôi SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "1"] keycode("1"),
+	_2 "Tôi CÓ THỂ SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "2", label = "Tôi CÓ THỂ SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "2"] keycode("2"),
+	_3 "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH" [value = "3", label = "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH", position = "3"] keycode("3"),
+	_4 "Tôi CÓ THỂ sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "4", label = "Tôi CÓ THỂ sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "4"] keycode("4"),
+	_5 "Tôi CHẮC CHẮN sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "5", label = "Tôi CHẮC CHẮN sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "5"] keycode("5")
+};
+
+_Q16 "SHOWTABLETQ16. Nếu vắc xin phòng bệnh zona/Herpes cho người trên 50 tuổi hoặc người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch như phần giới thiệu ở trên có trong danh mục vắc xin của bệnh viện thì mức độ sẵn sàng tư vấn/chỉ định của Bác sĩ với vắc xin này là như thế nào? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi SẼ KHÔNG tư vấn/chỉ định cho bệnh nhân" [value = "1", label = "Tôi SẼ KHÔNG tư vấn/chỉ định cho bệnh nhân", position = "1"] keycode("1"),
+	_2 "Tôi CÓ THỂ SẼ KHÔNG tư vấn/chỉ định cho bệnh nhân" [value = "2", label = "Tôi CÓ THỂ SẼ KHÔNG tư vấn/chỉ định cho bệnh nhân", position = "2"] keycode("2"),
+	_3 "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH" [value = "3", label = "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH", position = "3"] keycode("3"),
+	_4 "Tôi CÓ THỂ sẽ tư vấn/chỉ định cho bệnh nhân" [value = "4", label = "Tôi CÓ THỂ sẽ tư vấn/chỉ định cho bệnh nhân", position = "4"] keycode("4"),
+	_5 "Tôi CHẮC CHẮN sẽ tư vấn/chỉ định cho bệnh nhân" [value = "5", label = "Tôi CHẮC CHẮN sẽ tư vấn/chỉ định cho bệnh nhân", position = "5"] keycode("5")
+};
+
+_Q17 "SHOWTABLETQ17. Nếu công ty dược sản xuất loại vắc xin phòng bệnh Zona/Giời leo (như mô tả bên trên) muốn tiếp cận với Bác sĩ để giới thiệu về vắc xin mới này, bác sĩ muốn được liên hệ bằng cách nào hoặc qua các phương tiện nào? (MA)" 
+categorical[1..]
+{
+	_1 "Trình dược viên đến trực tiếp tại nơi công tác (bệnh viện/phòng khám/cơ sở y tế) để tư vấn" [value = "1", label = "Trình dược viên đến trực tiếp tại nơi công tác (bệnh viện/phòng khám/cơ sở y tế) để tư vấn", position = "1"] keycode("1"),
+	_2 "Hội nghị y khoa hoặc hội thảo" [value = "2", label = "Hội nghị y khoa hoặc hội thảo", position = "2"] keycode("2"),
+	_3 "Gửi thông tin giới thiệu qua email của tôi" [value = "3", label = "Gửi thông tin giới thiệu qua email của tôi", position = "3"] keycode("3"),
+	_4 "Đăng tải thông tin trực tiếp lên website của Nhà phân phối hoặc Công ty Dược" [value = "4", label = "Đăng tải thông tin trực tiếp lên website của Nhà phân phối hoặc Công ty Dược", position = "4"] keycode("4"),
+	_5 "Liên hệ trực tiếp qua số điện thoại tôi để tư vấn" [value = "5", label = "Liên hệ trực tiếp qua số điện thoại tôi để tư vấn", position = "5"] keycode("5"),
+	_6 "Thông tin từ tạp chí y khoa hoặc bài báo nghiên cứu khoa học" [value = "6", label = "Thông tin từ tạp chí y khoa hoặc bài báo nghiên cứu khoa học", position = "6"] keycode("6"),
+	_7 "Đăng tải thông tin trực tiếp lên trang zalo của Nhà phân phối hoặc Công ty Dược" [value = "7", label = "Đăng tải thông tin trực tiếp lên trang zalo của Nhà phân phối hoặc Công ty Dược", position = "7"] keycode("7"),
+	_8 "Gửi thông tin qua zalo hoặc viber hoặc qua tin nhắn" [value = "8", label = "Gửi thông tin qua zalo hoặc viber hoặc qua tin nhắn", position = "8"] keycode("8"),
+	_97 "(Các) kênh hoặc phương tiện (ghi rõ kênh/phương tiện)" [value = "97", label = "(Các) kênh hoặc phương tiện (ghi rõ kênh/phương tiện)", position = "9"] keycode("97") other(_97 "" text[ .. ])
+};
+
+_Note_2 "PHẦN 4 [HỎI CHO HCP] - THÔNG TIN VỀ CÁC BÁC SĨ KHÁC TRONG BỆNH VIỆN" 
+info;
+
+_Q18 "SHOWTABLETQ18. Vui lòng cho biết số lượng bác sĩ thuộc khoa {@} tại  mà bác sĩ đang làm việc." loop
+{
+	SUP_SUB_01 "<b>KHOA</b>"
+	{
+		_1 "Khoa Tim mạch" [value = "1", label = "Khoa Tim mạch", position = "2"] keycode("1"),
+		_2 "Khoa Da liễu" [value = "2", label = "Khoa Da liễu", position = "3"] keycode("2"),
+		_3 "Khoa Lão khoa" [value = "3", label = "Khoa Lão khoa", position = "4"] keycode("3"),
+		_4 "Khoa Thận học – Tiết niệu" [value = "4", label = "Khoa Thận học – Tiết niệu", position = "5"] keycode("4"),
+		_5 "Khoa Nội Thần kinh" [value = "5", label = "Khoa Nội Thần kinh", position = "6"] keycode("5"),
+		_6 "Khoa Nội tiết" [value = "6", label = "Khoa Nội tiết", position = "7"] keycode("6"),
+		_7 "Khoa Cơ xương khớp/Thấp khớp" [value = "7", label = "Khoa Cơ xương khớp/Thấp khớp", position = "8"] keycode("7"),
+		_8 "Khoa Nội trú" [value = "8", label = "Khoa Nội trú", position = "9"] keycode("8"),
+		_9 "Khoa Ngoại trú/Phòng khám" [value = "9", label = "Khoa Ngoại trú/Phòng khám", position = "10"] keycode("9"),
+		_10 "Khoa/ Đơn vị Tiêm chủng" [value = "10", label = "Khoa/ Đơn vị Tiêm chủng", position = "11"] keycode("10"),
+		_16 "Khoa nội tổng hợp/ nội tổng quát" [value = "16", label = "Khoa nội tổng hợp/ nội tổng quát", position = "12"] keycode("16"),
+		_17 "Khoa cấp cứu/hồi sức cấp cứu/ICU" [value = "17", label = "Khoa cấp cứu/hồi sức cấp cứu/ICU", position = "13"] keycode("17")
+	},
+	SUP_SUB_02 "<b>PHÒNG/BAN</b>"
+	{
+		_11 "Khoa dược" [value = "11", label = "Khoa dược", position = "15"] keycode("11"),
+		_12 "Phòng Kế hoạch tổng hợp" [value = "12", label = "Phòng Kế hoạch tổng hợp", position = "16"] keycode("12"),
+		_13 "Ban giám đốc bệnh viện" [value = "13", label = "Ban giám đốc bệnh viện", position = "17"] keycode("13"),
+		_14 "Phòng tài chính kế toán" [value = "14", label = "Phòng tài chính kế toán", position = "18"] keycode("14"),
+		_15 "Phòng tổ chức - hành chính - quản trị" [value = "15", label = "Phòng tổ chức - hành chính - quản trị", position = "19"] keycode("15")
+	},
+	_97 "" [value = "97", label = "", position = "20"] keycode("97")
+} fields
+(
+	_Q18_Codes "SHOWTABLETQ18. Vui lòng cho biết số lượng bác sĩ thuộc {@} tại  mà bác sĩ đang làm việc." 
+	categorical[1..1]
+	{
+		_1 "Số lượng bác sĩ" [value = "1", label = "Số lượng bác sĩ", position = "1"] keycode("1") other(_1 "" double[-2147483648 .. 2147483647]),
+		_2 "Từ chối trả lời" [value = "2", label = "Từ chối trả lời", position = "2"] keycode("2")
+	};
+
+)expand grid;
+
+_Note_3 "PHẦN 5 [HỎI CHO HCO] - THÔNG TIN VỀ VIỆC TIÊM CHỦNG Ở BỆNH VIỆN Trong phần này, chúng tôi muốn hiểu rõ hơn về việc tiêm chủng tại . Xin bác sĩ chia sẻ thêm một số thông tin sau." 
+info;
+
+_Q28 "Q28.  có phòng tiêm chủng vắc xin dành cho người lớn. (SA)" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q19 "SHOWTABLETQ19. Bệnh viện có định hướng phát triển hoặc đẩy mạnh mảng tiêm chủng cho người lớn trong vòng 2 năm tới hay không? (SA)" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q19b_Text "Q19b. Bác sĩ hãy cho biết lý do tại sao bệnh viện chưa có định hướng phát triển hoặc đẩy mạnh mảng tiêm chủng cho người lớn trong vòng 2 năm tới? (OE)" 
+text[ .. ];
+
+_Q22a "Q22a. Để đưa một vắc xin mới cho người lớn triển khai tại  cần trải qua những bước nào? (OE)" 
+categorical[1..1]
+{
+	_1 "Ghi nhận chi tiết các bước" [value = "1", label = "Ghi nhận chi tiết các bước", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+	_99 "Bệnh viện chưa có thông tin cụ thể về qui trình triển khai" [value = "99", label = "Bệnh viện chưa có thông tin cụ thể về qui trình triển khai", position = "2"] keycode("99")
+};
+
+_Q22b_Text "Q22b. Để đưa một thuốc mới cho người lớn triển khai tại  cần trải qua những bước nào? (OE)" 
+text[ .. ];
+
+_Q20a1 "SHOWTABLETQ20a1. Xin bác sĩ cho biết ai là những người quyết định việc triển khai một vắc xin mới dành cho người lớn tại Bệnh viện ? (MA)" 
+categorical[1..]
+{
+	_1 "Tôi" [value = "1", label = "Tôi", position = "1"] keycode("1"),
+	_2 "Người khác (ghi rõ số người)" [value = "2", label = "Người khác (ghi rõ số người)", position = "2"] keycode("2") other(_2 "" double[-2147483648 .. 2147483647])
+};
+
+_Q20a2 "SHOWTABLETQ20a2. Xin bác sĩ cho biết tên chức vụ/khoa/phòng và vai trò của những người/khoa/phòng quyết định. (OE)" loop
+{
+	_1 "Người thứ 1" [value = "1", label = "Người thứ 1", position = "1"] keycode("1"),
+	_2 "Người thứ 2" [value = "2", label = "Người thứ 2", position = "2"] keycode("2"),
+	_3 "Người thứ 3" [value = "3", label = "Người thứ 3", position = "3"] keycode("3"),
+	_4 "Người thứ 4" [value = "4", label = "Người thứ 4", position = "4"] keycode("4"),
+	_5 "Người thứ 5" [value = "5", label = "Người thứ 5", position = "5"] keycode("5"),
+	_6 "Người thứ 6" [value = "6", label = "Người thứ 6", position = "6"] keycode("6"),
+	_7 "Người thứ 7" [value = "7", label = "Người thứ 7", position = "7"] keycode("7"),
+	_8 "Người thứ 8" [value = "8", label = "Người thứ 8", position = "8"] keycode("8"),
+	_9 "Người thứ 9" [value = "9", label = "Người thứ 9", position = "9"] keycode("9"),
+	_10 "Người thứ 10" [value = "10", label = "Người thứ 10", position = "10"] keycode("10")
+} fields
+(
+	_Q20a2_Codes "SHOWTABLETQ20a2. Xin bác sĩ cho biết tên chức vụ/khoa/phòng và vai trò của những người/khoa/phòng quyết định. (OE)" 
+	categorical[1..]
+	{
+		_1 "Chức vụ/khoa/phòng" [value = "1", label = "Chức vụ/khoa/phòng", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_2 "Vai trò trong việc quyết định" [value = "2", label = "Vai trò trong việc quyết định", position = "2"] keycode("2") other(_2 "" text[ .. ]),
+		_99 "Từ chối" [value = "99", label = "Từ chối", position = "3"] keycode("99") exclusive
+	};
+
+)expand grid;
+
+_Q20b1 "SHOWTABLETQ20b1. Xin bác sĩ cho biết ai là những người quyết định việc triển khai một thuốc mới dành cho người lớn tại ? (MA)" 
+categorical[1..]
+{
+	_1 "Tôi" [value = "1", label = "Tôi", position = "1"] keycode("1"),
+	_2 "Người khác (số lượng)" [value = "2", label = "Người khác (số lượng)", position = "2"] keycode("2") other(_2 "" double[-2147483648 .. 2147483647])
+};
+
+_Q20b2 "Q20b2. Xin bác sĩ cho biết tên và chức vụ của những người quyết định (OE)" loop
+{
+	_1 "Người thứ 1" [value = "1", label = "Người thứ 1", position = "1"] keycode("1"),
+	_2 "Người thứ 2" [value = "2", label = "Người thứ 2", position = "2"] keycode("2"),
+	_3 "Người thứ 3" [value = "3", label = "Người thứ 3", position = "3"] keycode("3"),
+	_4 "Người thứ 4" [value = "4", label = "Người thứ 4", position = "4"] keycode("4"),
+	_5 "Người thứ 5" [value = "5", label = "Người thứ 5", position = "5"] keycode("5"),
+	_6 "Người thứ 6" [value = "6", label = "Người thứ 6", position = "6"] keycode("6"),
+	_7 "Người thứ 7" [value = "7", label = "Người thứ 7", position = "7"] keycode("7"),
+	_8 "Người thứ 8" [value = "8", label = "Người thứ 8", position = "8"] keycode("8"),
+	_9 "Người thứ 9" [value = "9", label = "Người thứ 9", position = "9"] keycode("9"),
+	_10 "Người thứ 10" [value = "10", label = "Người thứ 10", position = "10"] keycode("10")
+} fields
+(
+	_Q20b2_Codes "Q20b2. Xin bác sĩ cho biết tên và chức vụ của những người quyết định (OE)" 
+	categorical[1..]
+	{
+		_1 "Chức vụ/khoa/phòng" [value = "1", label = "Chức vụ/khoa/phòng", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_2 "Vai trò trong việc quyết định" [value = "2", label = "Vai trò trong việc quyết định", position = "2"] keycode("2") other(_2 "" text[ .. ]),
+		_99 "Từ chối" [value = "99", label = "Từ chối", position = "3"] keycode("99") exclusive
+	};
+
+)expand grid;
+
+_Q21a1 "SHOWTABLETQ21a1. Hiện tại ở Bệnh viện , nếu có vắc xin mới vào bệnh viện, có khoảng bao nhiêu người tham gia vào việc xây dựng qui trình triển khai vắc xin mới?" 
+categorical[1..1]
+{
+	_1 "Số người" [value = "1", label = "Số người", position = "1"] keycode("1") other(_1 "" double[-2147483648 .. 2147483647]),
+	_97 "Khác (ghi rõ)" [value = "97", label = "Khác (ghi rõ)", position = "2"] keycode("97") other(_97 "" text[ .. ]),
+	_99 "Từ chối" [value = "99", label = "Từ chối", position = "3"] keycode("99") exclusive
+};
+
+_Q21a2 "SHOWTABLETQ21a2. Xin bác sĩ cho biết tên chức vụ/khoa/phòng và vai trò của những người/khoa/phòng tham gia vào việc xây dựng qui trình triển khai vắc xin mới. (OE)" loop
+{
+	_1 "Người thứ 1" [value = "1", label = "Người thứ 1", position = "1"] keycode("1"),
+	_2 "Người thứ 2" [value = "2", label = "Người thứ 2", position = "2"] keycode("2"),
+	_3 "Người thứ 3" [value = "3", label = "Người thứ 3", position = "3"] keycode("3"),
+	_4 "Người thứ 4" [value = "4", label = "Người thứ 4", position = "4"] keycode("4"),
+	_5 "Người thứ 5" [value = "5", label = "Người thứ 5", position = "5"] keycode("5"),
+	_6 "Người thứ 6" [value = "6", label = "Người thứ 6", position = "6"] keycode("6"),
+	_7 "Người thứ 7" [value = "7", label = "Người thứ 7", position = "7"] keycode("7"),
+	_8 "Người thứ 8" [value = "8", label = "Người thứ 8", position = "8"] keycode("8"),
+	_9 "Người thứ 9" [value = "9", label = "Người thứ 9", position = "9"] keycode("9"),
+	_10 "Người thứ 10" [value = "10", label = "Người thứ 10", position = "10"] keycode("10")
+} fields
+(
+	_Q21a2_Codes "SHOWTABLETQ21a2. Xin bác sĩ cho biết tên chức vụ/khoa/phòng và vai trò của những người/khoa/phòng tham gia vào việc xây dựng qui trình triển khai vắc xin mới. (OE)" 
+	categorical[1..]
+	{
+		_1 "Chức vụ/khoa/phòng" [value = "1", label = "Chức vụ/khoa/phòng", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_2 "Vai trò trong việc xây dựng qui trình triển khai vắc xin mới" [value = "2", label = "Vai trò trong việc xây dựng qui trình triển khai vắc xin mới", position = "2"] keycode("2") other(_2 "" text[ .. ]),
+		_99 "Từ chối" [value = "99", label = "Từ chối", position = "3"] keycode("99") exclusive
+	};
+
+)expand grid;
+
+_Q21b1 "SHOWTABLETQ21b1. Hiện tại ở , nếu có thuốc mới vào bệnh viện, có khoảng bao nhiêu người tham gia vào việc xây dựng qui trình triển khai thuốc mới này?" 
+categorical[1..1]
+{
+	_1 "Số người" [value = "1", label = "Số người", position = "1"] keycode("1") other(_1 "" double[-2147483648 .. 2147483647]),
+	_99 "Từ chối" [value = "99", label = "Từ chối", position = "2"] keycode("99")
+};
+
+_Q21b2 "Q21b2. Xin bác sĩ cho biết chức vụ/khoa/phòng và vai trò của những người/khoa/phòng tham gia vào việc xây dựng qui trình triển khai thuốc mới. (OE)" loop
+{
+	_1 "Người thứ 1" [value = "1", label = "Người thứ 1", position = "1"] keycode("1"),
+	_2 "Người thứ 2" [value = "2", label = "Người thứ 2", position = "2"] keycode("2"),
+	_3 "Người thứ 3" [value = "3", label = "Người thứ 3", position = "3"] keycode("3"),
+	_4 "Người thứ 4" [value = "4", label = "Người thứ 4", position = "4"] keycode("4"),
+	_5 "Người thứ 5" [value = "5", label = "Người thứ 5", position = "5"] keycode("5")
+} fields
+(
+	_Q21b2_Codes "Q21b2. Xin bác sĩ cho biết chức vụ/khoa/phòng và vai trò của những người/khoa/phòng tham gia vào việc xây dựng qui trình triển khai thuốc mới. (OE)" 
+	categorical[1..]
+	{
+		_1 "Chức vụ/khoa/phòng" [value = "1", label = "Chức vụ/khoa/phòng", position = "1"] keycode("1") other(_1 "" text[ .. ]),
+		_2 "Vai trò trong việc xây dựng qui trình triển khai thuốc mới" [value = "2", label = "Vai trò trong việc xây dựng qui trình triển khai thuốc mới", position = "2"] keycode("2") other(_2 "" text[ .. ]),
+		_99 "Từ chối" [value = "99", label = "Từ chối", position = "3"] keycode("99") exclusive
+	};
+
+)expand grid;
+
+_Q23a "SHOWTABLETQ23a. Bệnh viện hiện đang có chương trình gì để khuyến khích các Bác sĩ tại các khoa điều trị tư vấn vắc xin cho người lớn không?" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q23b_Text "Q23b. Xin bác sĩ cho biết nội dung cụ thể các chương trình KHUYẾN KHÍCH BÁC SĨ KHOA ĐIỀU TRỊ tư vấn vắc xin khi thăm khám cho bệnh nhân (OE)" 
+text[ .. ];
+
+_Q24 "SHOWTABLETQ24. Bệnh viện hiện đang có hệ thống và cơ sở hạ tầng gì để kết nối Bác sĩ các khoa phòng tư vấn khác với phòng vắc xin không? (MA)" 
+categorical[1..]
+{
+	_1 "Phần mềm/hệ thống có thể liên kết database/dữ liệu của khối dự phòng và khối điều trị, để khối dự phòng có thể thấy và giúp khối điều trị xác định người bệnh tiềm năng để tiêm chủng" [value = "1", label = "Phần mềm/hệ thống có thể liên kết database/dữ liệu của khối dự phòng và khối điều trị, để khối dự phòng có thể thấy và giúp khối điều trị xác định người bệnh tiềm năng để tiêm chủng", position = "1"] keycode("1"),
+	_2 "Phần mềm/hệ thống tự động thông báo/nhắc nhở bác sĩ điều trị tư vấn vắc xins cho bệnh nhân nếu hệ thống nhận biết một bệnh nhân nào đó nằm trong tệp bệnh nhân phù hợp tiêm chủng" [value = "2", label = "Phần mềm/hệ thống tự động thông báo/nhắc nhở bác sĩ điều trị tư vấn vắc xins cho bệnh nhân nếu hệ thống nhận biết một bệnh nhân nào đó nằm trong tệp bệnh nhân phù hợp tiêm chủng", position = "2"] keycode("2"),
+	_97 "Khác (ghi rõ)" [value = "97", label = "Khác (ghi rõ)", position = "3"] keycode("97") other(_97 "" text[ .. ]),
+	_3 "Bệnh viện không có các hệ thống nào" [value = "3", label = "Bệnh viện không có các hệ thống nào", position = "4"] keycode("3") exclusive
+};
+
+_Q25a "SHOWTABLETQ25a. Bệnh viện thường liên lạc với bệnh nhân trong các trường hợp nào? (MA)" 
+categorical[1..]
+{
+	_1 "Gửi thông báo của bệnh viện" [value = "1", label = "Gửi thông báo của bệnh viện", position = "1"] keycode("1"),
+	_2 "Truyền thông/Cung cấp thông tin về bệnh" [value = "2", label = "Truyền thông/Cung cấp thông tin về bệnh", position = "2"] keycode("2"),
+	_3 "Nhắc nhở lịch tái khám/lịch tiêm chủng" [value = "3", label = "Nhắc nhở lịch tái khám/lịch tiêm chủng", position = "3"] keycode("3"),
+	use _LST_Other,
+	_99 "Bệnh viện không liên hệ/ truyền thông/cung cấp thông tin/liên lạc gì đến bệnh nhân (SA)" [value = "99", label = "Bệnh viện không liên hệ/ truyền thông/cung cấp thông tin/liên lạc gì đến bệnh nhân (SA)", position = "8"] keycode("99") exclusive
+};
+
+_Q25b "SHOWTABLETQ25b. Bệnh viện thường liên lạc/gửi thông báo cho bệnh nhân qua các kênh nào? (MA)" loop
+{
+	_1 "Gửi thông báo của bệnh viện" [value = "1", label = "Gửi thông báo của bệnh viện", position = "1"] keycode("1"),
+	_2 "Truyền thông/Cung cấp thông tin về bệnh" [value = "2", label = "Truyền thông/Cung cấp thông tin về bệnh", position = "2"] keycode("2"),
+	_3 "Nhắc nhở lịch tái khám/lịch tiêm chủng" [value = "3", label = "Nhắc nhở lịch tái khám/lịch tiêm chủng", position = "3"] keycode("3"),
+	_971 "" [value = "971", label = "", position = "4"] keycode("971"),
+	_972 "" [value = "972", label = "", position = "5"] keycode("972"),
+	_973 "" [value = "973", label = "", position = "6"] keycode("973")
+} fields
+(
+	_Q25b_Codes "SHOWTABLETQ25b. Bệnh viện thường liên lạc/gửi thông báo cho bệnh nhân qua các kênh nào? (MA)" 
+	categorical[1..]
+	{
+		_1 "Tin nhắn SMS" [value = "1", label = "Tin nhắn SMS", position = "1"] keycode("1"),
+		_2 "Fanpage/facebook của bệnh viện" [value = "2", label = "Fanpage/facebook của bệnh viện", position = "2"] keycode("2"),
+		_3 "Website bệnh viện" [value = "3", label = "Website bệnh viện", position = "3"] keycode("3"),
+		_4 "App/Ứng dụng của bệnh viện trên điện thoại" [value = "4", label = "App/Ứng dụng của bệnh viện trên điện thoại", position = "4"] keycode("4"),
+		_5 "Zalo" [value = "5", label = "Zalo", position = "5"] keycode("5"),
+		_6 "Email" [value = "6", label = "Email", position = "6"] keycode("6"),
+		_7 "Gọi điện trực tiếp" [value = "7", label = "Gọi điện trực tiếp", position = "7"] keycode("7"),
+		use _LST_Other
+	};
+
+)expand grid;
+
+_Q26a_Text "Q26a. Ở bệnh viện của Bác sĩ, đối với Bệnh nhân người lớn 50+, khi đi tiêm chủng thì Bệnh nhân phải trải qua những bước nào? (OE)" 
+text[ .. ];
+
+_Q26 "Q26. Ở bệnh viện của Bác sĩ, đối với Bệnh nhân người lớn 50+, khi đi tiêm chủng thì Bệnh nhân phải trải qua những bước nào? (MA)" 
+categorical[1..]
+{
+	_1 "Đăng ký tiêm" [value = "1", label = "Đăng ký tiêm", position = "1"] keycode("1"),
+	_2 "Khám sàng lọc với bác sĩ điều trị" [value = "2", label = "Khám sàng lọc với bác sĩ điều trị", position = "2"] keycode("2"),
+	_3 "Khám sàng lọc với bác sĩ tiêm chủng" [value = "3", label = "Khám sàng lọc với bác sĩ tiêm chủng", position = "3"] keycode("3"),
+	_4 "Đến quầy thu ngân đóng tiền" [value = "4", label = "Đến quầy thu ngân đóng tiền", position = "4"] keycode("4"),
+	_5 "Tiêm tại phòng tiêm của khoa điều trị" [value = "5", label = "Tiêm tại phòng tiêm của khoa điều trị", position = "5"] keycode("5"),
+	_6 "Tiêm tại phòng tiêm chủng" [value = "6", label = "Tiêm tại phòng tiêm chủng", position = "6"] keycode("6"),
+	_7 "Theo dõi và kiểm tra sau tiêm tại bệnh viện" [value = "7", label = "Theo dõi và kiểm tra sau tiêm tại bệnh viện", position = "7"] keycode("7"),
+	_8 "Nhắc nhở lịch tiêm mũi kế tiếp" [value = "8", label = "Nhắc nhở lịch tiêm mũi kế tiếp", position = "8"] keycode("8"),
+	use _LST_Other
+};
+
+_Q26_Popup "Vui lòng kiểm tra lại câu trả lời" 
+info;
+
+_Information_2 "[LỜI GIỚI THIỆU]Sau đây, chúng tôi muốn nghe ý kiến của bác sĩ về vắc xin ngừa Zona/Giời leo mới. Vui lòng đọc kỹ thông tin dưới đây trước khi chọn ”Tiếp theo”.NOTE CHO PVV: PVV ĐỌC CHO BÁC SĨ VÀ ĐƯA BÁC SĨ ĐỌC KỸ TRƯỚC KHI CHUYỂN SANG PHẦN TIẾP THEO.[Thông tin giới thiệu về Vắc xin ngừa Zona (Giời leo) mới] Có 1 loại vắc xin có thể được sử dụng để phòng ngừa bệnh Zona/Giời leo cho người lớn từ 50 tuổi trở lên và người lớn từ 18 tuổi trở lên có nguy cơ cao mắc HZ. Vắc xin này giúp cơ thể tự xây dựng khả năng bảo vệ để chống lại bệnh Zona/Giời leo và các biến chứng của bệnh, và được sản xuất bởi nhà sản xuất vắc xin toàn cầu.  Vắc xin này đã được sử dụng rộng rãi ở các nước như Mỹ, Canada và Đức, Trung Quốc, Nhật Bản, Bỉ, Thụy Điển, Hà Lan, Úc & Ý.Phác đồ chủng ngừa gồm 2 liều, tiêm cách nhau từ 2-6 tháng. Các nghiên cứu cho thấy 02 liều vắc xin có hơn 90% hiệu lực bảo vệ phòng ngừa mắc bệnh Zona/ Giời leo, và các biến chứng của bệnh, và có hiệu lực bảo vệ kéo dài lên đến 10 năm ở người từ 50 tuổi trở lên có hệ miễn dịch bình thường.Giống như các loại vắc xin khác, tiêm vắc xin này cũng có thể gây ra một số tác dụng phụ như đau, sưng đỏ quanh chỗ tiêm, và/hoặc sốt sau khi tiêm. Các tác dụng phụ này thường có khả năng tự giới hạn sau 2 - 3 ngày." 
+info;
+
+_Q15b "SHOWTABLETQ15b. Nếu sắp tới có 1 loại vắc xin phòng bệnh zona/Herpes cho người trên 50 tuổi hoặc người từ 18 tuổi trở lên mang các bệnh lý suy giảm miễn dịch hoặc đang sử dụng các thuốc ức chế miễn dịch như phần giới thiệu ở trên thì mức độ sẵn sàng đưa vắc xin này vào danh mục vắc xin của bệnh viện là như thế nào? (SA)" 
+categorical[1..1]
+{
+	_1 "Tôi SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "1", label = "Tôi SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "1"] keycode("1"),
+	_2 "Tôi CÓ THỂ SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "2", label = "Tôi CÓ THỂ SẼ KHÔNG xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "2"] keycode("2"),
+	_3 "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH" [value = "3", label = "Tôi KHÔNG BIẾT/CHƯA QUYẾT ĐỊNH", position = "3"] keycode("3"),
+	_4 "Tôi CÓ THỂ sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "4", label = "Tôi CÓ THỂ sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "4"] keycode("4"),
+	_5 "Tôi CHẮC CHẮN sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện" [value = "5", label = "Tôi CHẮC CHẮN sẽ xem xét đưa vắc xin này vào danh mục vắc xin của bệnh viện", position = "5"] keycode("5")
+};
+
+_Q27 "PVV KHÔNG HỎI, TỰ GHI NHẬN (MA)" 
+categorical[1..]
+{
+	_1 "Bác sĩ đồng ý ký Mẫu Thỏa Thuận của Ipsos" [value = "1", label = "Bác sĩ đồng ý ký Mẫu Thỏa Thuận của Ipsos", position = "1"] keycode("1"),
+	_2 "Bác sĩ đồng ý ký Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK" [value = "2", label = "Bác sĩ đồng ý ký Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK", position = "2"] keycode("2"),
+	_3 "Bác sĩ điền thông tin và gửi Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK qua mã QR" [value = "3", label = "Bác sĩ điền thông tin và gửi Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK qua mã QR", position = "3"] keycode("3")
+};
+
+_Q27a_Text "SHOWTABLETQ27a. Xin bác vui lòng chia sẻ lý do Bác từ chối ký thỏa thuận với GSK? [OE]" 
+text[ .. ];
+
+_Q27b_Text "SHOWTABLETQ27b. Xin bác sĩ chia sẻ về lý do không quét mã QR điền thông tin mà chỉ ký Thỏa thuận bản giấy? [OE]" 
+text[ .. ];
+
+_Q29a "Q29a. Bác sĩ đồng ý cung cấp thông tin cá nhân (họ và tên)" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Q29b "Q29b. Bác sĩ đồng ý cung cấp thông tin trả lời phỏng vấn" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Demographic_Infor "DEMOGRAPHIC" 
+info;
+
+_Married "SHOWTABLETXin cho biết tình trạng hôn nhân của bạn? (SA)" 
+categorical[1..1]
+{
+	_1 "Độc thân" [value = "1", label = "Độc thân", position = "1"] keycode("1"),
+	_2 "Có gia đình" [value = "2", label = "Có gia đình", position = "2"] keycode("2"),
+	_3 "Ly hôn / ly thân" [value = "3", label = "Ly hôn / ly thân", position = "3"] keycode("3"),
+	_4 "Góa" [value = "4", label = "Góa", position = "4"] keycode("4"),
+	_96 "Từ chối (không showtablet)" [value = "96", label = "Từ chối (không showtablet)", position = "5"] keycode("96")
+};
+
+_Education "SHOWTABLETXin cho biết trình độ học vấn cao nhất của bạn? (SA)" 
+categorical[1..1]
+{
+	_1 "Không đi học" [value = "1", label = "Không đi học", position = "1"] keycode("1"),
+	_2 "Chưa học xong tiểu học" [value = "2", label = "Chưa học xong tiểu học", position = "2"] keycode("2"),
+	_3 "Tốt nghiệp tiểu học" [value = "3", label = "Tốt nghiệp tiểu học", position = "3"] keycode("3"),
+	_4 "Chưa học xong cấp 2" [value = "4", label = "Chưa học xong cấp 2", position = "4"] keycode("4"),
+	_5 "Tốt nghiệp cấp 2" [value = "5", label = "Tốt nghiệp cấp 2", position = "5"] keycode("5"),
+	_6 "Chưa học xong cấp 3" [value = "6", label = "Chưa học xong cấp 3", position = "6"] keycode("6"),
+	_7 "Tốt nghiệp cấp 3" [value = "7", label = "Tốt nghiệp cấp 3", position = "7"] keycode("7"),
+	_8 "Chưa học xong đại học/ cao đẳng/ trường đào tạo nghề" [value = "8", label = "Chưa học xong đại học/ cao đẳng/ trường đào tạo nghề", position = "8"] keycode("8"),
+	_9 "Tốt nghiệp đại học/ cao đẳng/ đào tạo nghề" [value = "9", label = "Tốt nghiệp đại học/ cao đẳng/ đào tạo nghề", position = "9"] keycode("9"),
+	_10 "Cao học hoặc trên cao học" [value = "10", label = "Cao học hoặc trên cao học", position = "10"] keycode("10"),
+	_96 "Từ chối (không showtablet)" [value = "96", label = "Từ chối (không showtablet)", position = "11"] keycode("96")
+};
+
+_Occupation "SHOWTABLETNghề nghiệp/chức vụ hiện nay của bạn là gì? (SA)" 
+categorical[1..1]
+{
+	_1 "Chủ công ty/doanh nghiệp (Làm chủ, người sáng lập công ty, doanh nghiệp)" [value = "1", label = "Chủ công ty/doanh nghiệp (Làm chủ, người sáng lập công ty, doanh nghiệp)", position = "1"] keycode("1"),
+	_2 "Chủ cửa hàng/chủ cơ sở kinh doanh nhỏ lẻ (có đang ký kinh doanh, có nhân viên)" [value = "2", label = "Chủ cửa hàng/chủ cơ sở kinh doanh nhỏ lẻ (có đang ký kinh doanh, có nhân viên)", position = "2"] keycode("2"),
+	_3 "Nghề chuyên môn (bác sĩ, giáo viên, kỹ sư, IT,  hướng dẫn viên du lịch…)" [value = "3", label = "Nghề chuyên môn (bác sĩ, giáo viên, kỹ sư, IT,  hướng dẫn viên du lịch…)", position = "3"] keycode("3"),
+	_4 "Nhân viên văn phòng/ nhà nước cấp quản lý" [value = "4", label = "Nhân viên văn phòng/ nhà nước cấp quản lý", position = "4"] keycode("4"),
+	_5 "Nhân viên văn phòng/ nhà nước/ khách sạn( kế toán/ lễ tân/ nhân viên bán hàng, nhân viên điện lực/ nhân viên thu ngân/ nhân viên bất động sản…)" [value = "5", label = "Nhân viên văn phòng/ nhà nước/ khách sạn( kế toán/ lễ tân/ nhân viên bán hàng, nhân viên điện lực/ nhân viên thu ngân/ nhân viên bất động sản…)", position = "5"] keycode("5"),
+	_6 "Công nhân ( làm nhà máy, xí nghiệp, xưởng…)" [value = "6", label = "Công nhân ( làm nhà máy, xí nghiệp, xưởng…)", position = "6"] keycode("6"),
+	_7 "Buôn bán nhỏ lẻ ( tự buôn bán/ tự quản lý, không đăng ký)" [value = "7", label = "Buôn bán nhỏ lẻ ( tự buôn bán/ tự quản lý, không đăng ký)", position = "7"] keycode("7"),
+	_8 "Lao động tự do ( lao động không có hợp đồng VD: thợ chụp hình/ xe ôm/ grap/ tài xế/ khuân vác/ thơ làm móng/ thợ cắt tóc/ thợ may/ giữ trẻ….)" [value = "8", label = "Lao động tự do ( lao động không có hợp đồng VD: thợ chụp hình/ xe ôm/ grap/ tài xế/ khuân vác/ thơ làm móng/ thợ cắt tóc/ thợ may/ giữ trẻ….)", position = "8"] keycode("8"),
+	_9 "Thất nghiệp" [value = "9", label = "Thất nghiệp", position = "9"] keycode("9"),
+	_10 "Nội trợ" [value = "10", label = "Nội trợ", position = "10"] keycode("10"),
+	_11 "Sinh viên / học sinh" [value = "11", label = "Sinh viên / học sinh", position = "11"] keycode("11"),
+	_12 "Nghỉ hưu" [value = "12", label = "Nghỉ hưu", position = "12"] keycode("12"),
+	_13 "Chăn nuôi/ làm nông" [value = "13", label = "Chăn nuôi/ làm nông", position = "13"] keycode("13"),
+	_14 "Bộ đội/ Dân phòng" [value = "14", label = "Bộ đội/ Dân phòng", position = "14"] keycode("14"),
+	_15 "Bảo vệ" [value = "15", label = "Bảo vệ", position = "15"] keycode("15"),
+	_97 "Khác (nêu rõ........)" [value = "97", label = "Khác (nêu rõ........)", position = "16"] keycode("97") other(_97 "" text[ .. ]),
+	_96 "Từ chối (không showtablet)" [value = "96", label = "Từ chối (không showtablet)", position = "17"] keycode("96")
+};
+
+_Image_Product "Chụp hình Mẫu Thỏa Thuận của Ipsos đã được ký" 
+text[ .. ];
+
+_Image_Product_2 "Chụp hình Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK đã được ký" 
+text[ .. ];
+
+_Image_Product_3 "Chụp hình Thỏa Thuận Thu Thập Và Sử Dụng Dữ Liệu Cá Nhân của GSK qua mã QR đã được ký" 
+text[ .. ];
+
+_Image_House "CHỤP HÌNH NƠI PHỎNG VẤN." 
+text[ .. ];
+
+_Recontact "Chúng tôi rất cảm ơn những ý kiến phản hồi của bạn. Bạn có đồng ý nếu chúng tôi liên lạc lại với bạn và mời bạn tham gia những cuộc khảo sát tương tự trong tương lai?" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Confirmed "ĐỒNG Ý BẢO MẬT THÔNG TIN DỰ ÁN/SẢN PHẨMDỰ ÁN: TÔI TÊN LÀ (ĐÁP VIÊN)SỐ ĐIỆN THOẠI / ĐỊA CHỈTHÀNH PHỐTôi cam kết: Không tiết lộ thông tin cuộc nghiên cứu cho bất cứ ai, dưới mọi tình huống và hình thức. Ví dụ: chia sẻ, đăng tải hình ảnh thông tin/sản phẩm thử trên internet, mạng xã hội, diễn đàn hay group chat…Không lưu trữ thông tin của dự án (hình ảnh, video, tài liệu, sản phẩm thử, …) liên quan đến cuộc nghiên cứu.Cam kết tham gia cuộc nghiên cứu theo đúng quy trình được hướng dẫn (bảo quản, sử dụng, lưu trữ, hủy mẫu, …).Với các thành viên trong gia đình có thể tiếp xúc với thông tin của cuộc nghiên cứu, tôi đảm bảo sẽ thông báo cho họ về tính chất bảo mật của cuộc nghiên cứu, yêu cầu họ giữ kín và không tiết lộ thông tin.Đồng ý cho đơn vị nghiên cứu sử dụng những tài liệu (chụp hình, quay phim, ghi âm, ghi chép) để trình bày với khách hàng như một phần của kết quả nghiên cứu, không bao gồm thông tin cá nhân.Bằng cách ký vào đơn này, tôi xác nhận có sự đồng ý về quyền và nghĩa vụ bảo mật, sử dụng thông tin liên quan của cả hai bên." 
+categorical[1..1]
+{
+	_1 "Tôi đã đọc và đồng ý với các cam kết trên" [value = "1", label = "Tôi đã đọc và đồng ý với các cam kết trên", position = "1"] keycode("1"),
+	_2 "Tôi từ chối các cam kết trên" [value = "2", label = "Tôi từ chối các cam kết trên", position = "2"] keycode("2")
+};
+
+_KetThuc "Cảm ơn bạn rất nhiều vì đã tham gia vào cuộc khảo sát của chúng tôi." 
+info;
+
+_ChamDut "Bạn không thuộc đối tượng phỏng vấn. Cám ơn và kết thúc!.." 
+info;
+
+_LoaiPhieu "Loại Phiếu" 
+categorical[1..1]
+{
+	_1 "Main" [value = "1", label = "Main", position = "1"] keycode("1"),
+	_2 "Extra" [value = "2", label = "Extra", position = "2"] keycode("2"),
+	_3 "Cancel" [value = "3", label = "Cancel", position = "3"] keycode("3"),
+	_4 "Suspended" [value = "4", label = "Suspended", position = "4"] keycode("4"),
+	_5 "Booster" [value = "5", label = "Booster", position = "5"] keycode("5"),
+	_6 "Non" [value = "6", label = "Non", position = "6"] keycode("6"),
+	_7 "Overquota" [value = "7", label = "Overquota", position = "7"] keycode("7")
+};
+
+_Interview_Year "GHI NHẬN NĂM THỰC HIỆN PHỎNG VẤN" 
+long[-2147483648 .. 2147483647];
+
+_STARTDATE "STARTDATE" 
+date[ .. ];
+
+_STARTTIME "STARTTIME" 
+text[ .. ];
+
+_IntID "Interviewer ID" 
+long[-2147483648 .. 2147483647];
+
+_IntName "Interviewer Name" 
+text[ .. ];
+
+_Signature "Signature" 
+text[ .. ];
+
+_ENDDATE "ENDDATE" 
+date[ .. ];
+
+_ENDTIME "ENDTIME" 
+text[ .. ];
+
+_SPANTIME "SPANTIME" 
+text[ .. ];
+
+_TOTALTIME "TOTALTIME" 
+long[-2147483648 .. 2147483647];
+
+_Info_Sup "Bạn đã có được người giám sát đi cùng (accompany) trong cuộc phỏng vấn này không?" 
+categorical[1..1]
+{
+	_1 "Có" [value = "1", label = "Có", position = "1"] keycode("1"),
+	_2 "Không" [value = "2", label = "Không", position = "2"] keycode("2")
+};
+
+_Image_Sup "Chụp hình người giám sát đi cùng (accompany) tại địa chỉ thực tế" 
+text[ .. ];
+
+SHELL_CLOSE "Thank you very much for participating in our survey.  We sometimes re-contact respondents to verify that the market research was indeed carried out.  For this purpose we require some contact details from you in order to be able to check this should your interview be selected for quality control." 
+info;
+
+SHELL_DDG_STATUS "SHELL_DDG_STATUS" 
+text[ .. ];
+
+SHELL_NAME "Respondent name:" 
+text[ .. ];
+
+SHELL_BLOCK_TEL "Telephone number(s)" block fields
+(
+	SHELL_HOMETEL "Home telephone number:" 
+	text[ .. ];
+
+	SHELL_MOBTEL "Mobile telephone number:" 
+	text[ .. ];
+
+);
+
+SHELL_TEL "Telephone number(s)" 
+text[ .. ];
+
+SHELL_BLOCK_ADDRESS "Respondent address" block fields
+(
+	SHELL_HOUSENO "House/Flat Number" 
+	text[ .. ];
+
+	SHELL_STREET "Street" 
+	text[ .. ];
+
+	SHELL_DISTRICT "District/Suburb" 
+	text[ .. ];
+
+	SHELL_TOWN "Town/City" 
+	text[ .. ];
+
+	SHELL_ZIP "Zip/Postal Code" 
+	text[ .. ];
+
+);
+
+SHELL_ADDRESS "Respondent address" 
+text[ .. ];
+
+SHELL_BLOCK_EMAIL "Block" block fields
+(
+	SHELL_IIS_PANEL "Are you interested in sharing your email address with us and joining an online survey community?" 
+	categorical[1..1]
+	{
+		_A1 "Yes" [value = "A1", label = "Yes", position = "1"] keycode("A1"),
+		_A2 "No" [value = "A2", label = "No", position = "2"] keycode("A2")
+	};
+
+	SHELL_EMAIL "Email:" 
+	text[ .. ];
+
+	SHELL_EMAIL_DUMMY "Email:" 
+	text[ .. ];
+
+);
+
+_BHP "Basic holiday pay" 
+long[-2147483648 .. 2147483647];
+
+_PAQ "Pay adjusted by quota" 
+long[-2147483648 .. 2147483647];
+
+SHELL_SUP "Were you accompanied by a Supervisor or Ipsos person during this interview?" 
+categorical[1..1]
+{
+	_A1 "Yes" [value = "A1", label = "Yes", position = "1"] keycode("A1"),
+	_A2 "No" [value = "A2", label = "No", position = "2"] keycode("A2")
+};
+
+End Metadata

@@ -1,12 +1,12 @@
 {
-    "project_name" : "<!--Enter a project name-->",
+    "project_name" : "SAMPI_PHASE_3",
     "run_mdd_source" : true, 
     "main" : {
         "xmls" : {
-            "<!--Enter a protodid-->" : "<!--Enter a xml file-->"
+            "8742" : "ProtoSurvey_8742_{AFBB1C9F-D1E6-4F30-BAC8-FD99EBFC0D4D}.xml"
         },
-        "protoid_final" : "8402",
-        "csv" : "<!--Enter a csv file-->"
+        "protoid_final" : "8742",
+        "csv" : "ExportData98CD6CE7771046A68C4599044A53236B.csv"
     },
     "stages" : {
         "stage-1" : {
