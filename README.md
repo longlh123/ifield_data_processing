@@ -14,6 +14,7 @@
 <pre>
     <code>
         git branch -b my-branch-name
+        nếu đã tồn tại nhánh thì có thể remove -b đi
     </code>
 </pre>
 

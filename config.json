@@ -1,6 +1,6 @@
 {
     "project_name" : "SAMPI_PHASE_3",
-    "run_mdd_source" : true, 
+    "run_mdd_source" : false, 
     "source_initialization" : {
         "default_language" : "VIT",
         "delete_all" : true,
