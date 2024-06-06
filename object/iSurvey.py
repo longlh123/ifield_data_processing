@@ -22,18 +22,30 @@ class iSurvey(dict):
         self["answersref"] = iAnswersRef(answersref)
 
         body = root.find('body')
-        self["questions"] = iQuestions(body, self["answersref"])
-    
-class iQuestions(dict):
+        self["definesref"] = iDefines(body, self["answersref"])
+        self["questions"] = iQuestions(body, self["answersref"], self["definesref"])
+
+class iDefines(list):
     def __init__(self, body, answersref):
         self.__dict__ = dict()
         self.generate(body, answersref)
-
+    
     def generate(self, body, answersref):
+        for question in body.findall('*'):
+            if question.tag not in ["sectionStart", "loopStart","sectionEnd", "loopEnd"]:
+                if question.attrib["surveyBuilderV3CMSObjGUID"] in ["F620C65C-1072-4CF0-B293-A9C9012F5BE8"]:
+                    self.append(question.attrib["objectName"])
+
+class iQuestions(dict):
+    def __init__(self, body, answersref, definesref):
+        self.__dict__ = dict()
+        self.generate(body, answersref, definesref)
+
+    def generate(self, body, answersref, definesref):
         parent_nodes = list()
         
         for question in body.findall('*'):
-            if question.attrib['pos'] == "55":
+            if question.attrib['pos'] == "93":
                 a = ""
 
             if question.tag in ["sectionEnd", "loopEnd"]:
@@ -45,24 +57,24 @@ class iQuestions(dict):
                     if len(parent_nodes) > 0:
                         object_name = "{}.{}".format(".".join([q["attributes"]["objectName"] for q in parent_nodes]), object_name)
                     
-                    self[object_name] = iQuestion(question, answersref, parent_nodes=parent_nodes)
+                    self[object_name] = iQuestion(question, answersref, definesref, parent_nodes=parent_nodes)
 
                     if question.tag in ["sectionStart", "loopStart"]:
                         parent_nodes.append(self[object_name]) 
 
 class iQuestion(dict):
-    def __init__(self, question, answersref, parent_nodes=None):
+    def __init__(self, question, answersref, definesref, parent_nodes=None):
         self.__dict__ = dict()
-        self.generate(question, answersref, parent_nodes=parent_nodes)
+        self.generate(question, answersref, definesref, parent_nodes=parent_nodes)
     
-    def generate(self, question, answersref, parent_nodes=None):
+    def generate(self, question, answersref, definesref, parent_nodes=None):
         if question.attrib['pos'] == "302":
             a = ""
         self["text"] = self.get_text(question)
         self["attributes"] = question.attrib
         
         if question.find('answers') is not None:
-            self["answers"] = iAnswers(question.find('answers'), answersref)
+            self["answers"] = iAnswers(question.find('answers'), answersref, definesref)
         
         if len(parent_nodes) > 0:
             self["parents"] = list()
@@ -322,7 +334,7 @@ class iAnswersRef(dict):
             if answer.attrib["id"] not in self:
                 self[answer.attrib["id"]] = dict()
             
-            if answer.attrib["id"] == '14039':
+            if answer.attrib["id"] == '538411':
                 a = ""
 
             #print(answer.attrib["id"])
@@ -330,21 +342,50 @@ class iAnswersRef(dict):
             self[answer.attrib["id"]]["options"] = iOptions(answer.findall('option'))
 
 class iAnswers(dict):
-    def __init__(self, answers, answersref):
+    def __init__(self, answers, answersref, definesref):
         self.__dict__ = dict()
-        self.generate(answers, answersref)
+        self.generate(answers, answersref, definesref)
 
-    def generate(self, answers, answersref):
+    def generate(self, answers, answersref, definesref):
         self["attributes"] = answers.attrib
         self["answerref"] = answersref[self["attributes"]["answerSetID"]]
     
         if self["attributes"]["answerSetID"] != '8' and self["attributes"]["answerSetID"] != '-1':
-            self["options"] = iOptions(answers.find('options').findall('option'), self["answerref"]) 
+            self["options"] = iOptions(answers.find('options').findall('option'), self["answerref"], definesref) 
             self["syntax"] = self.syntax()
 
     def syntax(self):
-        s = [option["syntax"] for key, option in self["options"].items() if len(option["answersetreference"]) == 0]
-        return ",".join(s)
+        s = ""
+        pos = 1
+        sublist = []
+
+        while pos <= len(self["options"].items()):
+            option = self["options"][str(pos)]
+
+            if len(option["answersetreference"]) == 0:
+                if option["is_sublist"]:
+                    s += ("" if len(s) == 0 else ",") + option["syntax"]
+                    g_pos = pos + 1
+
+                    while g_pos <= len(self["options"].items()):
+                        if str(self["options"][str(g_pos)]["attributes"]["groupID"]) == str(pos):
+                            sublist.append(self["options"][str(g_pos)]["syntax"])
+                            g_pos += 1
+                        else:
+                            g_pos += 1
+                            break
+                        
+                    s = re.sub(pattern="###sublist{}###".format(str(pos)), repl=",".join(sublist), string=s)
+                    
+                    sublist = []
+                    pos = g_pos - 1
+                else:
+                    s += ("" if len(s) == 0 else ",") + option["syntax"]
+                
+            pos += 1
+        
+        #s = [option["syntax"] for key, option in self["options"].items() if len(option["answersetreference"]) == 0]
+        return s
 
 class iOptions(dict):
     def __init__(self, *args):
@@ -354,18 +395,20 @@ class iOptions(dict):
             self.generate(options=args[0])
         if len(args) == 2 and args[0] is not None and args[1] is not None:
             self.generate(options=args[0], answerref=args[1])
+        if len(args) == 3 and args[0] is not None and args[1] is not None and args[2] is not None:
+            self.generate(options=args[0], answerref=args[1], definesref=args[2])
         
-    def generate(self, options=dict(), answerref=dict()):
+    def generate(self, options=dict(), answerref=dict(), definesref=dict()):
         for option in options:
             if option.attrib["pos"] not in self:
-                self[option.attrib["pos"]] = iOption(option, answerref)
+                self[option.attrib["pos"]] = iOption(option, answerref, definesref)
 
 class iOption(dict):
     def __init__(self, *args):
         self.__dict__ = dict()
-        self.generate(option=args[0], answerref=args[1])
+        self.generate(option=args[0], answerref=args[1], definesref=args[2])
         
-    def generate(self, option=dict(), answerref=dict()):
+    def generate(self, option=dict(), answerref=dict(), definesref=dict()):
         if len(answerref) == 0:
             self["text"] = "" if option.find('text') is None else option.find('text').text
             self["attributes"] = option.attrib
@@ -377,7 +420,9 @@ class iOption(dict):
             self["objectname"] = option.attrib["objectName"]
             self["answersetreference"] = option.attrib["answerSetReference"]
             self["attributes"] = answerref["options"][option.attrib["pos"]]["attributes"]
-            
+            self["is_sublist"] = len(option.attrib["answerSetReference"]) == 0 and bool(int(self["attributes"]["isDisplayAsHeader"])) and option.attrib["objectName"] not in definesref
+            self["groupname_reference"] = "" if len(self["attributes"]["groupID"]) == 0 else "sublist{}".format(answerref["options"][self["attributes"]["groupID"]]["attributes"]["pos"])
+
             if option.find('otherField') is not None:
                 self["otherfield"] = answerref["options"][option.attrib["pos"]]["otherfield"].attrib
                 self["otherfield"]["objectName"] = option.find("otherField").attrib["objectName"]
@@ -385,7 +430,9 @@ class iOption(dict):
             self["syntax"] = self.syntax()
             
     def syntax(self):
-        if bool(int(self["attributes"]["isDisplayAsHeader"])):
+        if self["is_sublist"]:
+            s = '%s "%s" {###sublist%s###}' % (self["objectname"], self["text"], self["attributes"]["pos"])
+        elif bool(int(self["attributes"]["isDisplayAsHeader"])):
             s = "use %s" % (self["objectname"])
         else:
             s = '%s "%s" [ pos=%s, value="%s" ]' % (
