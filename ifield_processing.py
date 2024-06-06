@@ -57,18 +57,18 @@ try:
     #Read the xml file for the placement + recall section
     follow_up_questions = []
 
-    for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
-        try:
-            for proto_id, xml_file in stage_obj["xmls"] .items():
-                if os.path.exists(f'source\\xml\\{xml_file}'):
-                    isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
-                else:
-                    print("Config Warning: ", "ProtoID {} should be declare in the config file.".format(proto_id))
-        except:
-            raise Exception("Config Error: ", "ProtoID {} has no data in the CSV file.".format(proto_id))
+    # for stage_id, stage_obj in tqdm(config["stages"].items(), desc="Convet the xml file for the placement + recall section"):
+    #     try:
+    #         for proto_id, xml_file in stage_obj["xmls"] .items():
+    #             if os.path.exists(f'source\\xml\\{xml_file}'):
+    #                 isurveys[int(proto_id)]["survey"] = iSurvey(f'source\\xml\\{xml_file}') 
+    #             else:
+    #                 print("Config Warning: ", "ProtoID {} should be declare in the config file.".format(proto_id))
+    #     except:
+    #         raise Exception("Config Error: ", "ProtoID {} has no data in the CSV file.".format(proto_id))
         
-        if len(follow_up_questions) > 0:
-            follow_up_questions.extend([{a : 0}  for a in list(isurveys[int(proto_id)]["survey"]["questions"].keys()) if a not in follow_up_questions]) 
+    #     if len(follow_up_questions) > 0:
+    #         follow_up_questions.extend([{a : 0}  for a in list(isurveys[int(proto_id)]["survey"]["questions"].keys()) if a not in follow_up_questions]) 
 
     if config["run_mdd_source"]:
         #Create mdd/ddf file based on xmls file

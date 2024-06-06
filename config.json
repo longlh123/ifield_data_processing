@@ -1,37 +1,15 @@
 {
-    "project_name" : "--Enter a project Name--",
+    "project_name" : "PVN2024125_DINNER_RETAILER",
     "run_mdd_source" : true,
     "source_initialization" : {
         "delete_all" : true,
         "remove_all_ids" : true,
-        "dummy_data_required": false
+        "dummy_data_required": true
     },
     "main" : {
         "xmls" : {
-            "--Enter a protodid 1--" : "--Enter a xml file--",
-            "--Enter a protodid 2--" : "--Enter a xml file--"
+            "8717" : "ProtoSurvey_8717_{58FE4BAA-8882-4775-9000-9487697F72B9}.xml"
         },
-        "protoid_final" : "--Enter a protodid 2--"
-    },
-    "stages" : {
-        "stage-1" : {
-            "xmls" : {
-                "--Enter a protodid 1--" : "--Enter a xml file--"
-            },
-            "protoid_final" : "--Enter a protodid 1--"
-        },
-        "stage-2" : {
-            "xmls" : {
-                "--Enter a protodid 1--" : "--Enter a xml file--",
-                "--Enter a protodid 2--" : "--Enter a xml file--"
-            },
-            "protoid_final" : "--Enter a protodid 2--"
-        },
-        "stage-3" : {
-            "xmls" : {
-                "--Enter a protodid 1--" : "--Enter a xml file--"
-            },
-            "protoid_final" : "--Enter a protodid 1--"
-        }
+        "protoid_final" : "8717"
     }
 }
