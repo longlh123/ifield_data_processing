@@ -1,5 +1,5 @@
 {
-    "project_name" : "--Project Name--",
+    "project_name" : "VN2024xxx_ABC",
     "run_mdd_source" : true,
     "source_initialization" : {
         "delete_all" : true,
@@ -8,10 +8,10 @@
     },
     "main" : {
         "xmls" : {
-            "--Enter a protodid 1--" : "--Enter a xml file--",
-            "--Enter a protodid 2--" : "--Enter a xml file--"
+            "8646" : "export.xml",
+            "8705" : "ProtoSurvey_8705_{1F1BD0D0-6F3A-4683-93E8-F443216906F1}.xml"
         },
-        "protoid_final" : "--Enter a protodid 2--"
+        "protoid_final" : "8705"
     },
     "stages" : {
         "stage-1" : {
