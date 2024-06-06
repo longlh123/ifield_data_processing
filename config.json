@@ -2,9 +2,10 @@
     "project_name" : "PVN2024118_CMI_PICO_SAPA",
     "run_mdd_source" : true,
     "source_initialization" : {
+        "default_language" : "VIT",
         "delete_all" : true,
         "remove_all_ids" : true,
-        "dummy_data_required": false
+        "dummy_data_required": true
     },
     "main" : {
         "xmls" : {
