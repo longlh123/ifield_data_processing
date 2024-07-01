@@ -122,6 +122,18 @@ class Metadata(mrDataFileDsc):
         self.closeMDM()
         return arr
 
+    #add-in for myself
+    def delVariables(self,questions):
+        self.openMDM()
+        arr = list()
+        for v in self.MDM.Fields:
+            a = v.RelativeName
+            if (a in questions):
+                self.MDM.Fields.Remove(a)
+
+        self.saveMDM()
+        self.closeMDM()
+
     def addField(self, field):
         self.openMDM()
         self.MDM.Fields.Add(field)

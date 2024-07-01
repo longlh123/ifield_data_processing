@@ -25,6 +25,7 @@ f = open('config.json', mode = 'r', encoding="utf-8")
 config = json.loads(f.read())
 f.close()
 
+
 try:
     isurveys = {}
 
@@ -157,13 +158,13 @@ try:
 
             if len(ids) > 0:
                 df_data = df.loc[ids]
-
+                
                 #Allow inserting dummy data
                 if config["source_initialization"]["dummy_data_required"]:
                     df_data = df_data.loc[df_data["System_LocationID"] == "_DefaultSP"]
                 else:
                     df_data = df_data.loc[df_data["System_LocationID"] != "_DefaultSP"]
-
+                
                 if not df_data.empty:
                     adoConn.Open(conn)
 
@@ -215,7 +216,7 @@ try:
                                                 match question["datatype"].value:
                                                     case dataTypeConstants.mtText.value:
                                                         c.append(mdd_col)
-                                                        v.append("'{}'".format(". ".join(re.split('\n|\r', str(row[csv_obj["csv"][0]])))))
+                                                        v.append("'{}'".format(". ".join(re.split('\n|\r|\'|\"', str(row[csv_obj["csv"][0]])))))
                                                     case dataTypeConstants.mtDate.value:
                                                         c.append(mdd_col)
                                                         v.append("'{}'".format(row[csv_obj["csv"][0]]))
@@ -246,16 +247,60 @@ try:
                                 adoConn.Execute(sql_update)
                         except:
                             continue
+                        
+                        
 
                     adoConn.Close()
-
+                    #End insert data csv to mdd
+    
     #Delete all data before inserting new data (default is FALSE)
     if config["source_initialization"]["remove_all_ids"]:
         adoConn.Open(conn)
 
         sql_delete = "DELETE FROM VDATA WHERE Not _LoaiPhieu.ContainsAny({_1,_5})"
         adoConn.Execute(sql_delete)
-        adoConn.Close()       
+        adoConn.Close()
+
+    col_to_export = ["InstanceID","_ResName","_ResAddress","_ResHouseNo","_ResStreet","_ResProvinces","_ResDistrictSelected","_ResWardSelected","_ResPhone","_ResCellPhone","_Email","_IntID","_IntName","_LoaiPhieu"]
+    col_to_remove = ["_ResName","_ResAddress","_ResHouseNo","_ResStreet","_ResPhone","_ResCellPhone","_Email","_IntID","_IntName","SHELL_NAME","SHELL_BLOCK_TEL","SHELL_TEL","SHELL_BLOCK_ADDRESS","SHELL_ADDRESS"]
+
+    respondent_file = './data/{}_Respondent.xlsx'.format(config["project_name"])
+
+    if not os.path.isfile(respondent_file) or config["source_initialization"]["delete_all"]:
+        df_respondent_info = pd.DataFrame(columns=col_to_export)
+    else:
+        if os.path.getsize(respondent_file) == 0:
+            df_respondent_info = pd.DataFrame(columns=col_to_export)
+        else:
+            df_respondent_info = pd.read_excel(respondent_file)
+            os.remove(respondent_file)
+
+    writer = pd.ExcelWriter(respondent_file, engine='xlsxwriter',mode='w')
+
+    m = Metadata(mdd_file=current_mdd_file, ddf_file=current_ddf_file,sql_query="SELECT * FROM VDATA")
+    df_respondent_info = m.convertToDataFrame(questions=col_to_export)
+
+    df_respondent_info.reset_index()
+    df_respondent_info.to_excel(writer,sheet_name="Respondent",index=False)
+    writer.close()
+
+    a = "{}".format(current_mdd_file.replace("_EXPORT","_CLEAN_EXPORT"))
+    b = "{}".format(current_ddf_file.replace("_EXPORT","_CLEAN_EXPORT"))
+
+    if os.path.isfile(a):
+        os.remove(a)
+    if os.path.isfile(b):
+        os.remove(b)
+
+    #shutil.copy(current_mdd_file, a)
+    mdd_source = Metadata(mdd_file=current_mdd_file.replace("_EXPORT","_CLEAN"), dms_file=r"dms\OutputDDFFile.dms", default_language=config["source_initialization"]["default_language"])
+    mdd_source.runDMS()
+    
+    os.remove(b)
+    shutil.copy(current_ddf_file, b)
+    m = Metadata(mdd_file=a, ddf_file=b,sql_query="SELECT * FROM VDATA")
+    m.delVariables(questions=col_to_remove)
+    
 except Exception as error:
     print(repr(error))
     #sys.exit(repr(error))

@@ -1,25 +1,25 @@
 {
-    "project_name" : "--Enter a project Name--",
-    "run_mdd_source" : true,
+    "project_name" : "PVN2024999_GALLEON_M06",
+    "run_mdd_source" : false,
     "source_initialization" : {
         "default_language" : "VIT",
         "delete_all" : true,
         "remove_all_ids" : true,
-        "dummy_data_required": true
+        "dummy_data_required": false
     },
     "main" : {
         "xmls" : {
-            "--Enter a protodid 1--" : "--Enter a xml file--",
-            "--Enter a protodid 2--" : "--Enter a xml file--"
+            "8768" : "ProtoSurvey_8768_{B81A4AF0-EB19-43C9-9217-F5B71BA3AEE3}.xml"
         },
-        "protoid_final" : "--Enter a protodid 2--"
+        "protoid_final" : "8768"
     },
     "stages" : {
         "stage-1" : {
             "xmls" : {
-                "--Enter a protodid 1--" : "--Enter a xml file--"
+                "--Enter a protodid 1--" : "--Enter a xml file--",
+                "--Enter a protodid 2--" : "--Enter a xml file--"
             },
-            "protoid_final" : "--Enter a protodid 1--"
+            "protoid_final" : "--Enter a protodid 2--"
         },
         "stage-2" : {
             "xmls" : {
